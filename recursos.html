@@ -40,19 +40,19 @@
 <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
 <span class="font-label-sm text-label-sm text-on-surface-variant shrink-0 font-bold uppercase tracking-wider pl-0.5">Área:</span>
 <button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-primary-container text-on-primary transition-all active:scale-95" data-filter="all">Todas</button>
-<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="ciencias">Ciencias</button>
-<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="matematicas">Matemáticas</button>
-<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="lengua">Lengua</button>
-<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="sociales">Sociales</button>
+<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="ciencias">Fundamentos de Redes</button>
+<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="matematicas">Direccionamiento IP</button>
+<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="lengua">Cableado</button>
+<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="sociales">Seguridad</button>
 </div>
 <!-- Grado & Tipo Selector Row -->
 <div class="grid grid-cols-2 gap-2 pt-1">
 <div class="relative">
 <select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md py-2 pl-3 pr-8 rounded-lg focus:outline-none" id="grade-filter">
 <option value="all">Todos los grados</option>
-<option value="4to">4to Primaria</option>
-<option value="5to">5to Primaria</option>
-<option value="6to">6to Primaria</option>
+<option value="4to">4to Secundaria</option>
+<option value="5to">5to Secundaria</option>
+<option value="6to">6to Secundaria</option>
 </select>
 <span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
 </div>
@@ -106,23 +106,23 @@
 <article class="resource-card bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col transition-all hover:shadow-md" data-cat="guias" data-grade="5to" data-subject="ciencias" data-type="guia">
 <!-- Media Preview Header -->
 <div class="relative w-full h-44 bg-surface-container overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Educational visual diagram showing the hydrological water cycle with precipitation, condensation, and evaporation, painted in soft botanical watercolor textures of azure blues and earthy slate tones suited for elementary school science class." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuym35r9jnVPQ-cB6sKmBuIGwhhYDYBRebw0xrfD9WyI79uIxcpphfp0gPP1SGirVUlZok3O2SF3FOB4TsYsmYj2zmkQRqH9wF7gdqiL3KmH-4KCzaMvr0oCmhfa7O1D-lgEWwQmmLcM3_Rx6FH32xQeW1fRLQeBit7rHxfCw3XfmHETt00FHWKm--xq-MhW3q4xsP5knfxwPTzb8d_CdbJMmu5YvJlKyPKLj3F0_DfQ3JtWqiQQE"/>
+<img class="w-full h-full object-cover" data-alt="Imagen ilustrativa de redes de computadoras" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent"></div>
 <!-- Top Tags Overlay -->
 <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
 <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold shadow-sm">
 <span class="material-symbols-outlined text-[14px]">science</span>
-            Ciencias Naturales
+            Fundamentos de Redes
           </span>
 <span class="px-2.5 py-1 rounded-full bg-primary-container/90 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-semibold">
-            5to Primaria
+            5to Secundaria
           </span>
 </div>
 <!-- Quick Spec Badge Overlay -->
 <div class="absolute bottom-2.5 left-3 flex items-center gap-2">
 <span class="inline-flex items-center gap-1 text-on-primary font-label-sm text-label-sm drop-shadow">
 <span class="material-symbols-outlined text-[16px]">description</span>
-            3 páginas • Experimento de laboratorio
+            3 páginas • Práctica de laboratorio
           </span>
 </div>
 </div>
@@ -130,11 +130,10 @@
 <div class="p-4 flex flex-col gap-3">
 <div>
 <h2 class="font-headline-sm text-title-lg text-primary leading-snug font-bold">
-            Guía Didáctica y Ficha de Experimento: El Ciclo Hidrológico
+            Guía de Práctica: Mi primera red local con cables UTP
           </h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-            Secuencia completa para armar un terrario condensador en botella plástica reutilizable. Fomenta el método científico con registro de hipótesis y conclusiones guiadas.
-          </p>
+            Paso a paso para conectar dos computadoras a un switch, asignar direcciones IP y comprobar la conexión con ping. Incluye registro de resultados.</p>
 </div>
 <!-- Technical Metadata Grid -->
 <div class="bg-surface-container-low rounded-xl p-3 grid grid-cols-2 gap-2 text-on-surface">
@@ -178,15 +177,15 @@
 <!-- CARD 2: Fracciones Equivalentes -->
 <article class="resource-card bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col transition-all hover:shadow-md" data-cat="guias" data-grade="4to" data-subject="matematicas" data-type="rubrica">
 <div class="relative w-full h-44 bg-surface-container overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Classroom assessment worksheet flatlay featuring colorful fraction bars, geometric strips, mathematical evaluation matrices, and tidy handwritten teacher annotations on warm beige linen desk background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAuEwuv2lRmFAXUUvUq7SPGEqNaWFpYOeOskwbVUr9e5AdjxldD28rO6nufnjwsPuTo4TaDoTMOeeRMadPkPu_BlCy1EL0bO7LFDGTX2jVV7f_Md6oKv37yUmilNoK1yL6nOpZqP7UjL7wHy1kQvLcHkt8nPap-9qkQ8OuYFums8b4Bglpi0MZ1F9VqKJYwq07YpUzzosG7ZeeR76MDvXYxGjgu0b7YcoZhVQiAHM3LHjQThYDWEc"/>
+<img class="w-full h-full object-cover" data-alt="Imagen ilustrativa de redes de computadoras" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent"></div>
 <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
 <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">
-<span class="material-symbols-outlined text-[14px]">calculate</span>
-            Matemáticas
+<span class="material-symbols-outlined text-[14px]">lan</span>
+            Direccionamiento IP
           </span>
 <span class="px-2.5 py-1 rounded-full bg-primary-container/90 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-semibold">
-            4to &amp; 5to Primaria
+            4to &amp; 5to Secundaria
           </span>
 </div>
 <div class="absolute bottom-2.5 left-3 flex items-center gap-2">
@@ -199,11 +198,10 @@
 <div class="p-4 flex flex-col gap-3">
 <div>
 <h2 class="font-headline-sm text-title-lg text-primary leading-snug font-bold">
-            Rúbrica de Evaluación Formativa: Comprensión de Fracciones Equivalentes
+            Rúbrica de Evaluación: Subredes y Direccionamiento IPv4
           </h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-            Matriz de desempeño analítica alineada al currículo por competencias. Evalúa representación gráfica, amplificación, simplificación y resolución de situaciones cotidianas.
-          </p>
+            Matriz de desempeño que evalúa el cálculo de máscaras, rangos de hosts, direcciones de red y broadcast, y la configuración de equipos.</p>
 </div>
 <div class="bg-surface-container-low rounded-xl p-3 grid grid-cols-2 gap-2 text-on-surface">
 <div class="flex items-center gap-2">
@@ -244,33 +242,32 @@
 <!-- CARD 3: Coherencia y Conectores -->
 <article class="resource-card bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col transition-all hover:shadow-md" data-cat="imprimibles" data-grade="6to" data-subject="lengua" data-type="ficha">
 <div class="relative w-full h-44 bg-surface-container overflow-hidden">
-<img class="w-full h-full object-cover grayscale" data-alt="High contrast clean monochrome graphic printout worksheet for school children with punctuation marks, quotation bubbles, sentence diagram trees, minimal black and white aesthetic on high brightness paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJV3bcst4Ylw7lc18uJji7L6axdjcM0lQiYKmyjOua4lBaxYHDlcjufT5brk41h0OPs8aL4N_Pjx1ypOKkBr1a7GVxNzx1Dcte9mWIY4KutCdbdKKeJ4wMtlCjcXyZYOlxPgKYQ5UlSjDa35tj7cZwsuniHZr054JZmdhwT3kqGMrwnr9WISwtRruiC2ikb6J9R0OpBK5r8b4bCww63F3HI_-VBwozu3LvXHyI74jEqETQHdKahRM"/>
+<img class="w-full h-full object-cover grayscale" data-alt="Imagen ilustrativa de redes de computadoras" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary-container/85 via-transparent to-transparent"></div>
 <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
 <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-sm">
 <span class="material-symbols-outlined text-[14px]">menu_book</span>
-            Lengua Española
+            Cableado Estructurado
           </span>
 <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold shadow-sm">
-<span class="material-symbols-outlined text-[14px]">eco</span>
+<span class="material-symbols-outlined text-[14px]">hub</span>
             Eco-Tinta B/N
           </span>
 </div>
 <div class="absolute bottom-2.5 left-3 flex items-center gap-2">
 <span class="inline-flex items-center gap-1 text-on-primary font-label-sm text-label-sm drop-shadow">
 <span class="material-symbols-outlined text-[16px]">print</span>
-            6to Primaria • Ficha Imprimible sin escala de grises
+            6to Secundaria • Ficha Imprimible sin escala de grises
           </span>
 </div>
 </div>
 <div class="p-4 flex flex-col gap-3">
 <div>
 <h2 class="font-headline-sm text-title-lg text-primary leading-snug font-bold">
-            Ficha de Ejercicios Prácticos: Coherencia y Conectores en la Oración
+            Ficha de Ejercicios: Capas del Modelo OSI y Cableado T568B
           </h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-            Diseñada especialmente en monocromo limpio para fotocopiado económico escolar. Ejercicios de conectores causales, temporales y adversativos en párrafos expositivos.
-          </p>
+            Diseñada en monocromo para fotocopiado económico. Ejercicios de identificación de capas OSI, dispositivos y orden de colores del cable UTP.</p>
 </div>
 <div class="bg-surface-container-low rounded-xl p-3 grid grid-cols-2 gap-2 text-on-surface">
 <div class="flex items-center gap-2">
@@ -311,12 +308,12 @@
 <!-- CARD 4: Línea de Tiempo Dominicanas -->
 <article class="resource-card bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col transition-all hover:shadow-md" data-cat="fichas" data-grade="5to" data-subject="sociales" data-type="infografia">
 <div class="relative w-full h-44 bg-surface-container overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="High resolution educational infographic wall chart depicting historical timeline of Dominican Republic independence, portraits of founding fathers Juan Pablo Duarte, Francisco del Rosario Sanchez and Matias Ramon Mella with clean modern pedagogical typography and historic emblems." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh6GRNs9sGauxH-dOrE7qqVUv9l7mhLlXC9baBtJWIT6eCjabRNWJevNkGNDek4hFjCMtqzaw1tMJw_6fHRNqYws4vMDYBpIXUFmrSFPfJOzS93selR_cvwQ1qyiHWg_O32TFN4dcW0zlg8zVai-tkl9ITcvkp9Jq6lve-U46bCF_dgFVQSXnKQikSB9CzVhlfx8JtRvi1fLEeMJpbCF1LnBu5kNNEPb3CZ0EAJjwgageSv5zivn8"/>
+<img class="w-full h-full object-cover" data-alt="Imagen ilustrativa de redes de computadoras" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent"></div>
 <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
 <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold shadow-sm">
-<span class="material-symbols-outlined text-[14px]">public</span>
-            Ciencias Sociales
+<span class="material-symbols-outlined text-[14px]">security</span>
+            Seguridad en Redes
           </span>
 <span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
             Infografía Mural
@@ -325,18 +322,17 @@
 <div class="absolute bottom-2.5 left-3 flex items-center gap-2">
 <span class="inline-flex items-center gap-1 text-on-primary font-label-sm text-label-sm drop-shadow">
 <span class="material-symbols-outlined text-[16px]">view_timeline</span>
-            A3 / Tabloide • Efemérides Patrias Dominicanas
+            A3 / Tabloide • Las 7 capas del modelo OSI
           </span>
 </div>
 </div>
 <div class="p-4 flex flex-col gap-3">
 <div>
 <h2 class="font-headline-sm text-title-lg text-primary leading-snug font-bold">
-            Línea de Tiempo Ilustrada: Efemérides Dominicanas y Padres de la Patria
+            Póster: Modelo OSI y Encapsulamiento de Datos
           </h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-            Póster de aula en alta resolución vectorial. Presenta los hitos de 1844, la gesta de La Trinitaria y el ideario duartiano con infografías explicativas para el salón de clases.
-          </p>
+            Póster de aula que resume las 7 capas, su función, sus protocolos más comunes y la unidad de datos de cada una.</p>
 </div>
 <div class="bg-surface-container-low rounded-xl p-3 grid grid-cols-2 gap-2 text-on-surface">
 <div class="flex items-center gap-2">

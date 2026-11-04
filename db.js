@@ -6,7 +6,7 @@
  * el almacenamiento local del navegador por llamadas a una API REST / Supabase.
  */
 
-const DB_NAME = 'AulaAbiertaDB';
+const DB_NAME = 'ElRedesDB';
 const DB_VERSION = 1;
 
 class StorageService {
@@ -90,203 +90,206 @@ class StorageService {
     const articlesCount = await this._countRaw('articles');
     if (articlesCount === 0) {
       // Sembrar datos educativos iniciales
+      const AUTHOR = 'Lic. Adamaris Gratero';
+      const ROLE = 'Docente de Redes';
       const defaultArticles = [
         {
-          id: 'art-ciclo-agua',
-          title: 'El ciclo del agua y su vital importancia para la vida',
-          summary: 'Una travesía pedagógica para comprender el viaje inagotable del recurso más preciado de nuestra isla y el planeta.',
-          subject: 'Ciencias Naturales',
-          grade: '5to Primaria',
+          id: 'art-modelo-osi',
+          title: 'El modelo OSI: las 7 capas que explican cómo viaja la información',
+          summary: 'Una guía para entender qué ocurre desde que das clic en "enviar" hasta que el mensaje llega al otro lado de la red.',
+          subject: 'Fundamentos de Redes',
+          grade: '6to Secundaria',
           readTime: 8,
           status: 'published', // 'published', 'draft', 'scheduled'
-          coverImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
-          coverAlt: 'Esquema y paisaje del ciclo hidrológico en la naturaleza',
-          author: 'Lic. Adamaris Gratero',
-          role: 'Docente de Redes',
-          views: 2450,
-          createdAt: new Date('2025-03-14T08:30:00Z').getTime(),
+          coverImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+          coverAlt: 'Red global de conexiones luminosas sobre el planeta',
+          author: AUTHOR,
+          role: ROLE,
+          views: 1250,
+          createdAt: new Date('2026-10-20T08:30:00Z').getTime(),
           content: `
-            <div style="background:linear-gradient(135deg,#dbeafe,#f0fdf4);padding:20px 24px;border-radius:12px;margin-bottom:24px;border-left:4px solid #2563eb;">
-              <p style="margin:0 0 8px;font-weight:700;color:#1d4ed8;">📋 Ficha Curricular — Alineada al Currículo MINERD</p>
-              <p style="margin:4px 0;"><strong>Competencia fundamental:</strong> Científica y Tecnológica</p>
-              <p style="margin:4px 0;"><strong>Eje temático:</strong> La Tierra y el Universo — Ciclos naturales</p>
-              <p style="margin:4px 0;"><strong>Indicador de logro:</strong> Describe las fases del ciclo del agua y explica su importancia para los ecosistemas locales.</p>
-              <p style="margin:4px 0;"><strong>Grado:</strong> 5to Primaria &nbsp;|&nbsp; <strong>Duración:</strong> 3 sesiones de 45 min</p>
+            <div style="background:linear-gradient(135deg,#dbeafe,#f1f5f9);padding:20px 24px;border-radius:12px;margin-bottom:24px;border-left:4px solid #2563eb;">
+              <p style="margin:0 0 8px;font-weight:700;color:#1d4ed8;">📋 Ficha de la clase</p>
+              <p style="margin:4px 0;"><strong>Módulo:</strong> Redes de computadoras</p>
+              <p style="margin:4px 0;"><strong>Objetivo:</strong> Identificar las 7 capas del modelo OSI y explicar la función de cada una.</p>
+              <p style="margin:4px 0;"><strong>Grado:</strong> 6to Secundaria &nbsp;|&nbsp; <strong>Duración:</strong> 2 sesiones de 45 min</p>
             </div>
 
-            <h2>1. ¿De dónde viene la lluvia que riega nuestros campos?</h2>
-            <p>Cada vez que observamos un aguacero vespertino sobre Santo Domingo, el verde valle del Cibao o las aguas cristalinas del río Yaque del Norte, estamos presenciando una obra maestra de la naturaleza que lleva miles de millones de años en marcha: <strong>el ciclo del agua</strong>.</p>
-            <p>Para los estudiantes de primaria en nuestra región insular, comprender este ciclo no es solo una lección de ciencias; es entender la columna vertebral de nuestra agricultura, nuestro clima templado por los alisios y el agua potable que llega a nuestros hogares y aulas escolares.</p>
+            <h2>1. ¿Por qué necesitamos un modelo de capas?</h2>
+            <p>Cuando envías un mensaje por WhatsApp intervienen la aplicación, el sistema operativo, tu tarjeta de red, el cable o la señal Wi-Fi, el router de tu casa y decenas de equipos de tu proveedor de internet. Si todo eso fuera un solo bloque, nadie podría arreglarlo ni mejorarlo. El <strong>modelo OSI</strong> (Interconexión de Sistemas Abiertos), publicado por la ISO, divide el problema en <strong>7 capas</strong>: cada una hace un trabajo concreto y solo habla con la capa de arriba y la de abajo.</p>
 
             <blockquote style="border-left:4px solid #2563eb;padding:16px 20px;background:#eff6ff;border-radius:0 8px 8px 0;margin:24px 0;">
-              <p style="font-style:italic;margin:0 0 8px;">«El agua que bebió un dinosaurio hace millones de años es exactamente la misma molécula que hoy acaricia las hojas de nuestros manglares dominicanos.»</p>
-              <cite style="color:#64748b;">— Principio de Conservación Hidrológica</cite>
+              <p style="font-style:italic;margin:0 0 8px;">«Dividir un problema grande en capas pequeñas es la mejor forma de entenderlo y de repararlo.»</p>
+              <cite style="color:#64748b;">— Idea central del diseño de redes por capas</cite>
             </blockquote>
 
-            <h2>2. Las 4 fases clave del ciclo continuo</h2>
-            <p>El agua se transforma de líquido a gas y de gas a sólido en una danza ininterrumpida:</p>
+            <h2>2. Las 7 capas, de arriba hacia abajo</h2>
             <ol>
-              <li><strong>Evaporación:</strong> El calor del sol calienta el agua superficial de los ríos, lagos y el inmenso mar Caribe, transformándola en vapor invisible que asciende a la atmósfera. En República Dominicana, con más de 1,600 km de costa, la evaporación es intensa todo el año.</li>
-              <li><strong>Condensación:</strong> Al enfriarse en las capas altas, el vapor de agua se agrupa en diminutas gotas formando las nubes y la neblina matutina que cubre nuestras cordilleras Central y Septentrional.</li>
-              <li><strong>Precipitación:</strong> Cuando las nubes se saturan, las gotas caen por gravedad en forma de lluvia, llovizna o, en el Pico Duarte, ocasionalmente granizo. Nuestro país recibe un promedio de 1,500 mm de lluvia al año.</li>
-              <li><strong>Recolección (Escorrentía e Infiltración):</strong> El agua alimenta los acuíferos subterráneos, fluye por las cuencas de los 20 ríos principales y desemboca de vuelta en el océano, reiniciando el ciclo.</li>
+              <li><strong>Capa 7 — Aplicación:</strong> donde están los servicios que usa la persona: navegador web (HTTP/HTTPS), correo (SMTP), nombres de dominio (DNS).</li>
+              <li><strong>Capa 6 — Presentación:</strong> traduce, comprime y cifra los datos para que ambos extremos los entiendan (por ejemplo, TLS, JPEG, UTF-8).</li>
+              <li><strong>Capa 5 — Sesión:</strong> abre, mantiene y cierra el diálogo entre dos equipos.</li>
+              <li><strong>Capa 4 — Transporte:</strong> divide los datos en <em>segmentos</em> y controla su entrega. TCP es confiable; UDP es más rápido pero sin garantías.</li>
+              <li><strong>Capa 3 — Red:</strong> maneja las direcciones IP y decide la ruta. Aquí trabaja el <em>router</em> y la unidad de datos es el <em>paquete</em>.</li>
+              <li><strong>Capa 2 — Enlace de datos:</strong> entrega <em>tramas</em> dentro de una misma red usando direcciones MAC. Aquí trabaja el <em>switch</em>.</li>
+              <li><strong>Capa 1 — Física:</strong> cables, fibra, ondas de radio y señales eléctricas; transporta <em>bits</em>. Aquí trabajan los cables y los hubs.</li>
             </ol>
 
-            <div style="background:#ecfdf5;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #a7f3d0;">
-              <h4 style="margin:0 0 8px;color:#065f46;">🌿 ¿Sabías que...?</h4>
-              <p style="margin:0;">La Cordillera Central de la República Dominicana es conocida como la <em>«Madre de las Aguas»</em>. Allí nacen los ríos Yaque del Norte, Yaque del Sur, Artibonito y Yuna, que abastecen a más del 70% de la población dominicana.</p>
+            <div style="background:#f3e8ff;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #d8b4fe;">
+              <h4 style="margin:0 0 8px;color:#6b21a8;">💡 Truco para memorizarlas</h4>
+              <p style="margin:0;">De la capa 7 a la 1: <strong>A</strong>plicación, <strong>P</strong>resentación, <strong>S</strong>esión, <strong>T</strong>ransporte, <strong>R</strong>ed, <strong>E</strong>nlace, <strong>F</strong>ísica. Una frase: <em>«A Papá Siempre Te Ríe En Familia»</em>.</p>
             </div>
 
-            <h2>3. Secuencia Didáctica: El Experimento de la Bolsa Viajera</h2>
-            <p>Esta actividad permite a los estudiantes <strong>observar las 4 fases del ciclo en tiempo real</strong> usando materiales de bajo costo disponibles en cualquier escuela dominicana.</p>
+            <h2>3. Encapsulamiento: el viaje de un mensaje</h2>
+            <p>Al enviar datos, cada capa le agrega su propia información de control (una <em>cabecera</em>) a lo que recibe de la capa superior. A este proceso se le llama <strong>encapsulamiento</strong>: datos → segmento → paquete → trama → bits. En el equipo receptor ocurre lo contrario (<em>desencapsulamiento</em>) hasta que la aplicación recibe el mensaje original.</p>
 
-            <div style="background:#fff;padding:20px;border-radius:10px;border:1px solid #e2e8f0;margin:16px 0;">
-              <h4 style="color:#1e40af;margin-top:0;">🧪 Materiales (por equipo de 4 estudiantes)</h4>
-              <ul>
-                <li>1 bolsa plástica tipo ziploc transparente</li>
-                <li>1 taza de agua</li>
-                <li>Colorante azul alimentario (2 gotas)</li>
-                <li>Cinta adhesiva fuerte</li>
-                <li>1 marcador permanente</li>
-              </ul>
+            <h2>4. Actividad práctica</h2>
+            <ul>
+              <li>Abre el símbolo del sistema y ejecuta <code>ping 8.8.8.8</code>: ¿en qué capa trabaja este comando? (Pista: usa direcciones IP).</li>
+              <li>Ejecuta <code>ipconfig /all</code> (Windows) o <code>ip a</code> (Linux) y localiza tu dirección MAC y tu dirección IP: ¿qué capa usa cada una?</li>
+              <li>Con un cable desconectado, comprueba qué capa falla primero y cuál es el síntoma.</li>
+            </ul>
 
-              <h4 style="color:#1e40af;">📝 Procedimiento (Sesión 1 — 45 min)</h4>
-              <ol>
-                <li>Verter el agua con colorante en la bolsa y sellarla herméticamente.</li>
-                <li>Con el marcador, dibujar un sol arriba, nubes en el medio y el mar abajo.</li>
-                <li>Pegar la bolsa en una ventana que reciba sol directo (orientación sur ideal).</li>
-                <li>Registrar en el cuaderno: hora, temperatura del aula, estado de la bolsa.</li>
-                <li><strong>Predicción:</strong> Cada equipo escribe qué cree que pasará en 2 horas.</li>
-              </ol>
-
-              <h4 style="color:#1e40af;">🔍 Observación (Sesión 2 — día siguiente, 45 min)</h4>
-              <ol>
-                <li>Observar las gotas formadas en la parte superior de la bolsa (condensación).</li>
-                <li>Dibujar en el cuaderno lo que ven y etiquetar cada fase.</li>
-                <li>Comparar con la predicción: ¿acertaron? ¿Qué los sorprendió?</li>
-                <li>Discusión guiada: ¿Qué pasaría si tapamos el sol? ¿Y si la bolsa estuviera abierta?</li>
-              </ol>
-            </div>
-
-            <h2>4. Actividad para la Familia</h2>
-            <div style="background:#fef3c7;padding:16px 20px;border-radius:10px;margin:16px 0;border:1px solid #fcd34d;">
-              <p style="margin:0 0 12px;font-weight:700;color:#92400e;">🏠 Misión en Casa (con un adulto acompañante)</p>
-              <ol style="margin:0;">
-                <li>Recorrer la casa identificando dónde se <em>usa</em> agua y dónde se <em>desperdicia</em>.</li>
-                <li>Llenar una tabla con 3 columnas: lugar, uso, cantidad estimada.</li>
-                <li>Proponer 3 acciones concretas para ahorrar agua en su hogar.</li>
-                <li>Opcional: Tomar una foto del grifo que más gotea y traerla al aula.</li>
-              </ol>
-            </div>
-
-            <h2>5. Síntesis y Compromiso Ciudadano</h2>
-            <p>El ciclo hidrológico no es estático; se ve directamente impactado por la deforestación de nuestras lomas, la contaminación por plásticos en cañadas y ríos, y el calentamiento global. Cada árbol que sembramos en nuestras escuelas es un regulador del ciclo; cada botella plástica que recogemos de un arroyo es una barrera menos para el flujo natural del agua.</p>
-
-            <div style="background:linear-gradient(135deg,#ede9fe,#dbeafe);padding:20px;border-radius:10px;margin:24px 0;">
-              <h4 style="margin:0 0 12px;color:#5b21b6;">📊 Rúbrica de Evaluación Formativa</h4>
-              <table style="width:100%;border-collapse:collapse;font-size:14px;">
-                <thead>
-                  <tr style="background:#8b5cf6;color:#fff;">
-                    <th style="padding:8px;text-align:left;border-radius:6px 0 0 0;">Criterio</th>
-                    <th style="padding:8px;text-align:center;">Avanzado (4)</th>
-                    <th style="padding:8px;text-align:center;">Satisfactorio (3)</th>
-                    <th style="padding:8px;text-align:center;border-radius:0 6px 0 0;">En proceso (2)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="background:#f5f3ff;">
-                    <td style="padding:8px;font-weight:600;">Identifica las 4 fases</td>
-                    <td style="padding:8px;text-align:center;">Nombra y explica las 4 con ejemplos locales</td>
-                    <td style="padding:8px;text-align:center;">Nombra las 4 fases correctamente</td>
-                    <td style="padding:8px;text-align:center;">Identifica 2-3 fases</td>
-                  </tr>
-                  <tr>
-                    <td style="padding:8px;font-weight:600;">Experimento</td>
-                    <td style="padding:8px;text-align:center;">Registra y explica relación causa-efecto</td>
-                    <td style="padding:8px;text-align:center;">Realiza el experimento y registra</td>
-                    <td style="padding:8px;text-align:center;">Realiza el experimento con ayuda</td>
-                  </tr>
-                  <tr style="background:#f5f3ff;">
-                    <td style="padding:8px;font-weight:600;">Compromiso ambiental</td>
-                    <td style="padding:8px;text-align:center;">Propone y ejecuta acciones en su entorno</td>
-                    <td style="padding:8px;text-align:center;">Propone acciones concretas</td>
-                    <td style="padding:8px;text-align:center;">Reconoce la importancia del cuidado</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div style="background:#eff6ff;padding:16px 20px;border-radius:10px;margin:16px 0;border:1px solid #bae6fd;">
-              <p style="margin:0;font-weight:600;color:#1d4ed8;">📖 Referencias Curriculares</p>
-              <ul style="margin:8px 0 0;color:#334155;">
-                <li>Diseño Curricular Nivel Primario, MINERD (2014), Área Ciencias de la Naturaleza.</li>
-                <li>Ordenanza 02-2015, sobre el currículo revisado del Nivel Primario.</li>
-                <li>UNESCO (2023). Educación para el Desarrollo Sostenible — ODS 6: Agua limpia.</li>
-              </ul>
-            </div>
+            <h2>Para pensar</h2>
+            <p>Si una página web no carga pero <code>ping</code> a una IP sí responde, ¿en qué capas es más probable que esté el problema? Justifica tu respuesta.</p>
           `,
-          tags: ['Biodiversidad', 'MINERD', 'EducaciónAmbiental', 'Agua']
+          tags: ['ModeloOSI', 'Redes', 'Fundamentos', 'Encapsulamiento']
         },
         {
-          id: 'art-fracciones-equiv',
-          title: 'Comprendiendo las fracciones equivalentes: método visual para el aula y el hogar',
-          summary: 'Estrategias gráficas paso a paso para desmitificar las fracciones y construir intuición matemática sólida.',
-          subject: 'Matemáticas',
-          grade: '6to Primaria',
+          id: 'art-direccionamiento-ip',
+          title: 'Direccionamiento IPv4 y subredes: aprende a dividir una red paso a paso',
+          summary: 'Qué es una dirección IP, cómo se lee una máscara y cómo se divide una red /24 en cuatro subredes.',
+          subject: 'Direccionamiento IP',
+          grade: '6to Secundaria',
+          readTime: 9,
+          status: 'published',
+          coverImage: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
+          coverAlt: 'Servidores y cables de red en un centro de datos',
+          author: AUTHOR,
+          role: ROLE,
+          views: 980,
+          createdAt: new Date('2026-10-27T10:15:00Z').getTime(),
+          content: `
+            <h2>1. ¿Qué es una dirección IPv4?</h2>
+            <p>Una dirección IPv4 es un número de <strong>32 bits</strong> escrito en cuatro grupos de 8 bits (octetos) separados por puntos, por ejemplo <code>192.168.10.25</code>. Cada octeto va de 0 a 255. La dirección tiene dos partes: la <strong>parte de red</strong> (a qué red pertenece) y la <strong>parte de host</strong> (qué equipo es dentro de esa red). La <strong>máscara de subred</strong> indica dónde termina una y empieza la otra.</p>
+
+            <h2>2. Máscara y notación CIDR</h2>
+            <p>La máscara <code>255.255.255.0</code> tiene 24 bits en 1, por eso se escribe <code>/24</code>. Con 8 bits para hosts hay 2<sup>8</sup> = 256 direcciones, pero se restan 2: la <em>dirección de red</em> (primera) y la de <em>broadcast</em> (última). Quedan <strong>254 hosts utilizables</strong>.</p>
+            <blockquote style="border-left:4px solid #2563eb;padding:16px 20px;background:#eff6ff;border-radius:0 8px 8px 0;margin:24px 0;">
+              <p style="margin:0;">Fórmula: hosts utilizables = 2<sup>h</sup> − 2, donde <strong>h</strong> es la cantidad de bits de host.</p>
+            </blockquote>
+
+            <h2>3. Direcciones privadas</h2>
+            <ul>
+              <li><code>10.0.0.0/8</code> (10.0.0.0 – 10.255.255.255)</li>
+              <li><code>172.16.0.0/12</code> (172.16.0.0 – 172.31.255.255)</li>
+              <li><code>192.168.0.0/16</code> (192.168.0.0 – 192.168.255.255)</li>
+            </ul>
+            <p>Son las que usan las redes de casas, escuelas y oficinas; el router las traduce a una dirección pública mediante NAT.</p>
+
+            <h2>4. Ejemplo resuelto: dividir 192.168.10.0/24 en 4 subredes</h2>
+            <p>Necesitamos 4 subredes, así que "prestamos" 2 bits de host (2<sup>2</sup> = 4). La nueva máscara es <code>/26</code> = <code>255.255.255.192</code>. Quedan 6 bits de host: 2<sup>6</sup> − 2 = <strong>62 hosts por subred</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;margin:16px 0;">
+              <thead><tr style="background:#e2e8f0;text-align:left;"><th style="padding:8px;">Subred</th><th style="padding:8px;">Dirección de red</th><th style="padding:8px;">Rango utilizable</th><th style="padding:8px;">Broadcast</th></tr></thead>
+              <tbody>
+                <tr><td style="padding:8px;">1</td><td style="padding:8px;">192.168.10.0/26</td><td style="padding:8px;">.1 – .62</td><td style="padding:8px;">192.168.10.63</td></tr>
+                <tr><td style="padding:8px;">2</td><td style="padding:8px;">192.168.10.64/26</td><td style="padding:8px;">.65 – .126</td><td style="padding:8px;">192.168.10.127</td></tr>
+                <tr><td style="padding:8px;">3</td><td style="padding:8px;">192.168.10.128/26</td><td style="padding:8px;">.129 – .190</td><td style="padding:8px;">192.168.10.191</td></tr>
+                <tr><td style="padding:8px;">4</td><td style="padding:8px;">192.168.10.192/26</td><td style="padding:8px;">.193 – .254</td><td style="padding:8px;">192.168.10.255</td></tr>
+              </tbody>
+            </table>
+            <p>El "salto" entre subredes es 256 − 192 = <strong>64</strong>, por eso las redes comienzan en 0, 64, 128 y 192.</p>
+
+            <div style="background:#f3e8ff;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #d8b4fe;">
+              <h4 style="margin:0 0 8px;color:#6b21a8;">🧪 Practica</h4>
+              <p style="margin:0;">Divide <code>192.168.20.0/24</code> en 8 subredes. ¿Cuál es la nueva máscara, cuántos hosts tiene cada una y cuál es el rango de la tercera subred?</p>
+            </div>
+
+            <h2>5. Errores comunes</h2>
+            <ul>
+              <li>Asignar la dirección de red o la de broadcast a un equipo.</li>
+              <li>Poner dos equipos con la misma IP (conflicto de direcciones).</li>
+              <li>Configurar una puerta de enlace que no pertenece a la misma subred del equipo.</li>
+            </ul>
+          `,
+          tags: ['IPv4', 'Subredes', 'CIDR', 'Direccionamiento']
+        },
+        {
+          id: 'art-cableado-estructurado',
+          title: 'Cableado estructurado: cómo se organiza la red física de un edificio',
+          summary: 'Subsistemas, categorías de cable UTP y el orden de colores T568B para armar un cable de red correctamente.',
+          subject: 'Cableado Estructurado',
+          grade: '6to Secundaria',
           readTime: 7,
           status: 'published',
-          coverImage: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=1200&q=80',
-          coverAlt: 'Regletas y círculos fraccionarios manipulativos',
-          author: 'Lic. Marcos Peña',
-          role: 'Docente de Matemáticas',
-          views: 1890,
-          createdAt: new Date('2025-03-11T10:15:00Z').getTime(),
+          coverImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80',
+          coverAlt: 'Rack de comunicaciones con cables de red ordenados',
+          author: AUTHOR,
+          role: ROLE,
+          views: 760,
+          createdAt: new Date('2026-10-30T12:00:00Z').getTime(),
           content: `
-            <h2>¿Por qué 1/2 es igual a 2/4 y a 4/8?</h2>
-            <p>El concepto de equivalencia en fracciones suele ser una de las principales barreras pedagógicas cuando se aborda de forma puramente abstracta. Utilizando el método Singapur (Concreto-Pictórico-Abstracto), los niños pueden ver y tocar las divisiones antes de operar con números.</p>
-            <p>Presentar un pastel circular dividido en 2 mitades frente a otro dividido en 4 cuartos permite comprender de inmediato que la cantidad de superficie ocupada es idéntica.</p>
+            <h2>1. ¿Qué es el cableado estructurado?</h2>
+            <p>Es un sistema organizado y normalizado de cables, conectores y paneles que lleva voz, datos y video por todo un edificio. Se rige por normas como <strong>TIA/EIA-568</strong>, lo que permite que equipos de distintos fabricantes funcionen juntos y que la red sea fácil de ampliar y reparar.</p>
+
+            <h2>2. Los subsistemas</h2>
+            <ol>
+              <li><strong>Área de trabajo:</strong> donde están las computadoras y los tomas de pared.</li>
+              <li><strong>Cableado horizontal:</strong> une cada toma con el cuarto de telecomunicaciones del mismo piso. Longitud máxima del enlace permanente: <strong>90 m</strong>.</li>
+              <li><strong>Cableado vertical (backbone):</strong> conecta pisos y edificios entre sí, normalmente con fibra óptica.</li>
+              <li><strong>Cuarto de telecomunicaciones:</strong> alberga rack, patch panel y switches.</li>
+              <li><strong>Cuarto de equipos y acometida:</strong> servidores y entrada de los servicios del proveedor.</li>
+            </ol>
+            <p>Sumando los cables de parcheo (hasta 10 m en total), el canal completo no debe pasar de <strong>100 m</strong>.</p>
+
+            <h2>3. Categorías de cable UTP</h2>
+            <table style="width:100%;border-collapse:collapse;margin:16px 0;">
+              <thead><tr style="background:#e2e8f0;text-align:left;"><th style="padding:8px;">Categoría</th><th style="padding:8px;">Velocidad típica</th><th style="padding:8px;">Uso común</th></tr></thead>
+              <tbody>
+                <tr><td style="padding:8px;">Cat5e</td><td style="padding:8px;">1 Gbps (100 m)</td><td style="padding:8px;">Redes de oficina y escuela</td></tr>
+                <tr><td style="padding:8px;">Cat6</td><td style="padding:8px;">1 Gbps (100 m) / 10 Gbps (hasta 55 m)</td><td style="padding:8px;">Redes actuales</td></tr>
+                <tr><td style="padding:8px;">Cat6a</td><td style="padding:8px;">10 Gbps (100 m)</td><td style="padding:8px;">Centros de datos y backbone corto</td></tr>
+              </tbody>
+            </table>
+
+            <h2>4. Orden de colores T568B</h2>
+            <p>Mirando el conector RJ-45 con la lengüeta hacia abajo y los contactos hacia ti, de izquierda a derecha:</p>
+            <ol>
+              <li>Blanco/naranja</li><li>Naranja</li><li>Blanco/verde</li><li>Azul</li><li>Blanco/azul</li><li>Verde</li><li>Blanco/marrón</li><li>Marrón</li>
+            </ol>
+            <div style="background:#f3e8ff;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #d8b4fe;">
+              <h4 style="margin:0 0 8px;color:#6b21a8;">🛠️ Práctica de taller</h4>
+              <p style="margin:0;">Arma un cable <strong>directo</strong> (T568B en ambos extremos) y pruébalo con el probador de cables. Luego arma uno <strong>cruzado</strong> (T568B en un extremo y T568A en el otro) y explica en qué casos se usaba.</p>
+            </div>
+
+            <h2>5. Buenas prácticas</h2>
+            <ul>
+              <li>No doblar el cable con curvas muy cerradas ni jalarlo con fuerza.</li>
+              <li>Separar los cables de datos de los cables de energía.</li>
+              <li>Etiquetar ambos extremos de cada cable y cada puerto del patch panel.</li>
+              <li>Probar y documentar cada enlace al terminar.</li>
+            </ul>
           `,
-          tags: ['Matemáticas', 'MétodoCPA', 'GeometríaLúdica']
+          tags: ['Cableado', 'UTP', 'T568B', 'Taller']
         },
         {
-          id: 'art-oraciones-claras',
-          title: 'Cómo construir oraciones claras y coherentes en la escuela primaria',
-          summary: 'Guía de sintaxis lúdica para niños: identificación del sujeto y predicado mediante fichas manipulables.',
-          subject: 'Lengua Española',
-          grade: '4to Primaria',
-          readTime: 4,
-          status: 'published',
-          coverImage: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80',
-          coverAlt: 'Cuaderno escolar con ejercicios caligráficos y gramaticales',
-          author: 'Mtra. Altagracia Díaz',
-          role: 'Docente de Letras',
-          views: 940,
-          createdAt: new Date('2025-03-08T12:00:00Z').getTime(),
-          content: `
-            <h2>El juego de los bloques sintácticos</h2>
-            <p>Aprender la concordancia entre género y número es mucho más sencillo cuando los alumnos construyen oraciones como si fuesen trenes con vagones: ¿Quién realiza la acción? ¿Qué acción realiza? ¿Dónde o cómo ocurre?</p>
-          `,
-          tags: ['LenguaEspañola', 'RedacciónInicial', 'Gramática']
-        },
-        {
-          id: 'art-manglares-borrador',
-          title: 'Ecosistemas Costeros y Manglares de Samaná',
-          summary: 'Una secuencia reflexiva y multidisciplinar diseñada para conectar a los alumnos de primaria con el patrimonio marino.',
-          subject: 'Ciencias Naturales',
-          grade: '5to Primaria',
+          id: 'art-seguridad-wifi-borrador',
+          title: 'Seguridad en redes Wi-Fi: cómo proteger la red de la escuela y de tu casa',
+          summary: 'Cifrado WPA2/WPA3, contraseñas robustas y buenas prácticas para evitar accesos no autorizados.',
+          subject: 'Seguridad en Redes',
+          grade: '6to Secundaria',
           readTime: 6,
           status: 'draft',
-          coverImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-          coverAlt: 'Paisaje de manglar rojo costero',
-          author: 'Lic. Adamaris Gratero',
-          role: 'Docente de Redes',
+          coverImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
+          coverAlt: 'Candado digital sobre un circuito electrónico',
+          author: AUTHOR,
+          role: ROLE,
           views: 0,
-          createdAt: new Date('2025-03-15T09:00:00Z').getTime(),
+          createdAt: new Date('2026-11-02T09:00:00Z').getTime(),
           content: `
-            <h2>Guardianes del litoral dominicano</h2>
-            <p>Borrador en construcción. Pendiente de anexar la rúbrica formativa y las preguntas de observación de campo.</p>
+            <h2>Protegiendo nuestras redes inalámbricas</h2>
+            <p>Borrador en construcción. Pendiente de agregar la práctica de laboratorio y la lista de verificación de seguridad.</p>
           `,
-          tags: ['Biodiversidad', 'Samaná', 'EducaciónAmbiental']
+          tags: ['Seguridad', 'WiFi', 'WPA3']
         }
       ];
 
@@ -298,31 +301,31 @@ class StorageService {
       const defaultComments = [
         {
           id: 'comm-1',
-          articleId: 'art-ciclo-agua',
+          articleId: 'art-modelo-osi',
           authorName: 'Prof. Manuel Grullón',
           authorType: 'teacher', // teacher, family, student, guest
           authorBadge: 'Docente Verificado',
-          schoolInfo: 'Escuela Rep. de Chile • Distrito 10-01',
-          content: 'Excelente desglose. Realizamos hoy mismo el experimento de la bolsa con mis 28 alumnos de 5to grado y la emoción fue fantástica. ¿Tiene recomendaciones para adaptarlo con menos luz solar?',
+          schoolInfo: 'Docente de Informática • Santo Domingo',
+          content: 'Excelente explicación del encapsulamiento. Usé la frase para memorizar las capas con mis estudiantes de 6to y les encantó. ¿Tiene alguna práctica con Wireshark para ver las cabeceras?',
           status: 'pending', // pending, approved, rejected, spam
           createdAt: new Date(Date.now() - 45 * 60 * 1000).getTime(),
           teacherReply: null
         },
         {
           id: 'comm-2',
-          articleId: 'art-ciclo-agua',
+          articleId: 'art-direccionamiento-ip',
           authorName: 'Estefanía Peña',
           authorType: 'family',
           authorBadge: 'Familia Comunidad',
-          schoolInfo: 'Madre de estudiante de 5to A',
-          content: 'Leí este recurso junto a mi hijo para su proyecto escolar de ciencias. Las preguntas finales nos sirvieron para debatir el consumo de agua en casa.',
+          schoolInfo: 'Madre de estudiante de 6to',
+          content: 'Mi hijo practicó las subredes con la tabla del artículo y por fin entendió por qué el salto es de 64. ¡Muchas gracias por explicarlo tan claro!',
           status: 'approved',
           createdAt: new Date(Date.now() - 24 * 3600 * 1000).getTime(),
-          teacherReply: '¡Qué alegría inmensa, querida Estefanía! Ese asombro espontáneo en los ojos de los chicos es el corazón de la ciencia activa. ¡Un abrazo cálido a su grupo!'
+          teacherReply: '¡Qué alegría, Estefanía! Dígale que practique con la subred 192.168.20.0/24 del reto final. ¡Saludos a su familia!'
         },
         {
           id: 'comm-3',
-          articleId: 'art-fracciones-equiv',
+          articleId: 'art-cableado-estructurado',
           authorName: 'Visitante_982',
           authorType: 'guest',
           authorBadge: 'Anónimo',
@@ -342,37 +345,37 @@ class StorageService {
       // Sembrar biblioteca multimedia inicial
       const defaultMedia = [
         {
-          id: 'media-esquema-ciclo',
-          title: 'Esquema ciclo del agua RD',
+          id: 'media-modelo-osi',
+          title: 'Esquema modelo OSI',
           category: 'infografias',
-          url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
+          url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
           sizeKB: 420,
           dimensions: '1200x800',
-          altText: 'Diagrama del ciclo del agua en la Cordillera Central y costas dominicanas',
-          associatedArticle: 'El ciclo del agua y su importancia para la vida',
-          createdAt: new Date('2024-10-14').getTime()
+          altText: 'Red global de conexiones que representa el viaje de los datos entre capas',
+          associatedArticle: 'El modelo OSI: las 7 capas que explican cómo viaja la información',
+          createdAt: new Date('2026-10-18').getTime()
         },
         {
-          id: 'media-manglares',
-          title: 'Manglares costa norte Samaná',
-          category: 'portadas',
-          url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+          id: 'media-subredes',
+          title: 'Tabla de subredes /26',
+          category: 'fichas',
+          url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
           sizeKB: 310,
           dimensions: '1200x800',
-          altText: 'Vista de manglares y estuario tropical',
-          associatedArticle: 'Ecosistemas Costeros y Manglares de Samaná',
-          createdAt: new Date('2024-10-20').getTime()
+          altText: 'Servidores y cables en un centro de datos',
+          associatedArticle: 'Direccionamiento IPv4 y subredes: aprende a dividir una red paso a paso',
+          createdAt: new Date('2026-10-25').getTime()
         },
         {
-          id: 'media-fracciones',
-          title: 'Material didáctico fracciones',
-          category: 'fichas',
-          url: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=1200&q=80',
+          id: 'media-cableado',
+          title: 'Rack y patch panel',
+          category: 'portadas',
+          url: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80',
           sizeKB: 280,
           dimensions: '1080x720',
-          altText: 'Caja con regletas de madera fraccionarias',
-          associatedArticle: 'Comprendiendo las fracciones equivalentes',
-          createdAt: new Date('2024-11-02').getTime()
+          altText: 'Rack de comunicaciones con cables de red ordenados',
+          associatedArticle: 'Cableado estructurado: cómo se organiza la red física de un edificio',
+          createdAt: new Date('2026-10-29').getTime()
         }
       ];
 
