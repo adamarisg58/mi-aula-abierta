@@ -391,7 +391,7 @@ class StorageService {
           name: 'Adamaris Gratero',
           title: 'Lic.',
           role: 'Docente de Redes',
-          specialty: 'Informática • Redes',
+          specialty: 'Informática • Redes • 6to de Secundaria',
           school: 'Politécnico José Núñez de Cáceres',
           yearsExperience: 0,
           bio: 'Enseñar redes es enseñar a conectar: cada estudiante que entiende cómo viaja un paquete aprende también a construir puentes.',
