@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#d9e2ff", "on-secondary-fixed-variant": "#004b73", "on-primary": "#ffffff", "on-error": "#ffffff", "on-error-container": "#93000a", "on-surface-variant": "#45464e", "outline": "#75777f", "surface-tint": "#4f5e83", "primary-container": "#0f2042", "secondary": "#006398", "on-tertiary-container": "#009c6b", "surface-dim": "#d8dadc", "outline-variant": "#c5c6cf", "background": "#f7f9fb", "surface-container": "#eceef0", "surface-container-high": "#e6e8ea", "inverse-surface": "#2d3133", "primary-fixed-dim": "#b6c6f1", "surface-container-low": "#f2f4f6", "on-secondary-container": "#00476e", "surface-bright": "#f7f9fb", "surface-container-highest": "#e0e3e5", "secondary-container": "#5bb8fe", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#4edea3", "tertiary-fixed": "#6ffbbe", "on-background": "#191c1e", "error": "#ba1a1a", "inverse-primary": "#b6c6f1", "on-primary-container": "#7988b0", "on-primary-fixed-variant": "#37466a", "on-primary-fixed": "#081a3c", "inverse-on-surface": "#eff1f3", "on-surface": "#191c1e", "surface-variant": "#e0e3e5", "secondary-fixed-dim": "#93ccff", "on-tertiary": "#ffffff", "primary": "#000922", "on-secondary-fixed": "#001d31", "on-tertiary-fixed": "#002113", "surface": "#f7f9fb", "surface-container-lowest": "#ffffff", "tertiary-container": "#002718", "secondary-fixed": "#cce5ff", "tertiary": "#000d06", "on-tertiary-fixed-variant": "#005236" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "margin": "2rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "gutter": "1.5rem" }, "fontFamily": { "label-md": ["\"Source Sans 3\""], "display-mobile": ["Literata"], "label-lg": ["\"Source Sans 3\""], "body-lg": ["\"Source Sans 3\""], "body-md": ["\"Source Sans 3\""], "body-sm": ["\"Source Sans 3\""], "headline-sm": ["Literata"], "headline-lg": ["Literata"], "display": ["Literata"], "label-sm": ["\"Source Sans 3\""], "headline-md-mobile": ["Literata"], "title-md": ["\"Source Sans 3\""], "headline-md": ["Literata"], "title-lg": ["\"Source Sans 3\""], "headline-lg-mobile": ["Literata"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-md-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased" data-auto-profile><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="relative flex items-center justify-center shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-on-tertiary-container shadow-[0_0_0_2px_#f7f9fb]" title="En línea"></span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface truncate leading-tight" data-tp="titleName">Lic. Ramona Almonte</span><span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm tracking-wide shrink-0" data-tp="roleBadge">Docente Adm.</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Aula Abierta • Gestión</span></div></div><div class="flex items-center gap-1 shrink-0"><a class="w-11 h-11 flex items-center justify-center rounded-lg text-secondary hover:bg-surface-container-high transition-colors" href="index.html" title="Ver blog público"><span class="material-symbols-outlined text-[20px]">open_in_new</span></a><button class="relative w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" title="Notificaciones y Moderación"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-24">
+<!-- Cabecera de Sección Pedagógica -->
+<section class="px-gutter-mobile pt-space-md pb-space-sm">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Protocolo de Cuidado Digital</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Moderación de Comentarios</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+      Espacio seguro: Revisa las intervenciones de docentes, familias y alumnos antes de su publicación.
+    </p>
+<!-- Banner Pedagógico de Convivencia y Protección de Menores -->
+<div class="mt-space-md bg-secondary-fixed/50 rounded-xl p-space-sm shadow-sm flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">child_care</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-secondary-fixed font-semibold">Garantía de Entorno Seguro Minerd</span>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant leading-snug mt-0.5">
+          Verifica que no se divulguen datos personales sensibles de menores ni lenguaje hostil en la comunidad escolar.
+        </p>
+</div>
+</div>
+</section>
+<!-- Pestañas de Estado con Badges Numéricos (Scroll Horizontal Suave) -->
+<section class="px-gutter-mobile mt-space-sm">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<!-- Pestaña Activa: Pendientes -->
+<button class="tab-btn flex items-center gap-2 px-3.5 py-2 rounded-full bg-primary-container text-on-primary whitespace-nowrap shadow-sm transition-all" data-target="pendientes" type="button">
+<span class="font-label-lg text-label-lg text-white">Pendientes</span>
+<span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-200 font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+          6
+        </span>
+</button>
+<!-- Pestaña: Aprobados -->
+<button class="tab-btn flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface-variant whitespace-nowrap transition-all" data-target="aprobados" type="button">
+<span class="font-label-lg text-label-lg">Aprobados</span>
+<span class="px-2 py-0.5 rounded-full bg-on-tertiary-container/15 text-on-tertiary-container font-label-sm text-label-sm">
+          42
+        </span>
+</button>
+<!-- Pestaña: Rechazados / Spam -->
+<button class="tab-btn flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface-variant whitespace-nowrap transition-all" data-target="spam" type="button">
+<span class="font-label-lg text-label-lg">Spam / Rechazados</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-dim text-on-surface-variant font-label-sm text-label-sm">
+          3
+        </span>
+</button>
+</div>
+</section>
+<!-- Barra de Herramientas: Buscador & Selector de Artículo -->
+<section class="px-gutter-mobile mt-space-md flex flex-col gap-2.5">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm pl-10 pr-10 py-2.5 rounded-xl shadow-sm outline-none transition-shadow focus:shadow-md" id="searchInput" placeholder="Buscar por autor, contenido o artículo..." type="text"/>
+<button class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface" id="clearSearch" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-9 pr-9 py-2 rounded-xl shadow-sm appearance-none outline-none" id="articleFilter">
+<option value="todos">Todos los artículos educativos</option>
+<option value="agua">El ciclo del agua y su importancia para la vida</option>
+<option value="fracciones">Comprendiendo las fracciones equivalentes</option>
+<option value="historia">Pensamiento crítico en ciencias sociales</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Contador Dinámico y Feedback de Selección -->
+<div class="px-gutter-mobile mt-space-md flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span class="font-label-md text-label-md">Revisión prioritaria (<span id="visibleCount">3</span> en pantalla)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 cursor-pointer select-none">
+<span class="material-symbols-outlined text-[14px]">tune</span> Criterio cronológico
+    </span>
+</div>
+<!-- Lista de Tarjetas de Moderación -->
+<div class="px-gutter-mobile mt-2 flex flex-col gap-space-md" id="commentsContainer">
+<!-- COMENTARIO 1: Docente Manuel Grullón -->
+<article class="comment-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-300" data-article="agua" id="comment-card-1">
+<!-- Encabezado de la Tarjeta -->
+<div class="flex items-start justify-between gap-space-sm pb-space-xs">
+<div class="flex items-start gap- space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 shadow-sm overflow-hidden text-secondary">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-title-md text-title-md text-primary font-bold truncate">Prof. Manuel Grullón</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm flex items-center gap-0.5 shrink-0">
+<span class="material-symbols-outlined text-[12px]">verified</span> Docente Verificado
+              </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Escuela Rep. de Chile • Distrito 10-03</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline shrink-0">Hace 45 min</span>
+</div>
+<!-- Contexto del Artículo Vinculado -->
+<div class="mt-2.5 px-3 py-1.5 rounded-lg bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">article</span>
+<span class="font-label-md text-label-md text-on-surface truncate">
+          En: <span class="font-semibold text-primary">El ciclo del agua y su importancia para la vida</span>
+</span>
+</div>
+<!-- Texto del Comentario Pedagógico -->
+<div class="mt-space-sm pl-3 border-l-2 border-l-secondary/40 py-0.5">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          “Excelente desglose. Realizamos hoy mismo el experimento de la bolsa con mis 28 alumnos de 5to grado y la emoción fue fantástica. ¿Tiene recomendaciones para adaptarlo con menos luz solar?”
+        </p>
+</div>
+<!-- Aportes Metodológicos Detectados (Micro-delight) -->
+<div class="mt-space-sm flex items-center gap-1.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-on-tertiary-container/10 text-on-tertiary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span> Práctica de aula
+        </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+          Pregunta didáctica
+        </span>
+</div>
+<!-- Acciones de Decisión Pedagógica -->
+<div class="mt-space-md pt-space-xs flex flex-col gap-2">
+<div class="grid grid-cols-2 gap-2">
+<!-- Botón Aprobar -->
+<button class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-on-tertiary-container text-on-tertiary font-label-lg text-label-lg shadow-sm active:scale-98 transition-transform" onclick="handleAction('1', 'aprobar')" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+            Aprobar
+          </button>
+<!-- Botón Aprobar y Responder -->
+<button class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-sm active:scale-98 transition-transform" onclick="handleAction('1', 'responder')" type="button">
+<span class="material-symbols-outlined text-[18px]">reply</span>
+            Aprobar y Responder
+          </button>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<!-- Botón Rechazar -->
+<button class="w-full flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-error-container text-on-error-container font-label-md text-label-md active:opacity-80 transition-opacity" onclick="handleAction('1', 'rechazar')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+            Rechazar
+          </button>
+<!-- Botón Marcar Spam -->
+<button class="w-full flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-surface-dim transition-colors" onclick="handleAction('1', 'spam')" type="button">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+            Marcar como Spam
+          </button>
+</div>
+</div>
+</article>
+<!-- COMENTARIO 2: Madre de Familia Estefanía Peña -->
+<article class="comment-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-300" data-article="agua" id="comment-card-2">
+<!-- Encabezado -->
+<div class="flex items-start justify-between gap-space-sm pb-space-xs">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed-dim/40 flex items-center justify-center shrink-0 shadow-sm text-secondary">
+<span class="material-symbols-outlined text-[24px]">diversity_3</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-title-md text-title-md text-primary font-bold truncate">Estefanía Peña</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shrink-0">
+                Familia Comunidad
+              </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Madre de estudiante de 5to A</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline shrink-0">Ayer</span>
+</div>
+<!-- Contexto del Artículo Vinculado -->
+<div class="mt-2.5 px-3 py-1.5 rounded-lg bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">article</span>
+<span class="font-label-md text-label-md text-on-surface truncate">
+          En: <span class="font-semibold text-primary">El ciclo del agua y su importancia para la vida</span>
+</span>
+</div>
+<!-- Texto del Comentario Familiar -->
+<div class="mt-space-sm pl-3 border-l-2 border-l-secondary/20 py-0.5">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          “Leí este recurso junto a mi hijo para su proyecto escolar de ciencias. Las preguntas finales nos sirvieron para debatir el consumo de agua en casa.”
+        </p>
+</div>
+<!-- Metadato de Impacto Hogar -->
+<div class="mt-space-sm flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">home_work</span> Integración hogar-escuela
+        </span>
+</div>
+<!-- Fila de Acciones Rápidas -->
+<div class="mt-space-md pt-space-xs flex flex-col gap-2">
+<div class="grid grid-cols-2 gap-2">
+<!-- Aprobar -->
+<button class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-on-tertiary-container text-on-tertiary font-label-lg text-label-lg shadow-sm active:scale-98 transition-transform" onclick="handleAction('2', 'aprobar')" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+            Aprobar
+          </button>
+<!-- Aprobar y Responder -->
+<button class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-sm active:scale-98 transition-transform" onclick="handleAction('2', 'responder')" type="button">
+<span class="material-symbols-outlined text-[18px]">reply</span>
+            Aprobar y Responder
+          </button>
+</div>
+<!-- Rechazar -->
+<button class="w-full flex items-center justify-center gap-1 py-2 px-3 rounded-lg bg-error-container text-on-error-container font-label-md text-label-md active:opacity-80 transition-opacity" onclick="handleAction('2', 'rechazar')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+          Rechazar intervención
+        </button>
+</div>
+</article>
+<!-- COMENTARIO 3: Anónimo con Alerta de Seguridad -->
+<article class="comment-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-300" data-article="fracciones" id="comment-card-3">
+<!-- Encabezado con Advertencia -->
+<div class="flex items-start justify-between gap-space-sm pb-space-xs">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center shrink-0 shadow-sm text-error">
+<span class="material-symbols-outlined text-[24px]">no_accounts</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-title-md text-title-md text-primary font-bold truncate">Visitante_982</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shrink-0">
+                Anónimo
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline truncate">IP: 179.53.**.** • Sin credenciales docentes</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-error font-semibold shrink-0">Alerta</span>
+</div>
+<!-- Banner de Alerta Crítica del Algoritmo -->
+<div class="mt-2.5 p-space-sm rounded-lg bg-error-container/70 text-on-error-container flex items-center gap-2.5">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0">crisis_alert</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold">Riesgo de Seguridad Escolar</span>
+<span class="font-body-sm text-body-sm leading-tight text-on-error-container">Detectado posible enlace externo no educativo o promocional.</span>
+</div>
+</div>
+<!-- Contexto del Artículo Vinculado -->
+<div class="mt-2 px-3 py-1.5 rounded-lg bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">article</span>
+<span class="font-label-md text-label-md text-on-surface truncate">
+          En: <span class="font-semibold text-primary">Comprendiendo las fracciones equivalentes</span>
+</span>
+</div>
+<!-- Contenido Sospechoso -->
+<div class="mt-space-sm pl-3 border-l-2 border-l-error py-0.5">
+<p class="font-body-md text-body-md text-on-surface-variant line-through opacity-80">
+          “Para resolver rápido sus tareas miren este link gratis en hxxp://descarga-examenes-rd.cc y ganen puntos sin estudiar.”
+        </p>
+</div>
+<!-- Acciones de Contención -->
+<div class="mt-space-md pt-space-xs flex flex-col gap-2">
+<button class="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-dim transition-colors" onclick="handleAction('3', 'editar')" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+          Aprobar con edición (Eliminar hipervínculo)
+        </button>
+<div class="grid grid-cols-2 gap-2">
+<!-- Rechazar -->
+<button class="w-full flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-error-container text-on-error-container font-label-md text-label-md active:opacity-80 transition-opacity" onclick="handleAction('3', 'rechazar')" type="button">
+<span class="material-symbols-outlined text-[16px]">block</span>
+            Rechazar
+          </button>
+<!-- Eliminar Permanente -->
+<button class="w-full flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-error text-on-error font-label-md text-label-md active:opacity-80 transition-opacity" onclick="handleAction('3', 'eliminar')" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+            Eliminar permanentemente
+          </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Estado Vacío Ilustrado Dinámico (Oculto inicialmente) -->
+<div class="hidden px-gutter-mobile py-10 flex-col items-center justify-center text-center" id="emptyState">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed/40 text-secondary flex items-center justify-center mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[40px]">sentiment_very_satisfied</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary" data-tp="emptyGreeting">¡Bandeja al día, Maestra Ramona!</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-1">
+      Todos los comentarios han sido revisados y procesados conforme a los estándares pedagógicos.
+    </p>
+<button class="mt-space-md px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm" onclick="resetDemo()" type="button">
+      Restablecer lista de práctica
+    </button>
+</div>
+<!-- Barra de Acción Masiva Fija Inferior (Lote) -->
+<section class="px-gutter-mobile mt-space-lg">
+<div class="p-space-sm bg-surface-container-high rounded-xl flex flex-col gap-2">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Gestión acelerada</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">2 aportes seguros validados</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary-container text-on-primary font-title-md text-title-md shadow-md active:scale-98 transition-all" id="approveAllBtn" onclick="approveAllLegitimate()" type="button">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">done_all</span>
+        Aprobar legítimos en lote
+      </button>
+<p class="text-center font-label-sm text-label-sm text-outline px-2">
+        Aplica solo para comentarios de docentes y tutores sin alertas de seguridad.
+      </p>
+</div>
+</section>
+<!-- Modal / Toast de Notificación Táctil -->
+<div class="fixed bottom-20 left-4 right-4 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<div class="bg-primary text-on-primary px-4 py-3 rounded-xl shadow-xl flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]" id="toastIcon">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toastMessage">Comentario aprobado con éxito.</span>
+</div>
+<button class="text-on-primary-container hover:text-on-primary" onclick="hideToast()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Manejo de Interacción y Estados de Moderación
+  let activeFilter = 'todos';
+  let searchQuery = '';
+
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    const toastIco = document.getElementById('toastIcon');
+    if (!toast) return;
+
+    toastMsg.textContent = message;
+    toastIco.textContent = icon;
+    toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      hideToast();
+    }, 3200);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toastNotification');
+    if (!toast) return;
+    toast.classList.remove('translate-y-0', 'opacity-100');
+    toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+  }
+
+  function handleAction(id, action) {
+    const card = document.getElementById(`comment-card-${id}`);
+    if (!card) return;
+
+    let msg = '';
+    let icon = 'check_circle';
+
+    switch (action) {
+      case 'aprobar':
+        msg = 'Comentario validado y publicado en el artículo.';
+        icon = 'check_circle';
+        break;
+      case 'responder':
+        msg = 'Aprobado. Abriendo redactor de respuesta pedagógica...';
+        icon = 'send';
+        break;
+      case 'rechazar':
+        msg = 'Intervención rechazada y archivada.';
+        icon = 'close';
+        break;
+      case 'spam':
+        msg = 'Marcado como spam y bloqueado del foro escolar.';
+        icon = 'flag';
+        break;
+      case 'editar':
+        msg = 'Enlace neutralizado. Comentario admitido con corrección.';
+        icon = 'edit_note';
+        break;
+      case 'eliminar':
+        msg = 'Aporte eliminado permanentemente del servidor.';
+        icon = 'delete';
+        break;
+    }
+
+    // Animación suave de remoción
+    card.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      card.remove();
+      updateCounter();
+      showToast(msg, icon);
+    }, 250);
+  }
+
+  function approveAllLegitimate() {
+    const card1 = document.getElementById('comment-card-1');
+    const card2 = document.getElementById('comment-card-2');
+    let count = 0;
+
+    if (card1) {
+      card1.classList.add('scale-95', 'opacity-0');
+      count++;
+    }
+    if (card2) {
+      card2.classList.add('scale-95', 'opacity-0');
+      count++;
+    }
+
+    if (count > 0) {
+      setTimeout(() => {
+        if (card1) card1.remove();
+        if (card2) card2.remove();
+        updateCounter();
+        showToast(`Se aprobaron ${count} comentarios legítimos en lote.`);
+      }, 250);
+    } else {
+      showToast('No hay aportes pedagógicos pendientes para procesar.', 'info');
+    }
+  }
+
+  function updateCounter() {
+    const cards = document.querySelectorAll('.comment-card');
+    const counterEl = document.getElementById('visibleCount');
+    const emptyEl = document.getElementById('emptyState');
+    const container = document.getElementById('commentsContainer');
+    const approveBtn = document.getElementById('approveAllBtn');
+
+    if (counterEl) counterEl.textContent = cards.length;
+
+    if (cards.length === 0) {
+      if (emptyEl) emptyEl.classList.remove('hidden');
+      if (container) container.classList.add('hidden');
+      if (approveBtn) {
+        approveBtn.disabled = true;
+        approveBtn.classList.add('opacity-50', 'pointer-events-none');
+      }
+    } else {
+      if (emptyEl) emptyEl.classList.add('hidden');
+      if (container) container.classList.remove('hidden');
+    }
+  }
+
+  // Filtrado reactivo por artículo y búsqueda
+  const articleSelect = document.getElementById('articleFilter');
+  const searchInput = document.getElementById('searchInput');
+  const clearBtn = document.getElementById('clearSearch');
+
+  function applyFilters() {
+    const cards = document.querySelectorAll('.comment-card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const cardArticle = card.getAttribute('data-article');
+      const text = card.textContent.toLowerCase();
+      const matchesArticle = (activeFilter === 'todos') || (cardArticle === activeFilter);
+      const matchesSearch = text.includes(searchQuery.toLowerCase());
+
+      if (matchesArticle && matchesSearch) {
+        card.style.display = 'block';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const counterEl = document.getElementById('visibleCount');
+    if (counterEl) counterEl.textContent = visible;
+  }
+
+  if (articleSelect) {
+    articleSelect.addEventListener('change', (e) => {
+      activeFilter = e.target.value;
+      applyFilters();
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim();
+      if (clearBtn) {
+        if (searchQuery.length > 0) {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
+      }
+      applyFilters();
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      clearBtn.classList.add('hidden');
+      applyFilters();
+      searchInput.focus();
+    });
+  }
+
+  // Interacción de pestañas
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => {
+        b.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+
+      const target = btn.getAttribute('data-target');
+      if (target === 'aprobados') {
+        showToast('Mostrando 42 intervenciones publicadas.', 'visibility');
+      } else if (target === 'spam') {
+        showToast('Mostrando 3 intervenciones bloqueadas por seguridad.', 'shield');
+      }
+    });
+  });
+
+  function resetDemo() {
+    location.reload();
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,32,66,0.06)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="panel" href="panel.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Panel</span></a><a class="flex flex-col items-center justify-center w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="articulos" href="gestion.html"><span class="material-symbols-outlined text-[22px]">article</span><span class="font-label-sm text-label-sm mt-0.5">Artículos</span></a><a class="flex flex-col items-center justify-center w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="editor" href="editor.html"><div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_6px_rgba(15,32,66,0.2)]"><span class="material-symbols-outlined text-[20px]">edit_note</span></div></a><a class="flex flex-col items-center justify-center w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="multimedia" href="biblioteca.html"><span class="material-symbols-outlined text-[22px]">photo_library</span><span class="font-label-sm text-label-sm mt-0.5">Medios</span></a><a class="flex flex-col items-center justify-center w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors relative" data-path="moderacion" href="moderacion.html"><span class="material-symbols-outlined text-[22px]">rate_review</span><span class="font-label-sm text-label-sm mt-0.5">Moderación</span><span class="absolute top-1.5 right-2.5 w-1.5 h-1.5 rounded-full bg-error"></span></a></div></nav><script src="db.js"></script>
+<script src="profile-loader.js"></script>
+<script>
+// === CRUD DINÁMICO: Moderación de Comentarios ===
+(async function() {
+  await AulaAbiertaDB._initPromise;
+
+  var allComments = [], articleMap = {}, currentTab = 'pendientes', searchTerm = '', articleFilterId = 'todos';
+
+  var container = document.getElementById('commentsContainer');
+  var searchInput = document.getElementById('searchInput');
+  var clearBtn = document.getElementById('clearSearch');
+  var articleFilter = document.getElementById('articleFilter');
+  var visibleCountEl = document.getElementById('visibleCount');
+  var emptyState = document.getElementById('emptyState');
+
+  var TAB_STATUS = { pendientes: ['pending'], aprobados: ['approved'], spam: ['rejected','spam'] };
+
+  // Clone tab buttons to strip old listeners
+  var oldTabs = document.querySelectorAll('.tab-btn');
+  var tabBtns = [];
+  oldTabs.forEach(function(btn) { var c = btn.cloneNode(true); btn.parentNode.replaceChild(c, btn); tabBtns.push(c); });
+
+  async function loadData() {
+    allComments = await AulaAbiertaDB.getAll('comments');
+    allComments.sort(function(a, b) { return b.createdAt - a.createdAt; });
+    var articles = await AulaAbiertaDB.getAll('articles');
+    articleMap = {};
+    articles.forEach(function(a) { articleMap[a.id] = a; });
+    populateFilter(articles);
+    renderComments();
+    updateTabCounts();
+  }
+
+  function populateFilter(articles) {
+    articleFilter.innerHTML = '<option value="todos">Todos los artículos educativos</option>';
+    articles.forEach(function(a) {
+      var opt = document.createElement('option');
+      opt.value = a.id; opt.textContent = a.title;
+      articleFilter.appendChild(opt);
+    });
+  }
+
+  function filtered() {
+    var statuses = TAB_STATUS[currentTab] || ['pending'];
+    return allComments.filter(function(c) {
+      if (statuses.indexOf(c.status) === -1) return false;
+      if (articleFilterId !== 'todos' && c.articleId !== articleFilterId) return false;
+      if (searchTerm) {
+        var t = (c.authorName + ' ' + c.content + ' ' + (c.schoolInfo||'')).toLowerCase();
+        if (t.indexOf(searchTerm) === -1) return false;
+      }
+      return true;
+    });
+  }
+
+  function timeAgo(ts) {
+    var d = Date.now() - ts, m = Math.floor(d/60000);
+    if (m < 60) return 'Hace ' + m + ' min';
+    var h = Math.floor(m/60);
+    if (h < 24) return 'Hace ' + h + 'h';
+    var days = Math.floor(h/24);
+    return days === 1 ? 'Ayer' : 'Hace ' + days + ' días';
+  }
+
+  function authorStyle(type) {
+    if (type === 'teacher') return { icon:'school', bg:'bg-secondary-fixed', color:'text-secondary' };
+    if (type === 'family') return { icon:'diversity_3', bg:'bg-secondary-fixed-dim/40', color:'text-secondary' };
+    if (type === 'student') return { icon:'face', bg:'bg-primary-fixed', color:'text-primary' };
+    return { icon:'no_accounts', bg:'bg-error-container', color:'text-error' };
+  }
+
+  function commentHTML(c) {
+    var ai = authorStyle(c.authorType);
+    var artTitle = articleMap[c.articleId] ? articleMap[c.articleId].title : 'Artículo desconocido';
+    var spam = c.isSpamAlert;
+    var borderCls = spam ? 'border-l-error' : 'border-l-secondary/40';
+    var textCls = spam ? 'line-through opacity-80' : '';
+
+    var actions = '';
+    if (currentTab === 'pendientes') {
+      actions = '<div class="mt-space-md pt-space-xs flex flex-col gap-2">' +
+        '<div class="grid grid-cols-2 gap-2">' +
+          '<button class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-on-tertiary-container text-on-tertiary font-label-lg text-label-lg shadow-sm active:scale-98 transition-transform" onclick="crudAction(\'' + c.id + '\',\'aprobar\')"><span class="material-symbols-outlined text-[18px]">check_circle</span> Aprobar</button>' +
+          '<button class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-sm active:scale-98 transition-transform" onclick="crudAction(\'' + c.id + '\',\'responder\')"><span class="material-symbols-outlined text-[18px]">reply</span> Aprobar y Responder</button>' +
+        '</div>' +
+        '<div class="grid grid-cols-2 gap-2">' +
+          '<button class="w-full flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-error-container text-on-error-container font-label-md text-label-md" onclick="crudAction(\'' + c.id + '\',\'rechazar\')"><span class="material-symbols-outlined text-[16px]">close</span> Rechazar</button>' +
+          (spam ? '<button class="w-full flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-error text-on-error font-label-md text-label-md" onclick="crudAction(\'' + c.id + '\',\'eliminar\')"><span class="material-symbols-outlined text-[16px]">delete_forever</span> Eliminar</button>' :
+          '<button class="w-full flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md" onclick="crudAction(\'' + c.id + '\',\'spam\')"><span class="material-symbols-outlined text-[16px]">flag</span> Marcar Spam</button>') +
+        '</div></div>';
+    } else if (currentTab === 'aprobados') {
+      actions = '<div class="mt-space-md pt-space-xs flex gap-2">' +
+        '<button class="flex-1 flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-error-container text-on-error-container font-label-md text-label-md" onclick="crudAction(\'' + c.id + '\',\'rechazar\')"><span class="material-symbols-outlined text-[16px]">close</span> Revocar</button>' +
+        '<button class="flex-1 flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-error text-on-error font-label-md text-label-md" onclick="crudAction(\'' + c.id + '\',\'eliminar\')"><span class="material-symbols-outlined text-[16px]">delete_forever</span> Eliminar</button></div>';
+    } else {
+      actions = '<div class="mt-space-md pt-space-xs flex gap-2">' +
+        '<button class="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-on-tertiary-container text-on-tertiary font-label-lg text-label-lg shadow-sm" onclick="crudAction(\'' + c.id + '\',\'aprobar\')"><span class="material-symbols-outlined text-[18px]">check_circle</span> Restaurar</button>' +
+        '<button class="flex-1 flex items-center justify-center gap-1 py-2 px-2.5 rounded-lg bg-error text-on-error font-label-md text-label-md" onclick="crudAction(\'' + c.id + '\',\'eliminar\')"><span class="material-symbols-outlined text-[16px]">delete_forever</span> Eliminar</button></div>';
+    }
+
+    var reply = c.teacherReply ? '<div class="mt-space-sm p-3 rounded-lg bg-primary-fixed/30 border-l-2 border-primary"><div class="flex items-center gap-1 mb-1"><span class="material-symbols-outlined text-primary text-[14px]">reply</span><span class="font-label-sm text-label-sm text-primary font-semibold">Respuesta docente</span></div><p class="font-body-sm text-body-sm text-on-surface">' + escapeHTML(c.teacherReply) + '</p></div>' : '';
+    var spamBanner = spam ? '<div class="mt-2.5 p-space-sm rounded-lg bg-error-container/70 text-on-error-container flex items-center gap-2.5"><span class="material-symbols-outlined text-error text-[20px] shrink-0">crisis_alert</span><div><span class="font-label-md text-label-md font-bold">Riesgo de Seguridad</span></div></div>' : '';
+
+    return '<article class="comment-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-300" data-comment-id="' + c.id + '">' +
+      '<div class="flex items-start justify-between gap-space-sm pb-space-xs">' +
+        '<div class="flex items-start gap-space-sm min-w-0">' +
+          '<div class="w-10 h-10 rounded-full ' + ai.bg + ' flex items-center justify-center shrink-0 shadow-sm ' + ai.color + '"><span class="material-symbols-outlined text-[24px]">' + ai.icon + '</span></div>' +
+          '<div class="flex flex-col min-w-0">' +
+            '<div class="flex items-center gap-1.5 flex-wrap"><span class="font-title-md text-title-md text-primary font-bold truncate">' + escapeHTML(c.authorName) + '</span><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shrink-0">' + escapeHTML(c.authorBadge||c.authorType) + '</span></div>' +
+            '<span class="font-body-sm text-body-sm text-on-surface-variant truncate">' + escapeHTML(c.schoolInfo||'') + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<span class="font-label-sm text-label-sm text-outline shrink-0">' + timeAgo(c.createdAt) + '</span>' +
+      '</div>' +
+      '<div class="mt-2.5 px-3 py-1.5 rounded-lg bg-surface-container flex items-center gap-2">' +
+        '<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">article</span>' +
+        '<span class="font-label-md text-label-md text-on-surface truncate">En: <span class="font-semibold text-primary">' + escapeHTML(artTitle) + '</span></span>' +
+      '</div>' +
+      spamBanner +
+      '<div class="mt-space-sm pl-3 border-l-2 ' + borderCls + ' py-0.5">' +
+        '<p class=”font-body-md text-body-md text-on-surface leading-relaxed ' + textCls + '”>”' + escapeHTML(c.content) + '”</p>' +
+      '</div>' +
+      reply + actions +
+    '</article>';
+  }
+
+  function renderComments() {
+    var items = filtered();
+    container.innerHTML = items.map(commentHTML).join('');
+    if (visibleCountEl) visibleCountEl.textContent = items.length;
+    if (items.length === 0) { if(emptyState){emptyState.classList.remove('hidden');emptyState.classList.add('flex');} container.classList.add('hidden'); }
+    else { if(emptyState){emptyState.classList.add('hidden');emptyState.classList.remove('flex');} container.classList.remove('hidden'); }
+  }
+
+  function updateTabCounts() {
+    var counts = { pendientes:0, aprobados:0, spam:0 };
+    allComments.forEach(function(c) {
+      if (c.status === 'pending') counts.pendientes++;
+      else if (c.status === 'approved') counts.aprobados++;
+      else counts.spam++;
+    });
+    tabBtns.forEach(function(btn) {
+      var t = btn.dataset.target;
+      var badge = btn.querySelector('span:last-child');
+      if (badge && counts[t] !== undefined) badge.textContent = counts[t];
+    });
+  }
+
+  // Global action handler
+  window.crudAction = async function(id, action) {
+    var card = document.querySelector('[data-comment-id="' + id + '"]');
+    var msg = '', icon = 'check_circle';
+    switch (action) {
+      case 'aprobar':
+        await AulaAbiertaDB.updateCommentStatus(id, 'approved');
+        msg = 'Comentario aprobado y publicado.'; break;
+      case 'responder':
+        var reply = prompt('Escribe tu respuesta pedagógica:');
+        if (reply === null) return;
+        await AulaAbiertaDB.updateCommentStatus(id, 'approved', reply);
+        msg = 'Aprobado con respuesta pedagógica.'; icon = 'send'; break;
+      case 'rechazar':
+        await AulaAbiertaDB.updateCommentStatus(id, 'rejected');
+        msg = 'Comentario rechazado.'; icon = 'close'; break;
+      case 'spam':
+        await AulaAbiertaDB.updateCommentStatus(id, 'spam');
+        msg = 'Marcado como spam.'; icon = 'flag'; break;
+      case 'eliminar':
+        await AulaAbiertaDB.deleteComment(id);
+        msg = 'Eliminado permanentemente.'; icon = 'delete'; break;
+    }
+    if (card) { card.classList.add('scale-95','opacity-0'); await new Promise(function(r){setTimeout(r,250)}); }
+    await loadData();
+    showToast(msg, icon);
+  };
+
+  // Override batch approve
+  window.approveAllLegitimate = async function() {
+    var pending = allComments.filter(function(c) { return c.status === 'pending' && !c.isSpamAlert && (c.authorType === 'teacher' || c.authorType === 'family'); });
+    if (pending.length === 0) { showToast('No hay aportes legítimos pendientes.', 'info'); return; }
+    for (var i = 0; i < pending.length; i++) { await AulaAbiertaDB.updateCommentStatus(pending[i].id, 'approved'); }
+    await loadData();
+    showToast(pending.length + ' comentarios aprobados en lote.', 'done_all');
+  };
+
+  // Wire tabs
+  tabBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      currentTab = btn.dataset.target;
+      tabBtns.forEach(function(b) {
+        b.classList.remove('bg-primary-container','text-on-primary','shadow-sm');
+        b.classList.add('bg-surface-container-high','text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary-container','text-on-primary','shadow-sm');
+      btn.classList.remove('bg-surface-container-high','text-on-surface-variant');
+      renderComments();
+    });
+  });
+
+  // Wire search
+  if (searchInput) searchInput.addEventListener('input', function() {
+    searchTerm = searchInput.value.trim().toLowerCase();
+    if (clearBtn) clearBtn.classList.toggle('hidden', !searchTerm);
+    renderComments();
+  });
+  if (clearBtn) clearBtn.addEventListener('click', function() {
+    searchInput.value = ''; searchTerm = '';
+    clearBtn.classList.add('hidden');
+    renderComments();
+  });
+
+  // Wire article filter
+  if (articleFilter) articleFilter.addEventListener('change', function() {
+    articleFilterId = articleFilter.value;
+    renderComments();
+  });
+
+  // Override resetDemo
+  window.resetDemo = function() { location.reload(); };
+
+  await loadData();
+})();
+</script>
+</body></html>

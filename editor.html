@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "primary-fixed": "#d9e2ff", "on-secondary-fixed-variant": "#004b73", "on-primary": "#ffffff", "on-error": "#ffffff", "on-error-container": "#93000a", "on-surface-variant": "#45464e", "outline": "#75777f", "surface-tint": "#4f5e83", "primary-container": "#0f2042", "secondary": "#006398", "on-tertiary-container": "#009c6b", "surface-dim": "#d8dadc", "outline-variant": "#c5c6cf", "background": "#f7f9fb", "surface-container": "#eceef0", "surface-container-high": "#e6e8ea", "inverse-surface": "#2d3133", "primary-fixed-dim": "#b6c6f1", "surface-container-low": "#f2f4f6", "on-secondary-container": "#00476e", "surface-bright": "#f7f9fb", "surface-container-highest": "#e0e3e5", "secondary-container": "#5bb8fe", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#4edea3", "tertiary-fixed": "#6ffbbe", "on-background": "#191c1e", "error": "#ba1a1a", "inverse-primary": "#b6c6f1", "on-primary-container": "#7988b0", "on-primary-fixed-variant": "#37466a", "on-primary-fixed": "#081a3c", "inverse-on-surface": "#eff1f3", "on-surface": "#191c1e", "surface-variant": "#e0e3e5", "secondary-fixed-dim": "#93ccff", "on-tertiary": "#ffffff", "primary": "#000922", "on-secondary-fixed": "#001d31", "on-tertiary-fixed": "#002113", "surface": "#f7f9fb", "surface-container-lowest": "#ffffff", "tertiary-container": "#002718", "secondary-fixed": "#cce5ff", "tertiary": "#000d06", "on-tertiary-fixed-variant": "#005236" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "margin": "2rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "gutter": "1.5rem" }, "fontFamily": { "label-md": ["\"Source Sans 3\""], "display-mobile": ["Literata"], "label-lg": ["\"Source Sans 3\""], "body-lg": ["\"Source Sans 3\""], "body-md": ["\"Source Sans 3\""], "body-sm": ["\"Source Sans 3\""], "headline-sm": ["Literata"], "headline-lg": ["Literata"], "display": ["Literata"], "label-sm": ["\"Source Sans 3\""], "headline-md-mobile": ["Literata"], "title-md": ["\"Source Sans 3\""], "headline-md": ["Literata"], "title-lg": ["\"Source Sans 3\""], "headline-lg-mobile": ["Literata"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-md-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body data-auto-profile class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Volver" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container-high transition-colors shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-primary truncate">Editor</h1></div><div class="flex items-center gap-space-xs shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-12">
+<!-- Status bar & Global Actions -->
+<div class="w-full bg-surface-container-low px-gutter-mobile py-space-sm flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-error transition-colors px-2 py-1 rounded" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span class="font-label-md text-label-md">Salir</span>
+</button>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container rounded-full text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm truncate">Guardado aut. hace 1 min</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1.5 bg-surface text-primary rounded-lg font-label-md text-label-md shadow-sm active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span>Borrador</span>
+</button>
+<button class="px-3 py-1.5 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md shadow-sm active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Publicar</span>
+</button>
+</div>
+</div>
+<!-- Segmented Status Control -->
+<div class="grid grid-cols-3 gap-1 bg-surface-container-highest p-1 rounded-lg">
+<button class="py-1 px-2 text-center rounded-md font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-sm font-semibold" type="button">
+        Borrador
+      </button>
+<button class="py-1 px-2 text-center rounded-md font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" type="button">
+        Programado
+      </button>
+<button class="py-1 px-2 text-center rounded-md font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" type="button">
+        Inmediato
+      </button>
+</div>
+</div>
+<div class="flex flex-col gap-space-lg px-gutter-mobile pt-space-md">
+<!-- Header & Title Module -->
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="article-title">Título de la publicación</label>
+<input class="w-full font-headline-md-mobile text-headline-md-mobile text-primary bg-transparent focus:outline-none placeholder:text-outline-variant" id="article-title" placeholder="Ej. Explorando los manglares dominicanos..." type="text" value="Explorando los manglares dominicanos y su biodiversidad marina"/>
+</div>
+<div class="flex flex-col gap-1 pt-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="article-subtitle">Resumen didáctico y objetivos</label>
+<textarea class="w-full font-body-sm text-body-sm text-on-surface-variant bg-transparent resize-none focus:outline-none placeholder:text-outline-variant leading-relaxed" id="article-subtitle" placeholder="Una secuencia reflexiva para conectar a los estudiantes con su entorno costero..." rows="2">Una secuencia reflexiva y multidisciplinar diseñada para conectar a los alumnos de primaria y media con la riqueza biológica de nuestras costas tropicales.</textarea>
+</div>
+</div>
+<!-- Curricular Alignment Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px] text-secondary">school</span>
+<h2 class="font-title-md text-title-md text-primary">Alineación Curricular</h2>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="subject-select">Asignatura</label>
+<div class="relative">
+<select class="w-full font-body-sm text-body-sm bg-surface-container-low text-on-surface rounded-lg py-2.5 px-3 appearance-none focus:outline-none focus:bg-surface-container" id="subject-select">
+<option selected="">Ciencias Naturales</option>
+<option>Matemáticas</option>
+<option>Lengua Española</option>
+<option>Ciencias Sociales</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="grade-select">Nivel / Grado</label>
+<div class="relative">
+<select class="w-full font-body-sm text-body-sm bg-surface-container-low text-on-surface rounded-lg py-2.5 px-3 appearance-none focus:outline-none focus:bg-surface-container" id="grade-select">
+<option>4to Primaria</option>
+<option selected="">5to Primaria</option>
+<option>6to Primaria</option>
+<option>1ro Secundaria</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[20px]">timer</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lectura estimada</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">12 minutos aprox.</span>
+</div>
+<div class="flex items-center gap-1 bg-surface px-2 py-1 rounded">
+<input class="w-8 text-center font-label-md text-label-md bg-transparent focus:outline-none" type="number" value="12"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">min</span>
+</div>
+</div>
+<!-- Descriptores / Tags -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Descriptores temáticos</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-md text-label-md">
+            #Biodiversidad
+            <button aria-label="Eliminar etiqueta" class="hover:text-error leading-none" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-md text-label-md">
+            #Samaná
+            <button aria-label="Eliminar etiqueta" class="hover:text-error leading-none" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-md text-label-md">
+            #MINERD
+            <button aria-label="Eliminar etiqueta" class="hover:text-error leading-none" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-md text-label-md">
+            #EducaciónAmbiental
+            <button aria-label="Eliminar etiqueta" class="hover:text-error leading-none" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container text-primary rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Añadir</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Media Cover Zone -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">image</span>
+<h2 class="font-title-md text-title-md text-primary">Portada del Artículo</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Recomendado 16:9</span>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="Lush Dominican coastal mangrove forest with clear turquoise waters and intricate mangrove roots visible beneath the surface, bathed in warm Caribbean morning sunlight, crisp editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrvKaq4DQeWQS1BJoOx2pIOhqvWKvRRsG60Pin3bHx_g1HL4ZvuwrmcZzgpr1i_CAr8S6jxII6czub6YBLrtGfFdrlESHCQiEZ6SjdJBMfGzwOoQwZp1ZMUJ9c25-eZgMOisyTekA-_9ndzJtpYDHKB-C35Sq6zEXEOOxElxtieSH5lD1C2NBBH_wOHCZy6TwuwrPf7V_TnzgZ78_-PGfBi7VILusPf_NtT5LBR5vO8HLj4-BqiSA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-sm">
+<span class="text-on-primary font-label-sm text-label-sm bg-primary/60 px-2 py-0.5 rounded backdrop-blur-sm">Portada activa: Manglares de Samaná</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="flex items-center justify-center gap-1.5 py-2 px-2 bg-surface-container text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Cambiar foto</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-2 bg-surface-container text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">collections_bookmark</span>
+<span>Biblioteca</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="cover-alt">Texto alternativo accesible (alt)</label>
+<input class="font-body-sm text-body-sm bg-surface-container-low text-on-surface px-3 py-2 rounded-lg focus:outline-none focus:bg-surface-container" id="cover-alt" placeholder="Describe la imagen para lectores con discapacidad visual..." type="text" value="Vista submarina y superficial de raíces de manglar rojo en una ensenada caribeña cristalina"/>
+</div>
+</div>
+</div>
+<!-- Sticky Rich Editor Toolbar -->
+<div class="sticky top-16 z-30 w-full bg-surface-container-lowest/95 backdrop-blur-md px-gutter-mobile py-2 shadow-md mt-space-md">
+<div class="flex items-center gap-1 overflow-x-auto py-1 scroll-smooth">
+<button aria-label="Negrita" class="p-2 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors shrink-0" title="Negrita" type="button">
+<span class="material-symbols-outlined text-[20px]">format_bold</span>
+</button>
+<button aria-label="Cursiva" class="p-2 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors shrink-0" title="Cursiva" type="button">
+<span class="material-symbols-outlined text-[20px]">format_italic</span>
+</button>
+<div class="w-px h-5 bg-surface-container-highest shrink-0 mx-0.5"></div>
+<button aria-label="Encabezado H2" class="p-2 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors shrink-0 font-label-md text-label-md font-bold" title="Encabezado H2" type="button">
+        H2
+      </button>
+<button aria-label="Encabezado H3" class="p-2 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors shrink-0 font-label-md text-label-md" title="Encabezado H3" type="button">
+        H3
+      </button>
+<div class="w-px h-5 bg-surface-container-highest shrink-0 mx-0.5"></div>
+<button aria-label="Lista con viñetas" class="p-2 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors shrink-0" title="Lista viñetas" type="button">
+<span class="material-symbols-outlined text-[20px]">format_list_bulleted</span>
+</button>
+<button aria-label="Lista numerada" class="p-2 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors shrink-0" title="Lista numerada" type="button">
+<span class="material-symbols-outlined text-[20px]">format_list_numbered</span>
+</button>
+<button aria-label="Cita pedagógica" class="p-2 rounded bg-surface-container text-secondary font-bold shrink-0" title="Cita pedagógica" type="button">
+<span class="material-symbols-outlined text-[20px]">format_quote</span>
+</button>
+<div class="w-px h-5 bg-surface-container-highest shrink-0 mx-0.5"></div>
+<button aria-label="Insertar imagen" class="p-2 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors shrink-0" title="Insertar imagen" type="button">
+<span class="material-symbols-outlined text-[20px]">add_photo_alternate</span>
+</button>
+<button aria-label="Insertar video" class="p-2 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors shrink-0" title="Insertar video educativo" type="button">
+<span class="material-symbols-outlined text-[20px]">smart_display</span>
+</button>
+<button aria-label="Adjuntar archivo" class="p-2 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors shrink-0" title="Adjuntar ficha didáctica" type="button">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<div class="w-px h-5 bg-surface-container-highest shrink-0 mx-0.5"></div>
+<button aria-label="Caja sabías que" class="p-2 rounded hover:bg-surface-container text-tertiary-fixed-dim shrink-0" title="Caja '¿Sabías que...?'" type="button">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</button>
+<button aria-label="Pregunta para reflexionar" class="p-2 rounded hover:bg-surface-container text-secondary shrink-0" title="Pregunta reflexiva" type="button">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+</button>
+</div>
+</div>
+<!-- Main WYSIWYG Content Area -->
+<div class="px-gutter-mobile pt-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cuerpo del artículo (Modo editor)</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 428 palabras
+        </span>
+</div>
+<!-- Live Editable Body Mockup -->
+<div class="flex flex-col gap-space-md font-body-md text-body-md text-on-surface leading-relaxed">
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-primary">
+          1. El ecosistema invisible: guardianes del litoral
+        </h2>
+<p class="font-body-md text-body-md text-on-surface">
+          Los manglares constituyen uno de los biomas más singulares y determinantes de la geografía dominicana. Presentes a lo largo del Parque Nacional Los Haitises, Bahía de las Calderas y la Laguna de Oviedo, actúan como barreras naturales frente a los ciclones tropicales y como viveros indispensables para innumerables especies ícticas.
+        </p>
+<!-- Bloque de Cita Pedagógica -->
+<div class="bg-surface-container-low p-space-md rounded-r-xl relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<p class="font-display-mobile text-body-lg italic text-primary leading-snug mb-2 pl-2">
+            «La enseñanza de la ciencia ambiental no debe limitarse al catálogo de datos; debe suscitar el asombro y la responsabilidad activa ante nuestro propio patrimonio costero.»
+          </p>
+<div class="flex items-center gap-2 pl-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wide">MINERD • Guía Curricular de Ciencias V</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+          Al integrar a los estudiantes en la exploración de las raíces zancudas del mangle rojo (<em>Rhizophora mangle</em>), facilitamos que identifiquen la filtración de sedimentos y la simbiosis con moluscos y crustáceos.
+        </p>
+<!-- Didactic Box: Vocabulario Clave -->
+<div class="bg-secondary/10 p-space-md rounded-xl flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<span class="font-title-md text-title-md font-bold">Glosario Docente: Halófitas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Plantas adaptadas morfológicamente para prosperar en ambientes con altas concentraciones salinas mediante glándulas secretoras o tejidos de exclusión osmótica foliar.
+          </p>
+</div>
+<!-- Inline Prompt Suggestion / Delight Block -->
+<div class="bg-surface-container-high/60 p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="font-body-sm text-body-sm">Escribe aquí para continuar la secuencia o presiona '/' para bloques...</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">/ comando</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Associated Didactic Resources -->
+<div class="px-gutter-mobile pt-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">folder_open</span>
+<h2 class="font-title-md text-title-md text-primary">Recursos Asociados</h2>
+</div>
+<button class="text-secondary font-label-md text-label-md flex items-center gap-1 hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Subir otro</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[24px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-primary truncate font-bold">Guia_Campo_Manglares_5toPrimaria.pdf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2.4 MB • 4 páginas didácticas imprimibles</span>
+</div>
+</div>
+<button aria-label="Opciones del archivo" class="p-1.5 text-on-surface-variant hover:text-primary transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Advanced Publication Options -->
+<div class="px-gutter-mobile pt-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px] text-secondary">tune</span>
+<h2 class="font-title-md text-title-md text-primary">Opciones Avanzadas de Edición</h2>
+</div>
+<!-- Toggle 1: Moderated Comments -->
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary">Permitir comentarios moderados</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Los docentes y familias pueden comentar tras revisión previa.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:bg-secondary transition-colors after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-surface after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"></div>
+</label>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Toggle 2: Featured Article -->
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary">Destacar en la portada principal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Aparecerá en el carrusel de honores y recursos modelo.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:bg-secondary transition-colors after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-surface after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Bottom Action Confirmation Float -->
+<div class="px-gutter-mobile pt-space-lg flex items-center justify-between gap-space-sm">
+<button class="flex-1 py-3 px-4 bg-surface-container text-on-surface rounded-xl font-label-lg text-label-lg text-center font-semibold active:scale-[0.98] transition-transform" type="button">
+      Vista Previa
+    </button>
+<button class="flex-1 py-3 px-4 bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg text-center font-semibold shadow-md active:scale-[0.98] transition-transform flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Publicar ahora</span>
+</button>
+</div>
+</div></main><script src="db.js"></script>
+<script src="profile-loader.js"></script>
+<script>
+(function() {
+  // === DOM References ===
+  const titleInput = document.getElementById('article-title');
+  const summaryInput = document.getElementById('article-subtitle');
+  const subjectSelect = document.getElementById('subject-select');
+  const gradeSelect = document.getElementById('grade-select');
+  const coverAltInput = document.getElementById('cover-alt');
+  const readTimeInput = document.querySelector('input[type="number"]');
+  const coverImg = document.querySelector('.relative.w-full.h-44 img');
+  const coverLabel = document.querySelector('.relative.w-full.h-44 .bg-primary\\/60');
+
+  // Content area — the editable body
+  const contentArea = document.querySelector('main .flex.flex-col.gap-space-md.font-body-md');
+  if (contentArea) contentArea.setAttribute('contenteditable', 'true');
+
+  // Tags container
+  const tagsContainer = document.querySelector('.flex.flex-wrap.gap-1\\.5');
+
+  // Status segmented buttons
+  const statusBtns = document.querySelectorAll('.grid.grid-cols-3 button');
+  const statusMap = ['draft', 'scheduled', 'published'];
+  let currentStatus = 'draft';
+
+  // Top action buttons
+  const topBtns = document.querySelectorAll('header ~ main .bg-surface-container-low .flex.items-center.gap-space-xs button');
+  const saveDraftBtn = topBtns[0]; // "Borrador"
+  const publishTopBtn = topBtns[1]; // "Publicar"
+
+  // Bottom buttons
+  const bottomBtns = document.querySelectorAll('.px-gutter-mobile.pt-space-lg.flex button');
+  const previewBtn = bottomBtns[0];
+  const publishBottomBtn = bottomBtns[1];
+
+  // Toggles
+  const toggleInputs = document.querySelectorAll('.bg-surface-container-lowest input[type="checkbox"]');
+  const commentsToggle = toggleInputs[0];
+  const featuredToggle = toggleInputs[1];
+
+  // Auto-save indicator
+  const autoSaveLabel = document.querySelector('.animate-pulse + .font-label-sm');
+  const autoSaveDot = document.querySelector('.animate-pulse');
+
+  // === State ===
+  let editingArticle = null;
+  let _teacherProfile = null;
+  const urlParams = new URLSearchParams(window.location.search);
+  const editId = urlParams.get('id');
+
+  // === Status Segmented Control ===
+  statusBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      statusBtns.forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        b.classList.add('text-on-surface-variant');
+      });
+      btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      btn.classList.remove('text-on-surface-variant');
+      currentStatus = statusMap[idx];
+    });
+  });
+
+  // === Tags Management ===
+  function getTags() {
+    const chips = tagsContainer.querySelectorAll('span.inline-flex');
+    return Array.from(chips).map(chip => {
+      const text = chip.childNodes[0].textContent.trim().replace(/^#/, '');
+      return text;
+    });
+  }
+
+  function renderTags(tags) {
+    // Remove existing chips but keep the "Añadir" button
+    const addBtn = tagsContainer.querySelector('button');
+    tagsContainer.innerHTML = '';
+    tags.forEach(tag => {
+      const chip = document.createElement('span');
+      chip.className = 'inline-flex items-center gap-1 px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-md text-label-md';
+      chip.innerHTML = `#${escapeHTML(tag)} <button aria-label="Eliminar etiqueta" class="hover:text-error leading-none" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>`;
+      chip.querySelector('button').addEventListener('click', () => {
+        chip.remove();
+      });
+      tagsContainer.appendChild(chip);
+    });
+    // Re-add the "Añadir" button
+    const newAddBtn = document.createElement('button');
+    newAddBtn.className = 'inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container text-primary rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors';
+    newAddBtn.type = 'button';
+    newAddBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">add</span><span>Añadir</span>';
+    newAddBtn.addEventListener('click', addTagPrompt);
+    tagsContainer.appendChild(newAddBtn);
+  }
+
+  function addTagPrompt() {
+    const tag = prompt('Escriba el nuevo descriptor temático:');
+    if (tag && tag.trim()) {
+      const currentTags = getTags();
+      currentTags.push(tag.trim());
+      renderTags(currentTags);
+    }
+  }
+
+  // Wire existing tag remove buttons
+  tagsContainer.querySelectorAll('span.inline-flex button').forEach(btn => {
+    btn.addEventListener('click', () => btn.parentElement.remove());
+  });
+  // Wire existing add button
+  const existingAddBtn = tagsContainer.querySelector('button.bg-surface-container');
+  if (existingAddBtn) existingAddBtn.addEventListener('click', addTagPrompt);
+
+  // === Rich Editor Toolbar ===
+  const toolbar = document.querySelector('.sticky.top-16 .flex.items-center');
+  if (toolbar) {
+    const buttons = toolbar.querySelectorAll('button');
+    buttons.forEach(btn => {
+      const label = btn.getAttribute('aria-label') || '';
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!contentArea) return;
+        contentArea.focus();
+        if (label === 'Negrita') document.execCommand('bold', false);
+        else if (label === 'Cursiva') document.execCommand('italic', false);
+        else if (label === 'Encabezado H2') document.execCommand('formatBlock', false, 'h2');
+        else if (label === 'Encabezado H3') document.execCommand('formatBlock', false, 'h3');
+        else if (label === 'Lista con viñetas') document.execCommand('insertUnorderedList', false);
+        else if (label === 'Lista numerada') document.execCommand('insertOrderedList', false);
+        else if (label === 'Cita pedagógica') document.execCommand('formatBlock', false, 'blockquote');
+      });
+    });
+  }
+
+  // === Collect Form Data ===
+  function collectArticleData() {
+    const data = {
+      title: titleInput.value.trim(),
+      summary: summaryInput.value.trim(),
+      subject: subjectSelect.value,
+      grade: gradeSelect.value,
+      readTime: parseInt(readTimeInput.value) || 5,
+      status: currentStatus,
+      coverImage: coverImg ? coverImg.src : '',
+      coverAlt: coverAltInput.value.trim(),
+      author: _teacherProfile?.name || 'Docente',
+      role: _teacherProfile?.role || '',
+      content: contentArea ? contentArea.innerHTML : '',
+      tags: getTags(),
+      allowComments: commentsToggle ? commentsToggle.checked : true,
+      featured: featuredToggle ? featuredToggle.checked : false
+    };
+    if (editingArticle) {
+      data.id = editingArticle.id;
+      data.createdAt = editingArticle.createdAt;
+      data.views = editingArticle.views || 0;
+    }
+    return data;
+  }
+
+  // === Save ===
+  async function saveArticle(forceStatus) {
+    const data = collectArticleData();
+    if (forceStatus) data.status = forceStatus;
+    if (!data.title) {
+      showToast('Por favor escriba un título para la publicación.', 'error');
+      titleInput.focus();
+      return;
+    }
+    try {
+      await window.AulaAbiertaDB.saveArticle(data);
+      const msg = data.status === 'published' ? '¡Artículo publicado exitosamente!'
+                : data.status === 'scheduled' ? 'Artículo programado correctamente.'
+                : 'Borrador guardado.';
+      showToast(msg, 'success');
+      setTimeout(() => {
+        window.location.href = 'gestion.html?saved=1';
+      }, 1000);
+    } catch (err) {
+      console.error('Error al guardar:', err);
+      showToast('Error al guardar el artículo. Intente nuevamente.', 'error');
+    }
+  }
+
+  // === Wire Save Buttons ===
+  if (saveDraftBtn) saveDraftBtn.addEventListener('click', () => saveArticle('draft'));
+  if (publishTopBtn) publishTopBtn.addEventListener('click', () => saveArticle('published'));
+  if (publishBottomBtn) publishBottomBtn.addEventListener('click', () => saveArticle('published'));
+
+  // Preview button — save as draft first, then open reading view
+  if (previewBtn) previewBtn.addEventListener('click', async () => {
+    const data = collectArticleData();
+    if (!data.title) { showToast('Escriba un título primero.', 'error'); return; }
+    if (!data.status || data.status === 'published') data.status = 'draft';
+    const saved = await window.AulaAbiertaDB.saveArticle(data);
+    window.location.href = 'lectura.html?id=' + saved.id;
+  });
+
+  // === Auto-Save (every 30s) ===
+  let autoSaveTimer = null;
+  function startAutoSave() {
+    autoSaveTimer = setInterval(async () => {
+      const data = collectArticleData();
+      if (!data.title && !data.content) return;
+      if (!data.status || data.status === 'published') data.status = 'draft';
+      try {
+        const saved = await window.AulaAbiertaDB.saveArticle(data);
+        if (!editingArticle) editingArticle = saved; // preserve id for future saves
+        updateAutoSaveLabel('Guardado aut. ahora');
+      } catch (e) { /* silent */ }
+    }, 30000);
+  }
+
+  function updateAutoSaveLabel(text) {
+    if (autoSaveLabel) autoSaveLabel.textContent = text;
+  }
+
+  // === Toast Notification ===
+  function showToast(message, type) {
+    let toast = document.getElementById('editor-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'editor-toast';
+      toast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 z-[100] px-4 py-3 rounded-xl shadow-lg font-label-lg text-label-lg transition-all duration-300 max-w-[90vw] text-center';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.className = toast.className.replace(/bg-\S+/g, '').replace(/text-\S+/g, '');
+    if (type === 'error') {
+      toast.classList.add('bg-error-container', 'text-on-error-container');
+    } else {
+      toast.classList.add('bg-primary-container', 'text-on-primary');
+    }
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(20px)';
+    }, 3000);
+  }
+
+  // === Load Article for Editing ===
+  async function loadArticleForEdit(id) {
+    try {
+      const art = await window.AulaAbiertaDB.getArticleById(id);
+      if (!art) {
+        showToast('Artículo no encontrado.', 'error');
+        return;
+      }
+      editingArticle = art;
+
+      // Populate fields
+      titleInput.value = art.title || '';
+      summaryInput.value = art.summary || '';
+      subjectSelect.value = art.subject || 'Ciencias Naturales';
+      gradeSelect.value = art.grade || '5to Primaria';
+      readTimeInput.value = art.readTime || 5;
+      coverAltInput.value = art.coverAlt || '';
+
+      if (art.coverImage && coverImg) {
+        coverImg.src = art.coverImage;
+      }
+      if (coverLabel && art.title) {
+        coverLabel.textContent = 'Portada activa: ' + art.title.substring(0, 40);
+      }
+
+      if (art.content && contentArea) {
+        contentArea.innerHTML = sanitizeHTML(art.content);
+      }
+
+      if (art.tags && art.tags.length) {
+        renderTags(art.tags);
+      }
+
+      // Set status
+      const statusIdx = statusMap.indexOf(art.status);
+      if (statusIdx >= 0) {
+        statusBtns[statusIdx].click();
+      }
+
+      // Set toggles
+      if (commentsToggle && art.allowComments !== undefined) commentsToggle.checked = art.allowComments;
+      if (featuredToggle && art.featured !== undefined) featuredToggle.checked = art.featured;
+
+      // Update page title
+      document.querySelector('h1.font-headline-sm').textContent = 'Editar Artículo';
+
+    } catch (err) {
+      console.error('Error cargando artículo:', err);
+      showToast('Error al cargar el artículo.', 'error');
+    }
+  }
+
+  // === Init ===
+  async function init() {
+    await window.AulaAbiertaDB._initPromise;
+    if (typeof window.getTeacherProfile === 'function') {
+      try { _teacherProfile = await window.getTeacherProfile(); } catch(e) {}
+    }
+    if (editId) {
+      await loadArticleForEdit(editId);
+    } else {
+      // New article — clear hardcoded values
+      titleInput.value = '';
+      summaryInput.value = '';
+      coverAltInput.value = '';
+      readTimeInput.value = 5;
+      if (contentArea) contentArea.innerHTML = '<p>Escriba el contenido de su artículo aquí...</p>';
+      renderTags([]);
+    }
+    startAutoSave();
+  }
+
+  // Wire "Salir" button
+  const exitBtn = document.querySelector('button .font-label-md');
+  if (exitBtn && exitBtn.textContent.trim() === 'Salir') {
+    exitBtn.closest('button').addEventListener('click', () => {
+      if (confirm('¿Desea salir sin guardar los cambios?')) {
+        window.location.href = 'gestion.html';
+      }
+    });
+  }
+
+  init();
+})();
+</script>
+</body></html>

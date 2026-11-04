@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Aula Abierta</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&amp;family=Source+Sans+3:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error": "#ba1a1a", "primary": "#000922", "inverse-primary": "#b6c6f1", "on-secondary-container": "#00476e", "on-error": "#ffffff", "primary-fixed-dim": "#b6c6f1", "error-container": "#ffdad6", "outline": "#75777f", "surface-bright": "#f7f9fb", "on-surface": "#191c1e", "on-primary-container": "#7988b0", "primary-fixed": "#d9e2ff", "on-tertiary-fixed": "#002113", "on-surface-variant": "#45464e", "on-primary-fixed-variant": "#37466a", "surface-container": "#eceef0", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "secondary-container": "#5bb8fe", "inverse-surface": "#2d3133", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#009c6b", "surface-variant": "#e0e3e5", "surface-dim": "#d8dadc", "background": "#f7f9fb", "primary-container": "#0f2042", "tertiary": "#000d06", "on-primary-fixed": "#081a3c", "on-secondary-fixed": "#001d31", "on-primary": "#ffffff", "on-background": "#191c1e", "tertiary-fixed-dim": "#4edea3", "surface-container-highest": "#e0e3e5", "secondary-fixed-dim": "#93ccff", "inverse-on-surface": "#eff1f3", "tertiary-fixed": "#6ffbbe", "on-secondary-fixed-variant": "#004b73", "on-tertiary-fixed-variant": "#005236", "outline-variant": "#c5c6cf", "tertiary-container": "#002718", "surface": "#f7f9fb", "surface-tint": "#4f5e83", "secondary": "#006398", "on-error-container": "#93000a", "secondary-fixed": "#cce5ff", "surface-container-high": "#e6e8ea", "surface-container-low": "#f2f4f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin": "2rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-mobile": "1rem" }, fontFamily: { "body-lg": ["\"Source Sans 3\""], "headline-md": ["Literata"], "headline-sm": ["Literata"], "label-lg": ["\"Source Sans 3\""], "display": ["Literata"], "title-md": ["\"Source Sans 3\""], "headline-md-mobile": ["Literata"], "headline-lg-mobile": ["Literata"], "label-sm": ["\"Source Sans 3\""], "display-mobile": ["Literata"], "body-sm": ["\"Source Sans 3\""], "title-lg": ["\"Source Sans 3\""], "headline-lg": ["Literata"], "label-md": ["\"Source Sans 3\""], "body-md": ["\"Source Sans 3\""] }, fontSize: { "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-md-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "display-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen" data-auto-profile><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,32,66,0.05)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Logo Aula Abierta" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc5inx07kdMNiPilOQ2dgiYy0fxqiFi1z1VBbAE2kswSZLikWihwSGN9sSRJjYkQR-mXq3G9NkUxJuNRZR0rTUdjDP8O98CLkZJNqNyrOGWAei46h6drUzCQbHs7JlswwIwnct6VynZzaHVHa22OmbTrWUYYob-1xTJklooTZ2w7DXmXtHgOAtLvQR8VZ5B_256iIbTck9dkeheUO8i1SBk8nxh8KBBV_utg_o2VHm1Z_Oa3L-JFs"/><div class="flex flex-col truncate leading-tight"><div class="flex items-baseline gap-space-xs"><span class="font-headline-sm text-title-md text-primary truncate font-bold">Aula Abierta</span></div><span class="font-label-sm text-label-sm text-secondary truncate tracking-normal font-semibold">Mi Blog Docente • Inicio</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Buscar publicaciones o recursos" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Guardados y marcadores" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">bookmark</span></button><a aria-label="Perfil del docente" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" data-path="perfil-docente" href="panel.html"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%236750A4' rx='60'/%3E%3Ctext x='60' y='76' text-anchor='middle' font-size='48' font-family='sans-serif' fill='white'%3E%F0%9F%91%A9%E2%80%8D%F0%9F%8F%AB%3C/text%3E%3C/svg%3E"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Saludo Cálido y Empático Docente -->
+<section class="px-gutter-mobile pt-space-md pb-space-sm">
+<div class="bg-primary-container text-on-primary rounded-xl p-space-md shadow-md relative overflow-hidden">
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">Semana Escolar Activa</span>
+<span class="text-secondary-fixed text-label-sm font-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Octubre 2024
+          </span>
+</div>
+<h2 class="font-headline-md-mobile text-headline-md-mobile font-bold tracking-tight text-surface-lowest">
+          ¡Bienvenidos al aula digital!
+        </h2>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+          Soy la <strong class="text-surface font-semibold" data-tp="titleName">Lic. Ramona Almonte</strong>. Diseñé este espacio para que nuestras niñas, niños y colegas docentes exploren el saber dominicano y universal con rigor académico, asombro y mucho entusiasmo pedagógico.
+        </p>
+<div class="pt-space-xs flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 bg-surface/10 backdrop-blur-md px-3 py-1 rounded-full text-surface-lowest font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">verified</span>
+            Curaduría MINERD sugerida
+          </div>
+<a class="text-secondary-fixed hover:text-surface text-label-sm font-label-sm flex items-center gap-0.5 transition-colors" href="#areas-curriculares">
+            Explorar áreas <span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- Detalle decorativo sutil en fondo -->
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-secondary/20 blur-xl pointer-events-none"></div>
+</div>
+</section>
+<!-- Artículo Destacado de la Semana (Hero Card) -->
+<section class="px-gutter-mobile py-space-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_awesome</span>
+<h3 class="font-title-md text-title-md text-primary font-bold">Lectura Recomendada</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Semana 4</span>
+</div>
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-md flex flex-col group">
+<div class="relative w-full h-44 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Ilustración científica y pedagógica de acuarela digital con el ciclo hidrológico en la cordillera caribeña, mostrando evaporación, nubes de lluvia tropical sobre las montañas y ríos cristalinos desembocando en el mar, tonalidades azul índigo, cian y verde esmeralda con iluminación cálida y natural" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhyH38OIpbtm_4rrc4Uwn5-Yj7qJGf1oYp-KVPJr1uylCC_3g4q1ejq0qpp09H6ZmysyVAz3RBfKC4vsxbbPgPzdJ-Nh6cFXbO51u2CYDEaaEWEFfLvzybni1ACrBebsJS7MCfUYO2L3TiWwXp0yAlljdcwBsJSFgcwtJeDt3Dz26RFngNKGqnqosVmOyymyFxhOig9An54p2mCrqKPHU4VUpReeIaqcMl0FXRWXv5TD5-U8kZVgE"/>
+<div class="absolute top-space-sm left-space-sm flex gap-1.5 items-center">
+<span class="bg-amber-100 text-amber-900 font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+            Destacado
+          </span>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold shadow-sm">
+            Ciencias Naturales
+          </span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm bg-primary/80 backdrop-blur-md text-surface-lowest font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5 min lectura
+        </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">school</span> 4to • 6to Primaria</span>
+<span>•</span>
+<span>Ref. Didáctica CN-24</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">
+          El ciclo del agua y su importancia para la vida
+        </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed line-clamp-2">
+          Una mirada reflexiva para entender cómo la evaporación en nuestras costas y la condensación en la Cordillera Central garantizan la supervivencia de los ecosistemas dominicanos.
+        </p>
+<div class="pt-space-xs flex items-center justify-between gap-space-sm">
+<a class="inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg py-2.5 px-4 rounded-lg shadow-sm transition-all text-center" href="#">
+<span>Leer artículo completo</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button aria-label="Guardar artículo destacado" class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark_add</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Acceso Rápido por Áreas Curriculares -->
+<section class="px-gutter-mobile py-space-sm" id="areas-curriculares">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Áreas Curriculares</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Explora por ejes pedagógicos transversales</p>
+</div>
+<a class="font-label-sm text-label-sm text-secondary font-semibold hover:underline flex items-center gap-0.5" href="#">
+        Ver todas <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Tarjeta: Ciencias Naturales -->
+<a class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-2 group" href="#">
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-md text-body-md font-bold text-primary block truncate">Ciencias Naturales</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14 publicaciones</span>
+</div>
+</a>
+<!-- Tarjeta: Matemáticas -->
+<a class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-2 group" href="#">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">calculate</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-md text-body-md font-bold text-primary block truncate">Matemáticas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">19 secuencias</span>
+</div>
+</a>
+<!-- Tarjeta: Lengua Española -->
+<a class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-2 group" href="#">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">local_library</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-md text-body-md font-bold text-primary block truncate">Lengua Española</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">22 lecturas</span>
+</div>
+</a>
+<!-- Tarjeta: Ciencias Sociales -->
+<a class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-2 group" href="#">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">public</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-md text-body-md font-bold text-primary block truncate">Ciencias Sociales</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">11 investigaciones</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Últimas Publicaciones -->
+<section class="px-gutter-mobile py-space-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">history_edu</span>
+<h3 class="font-title-md text-title-md text-primary font-bold">Últimas Publicaciones</h3>
+</div>
+<a class="font-label-sm text-label-sm text-secondary font-semibold hover:underline" href="#">Ver repositorio</a>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Artículo 1: Matemáticas -->
+<article class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex gap-space-sm items-start">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Plato geométrico con círculos divididos en fracciones coloreadas en azul marino y cyan didáctico, reglas de madera sobre un pupitre escolar caribeño con luz de mañana cálida y nítida" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjZb1gp9aLd2cih1XpTJnFQH1iDIJIzsjgAvRJhu6B7ZH29sc1u-Cud4MZX1xRYWu5-C-bVWcgMp7BnPhjl6bm3vSBj9Jaa-ZH9vpYBp05yBLBBNYxkWzz_kP0BCYtE-MgSeXBcL-u-IR8_lwGc2ZjHPSx--BDNF45cxId2h8lmJium6Jn7hHfzloCgo8DJDJX_71nGoREWQNvPRhnyq0mf5sdwQ_l7r4f-vVhTufoyntdjN_6C0Y"/>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">5to Grado</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">24 Oct</span>
+</div>
+<a class="font-title-md text-body-md font-bold text-primary hover:text-secondary transition-colors line-clamp-2 mt-0.5" href="#">
+            Comprendiendo las fracciones equivalentes
+          </a>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 4 min lectura</span>
+<button aria-label="Guardar artículo" class="text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Artículo 2: Lengua Española -->
+<article class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex gap-space-sm items-start">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Cuaderno caligráfico abierto con notas legibles y resaltadores en tonos verde menta y lapicero de tinta azul, libros de gramática infantil y una flor de trinitaria secada como marcapáginas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2D8hMOGjD4GLsG2YH9CSoOFGwG_kInc1FbaJithBv8rLoenGE3yv8QvEAl5e2MbnJY8TZFbAii8apT3-2t5RQ3juzv6TeNllY2piSdiscavvcZ_rOowVl1Y5E_rtdxLGbcBs2J_eSWvFBvWv4DG6BXmZ3o60Kxtypxn7_NObvc5NlOzScrvCBZtgqf4xML6avnCXxGrXttTlTGmxMc0wlNDTlLtTBxDCnMri6d00e78ujLa89Rus"/>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">4to Grado</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">20 Oct</span>
+</div>
+<a class="font-title-md text-body-md font-bold text-primary hover:text-secondary transition-colors line-clamp-2 mt-0.5" href="#">
+            Cómo construir oraciones claras y fluidas
+          </a>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 6 min lectura</span>
+<button aria-label="Guardar artículo" class="text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Artículo 3: Ciencias Sociales -->
+<article class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex gap-space-sm items-start">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Mapa cartográfico antiguo de la isla de Santo Domingo y la Española, con una brújula de bronce, documentos históricos transcritos y un lápiz sobre madera noble iluminada por el sol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6BR5HDu6AsuEtIbmSpGCuhPuzyD21lkJPJoiSSSpc0XDwHXL78NnswgJzMoNQb7ZeScN-A-ZCBV-_wZUMPh00DSrtnKtchnYiwSasrstb2byZiDh0NlmaYO88eObZ-55VNHsoy54IzWiRVpPjiE8iKjZmYjYjFUXzlV960K3NHsV0A204vDwIeXjx0TAA8tMOOBKTbA4-I8aIwvYlJjPtG7SNx8fYVcyQBRehQ6Rx3H0sCOLNEEk"/>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">6to Grado</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">17 Oct</span>
+</div>
+<a class="font-title-md text-body-md font-bold text-primary hover:text-secondary transition-colors line-clamp-2 mt-0.5" href="#">
+            Explorando la historia dominicana en el siglo XIX
+          </a>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 8 min lectura</span>
+<button aria-label="Guardar artículo" class="text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Recurso Pedagógico Recomendado (Descarga Directa) -->
+<section class="px-gutter-mobile py-space-sm">
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">download_for_offline</span>
+<h3 class="font-title-md text-title-md text-primary font-bold">Recurso Pedagógico</h3>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">print</span> Imprimible
+        </span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-sm shadow-xs">
+<div class="w-12 h-12 rounded-lg bg-red-50 text-red-700 flex flex-col items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+<span class="font-label-sm text-[9px] uppercase tracking-wider font-extrabold -mt-1">PDF</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-md text-body-md font-bold text-primary truncate">
+            Guía de observación del ciclo hidrológico
+          </h4>
+<p class="font-body-sm text-label-sm text-on-surface-variant truncate">
+            Ficha experimental para el aula y patio escolar • 1.8 MB
+          </p>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
+          Incluye rúbrica evaluativa
+        </div>
+<button class="inline-flex items-center gap-1.5 bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md py-2 px-3.5 rounded-lg shadow-sm transition-all" onclick="showToast('Iniciando descarga segura de la Guía Didáctica (PDF)...', 'info')" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Descargar Guía</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Actividad de la Semana (Interactiva) -->
+<section class="px-gutter-mobile py-space-sm">
+<div class="bg-gradient-to-br from-secondary to-primary-container text-on-primary p-space-md rounded-xl shadow-md relative overflow-hidden">
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sports_esports</span> Dinámica semanal
+          </span>
+<span class="text-secondary-fixed text-label-sm font-label-sm">Reto #12</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-surface-lowest">
+          ¿Cuánto sabes sobre la condensación y los ríos?
+        </h3>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+          Pon a prueba los aprendizajes de tu grupo con 5 preguntas interactivas diseñadas para debate en clase o práctica individual en casa.
+        </p>
+<div class="pt-space-xs flex items-center justify-between gap-space-sm">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center text-[10px] font-bold ring-2 ring-primary-container">4A</div>
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center text-[10px] font-bold ring-2 ring-primary-container">5B</div>
+<div class="w-7 h-7 rounded-full bg-surface text-primary flex items-center justify-center text-[10px] font-bold ring-2 ring-primary-container">+35</div>
+</div>
+<button class="inline-flex items-center gap-1.5 bg-tertiary-fixed text-on-tertiary-fixed font-label-lg text-label-lg py-2 px-4 rounded-lg font-bold shadow-sm hover:opacity-90 transition-opacity" onclick="showToast('Abriendo desafío interactivo de Ciencias Naturales...', 'info')" type="button">
+<span>Jugar al reto de Ciencias</span>
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Resplandor decorativo -->
+<div class="absolute right-0 top-0 w-28 h-28 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+</div>
+</section>
+<!-- Banner: Conoce a tu Docente -->
+<section class="px-gutter-mobile py-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative shrink-0">
+<img alt="Lic. Ramona Almonte" class="w-16 h-16 rounded-full object-cover ring-2 ring-secondary-container/40 shadow-sm" data-tp="photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%236750A4' rx='60'/%3E%3Ctext x='60' y='76' text-anchor='middle' font-size='48' font-family='sans-serif' fill='white'%3E%F0%9F%91%A9%E2%80%8D%F0%9F%8F%AB%3C/text%3E%3C/svg%3E"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 bg-tertiary-fixed rounded-full ring-2 ring-surface-container-lowest" title="Docente activa"></span>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-title-lg text-title-lg font-bold text-primary truncate" data-tp="titleName">Lic. Ramona Almonte</h4>
+<p class="font-label-md text-label-md text-secondary font-semibold truncate" data-tp="specialty">Educación Primaria • Mención Ciencias</p>
+<p class="font-body-sm text-label-sm text-on-surface-variant truncate" data-tp="schoolYears">Distrito Educativo 10-01 • 14 años de vocación</p>
+</div>
+</div>
+<p class=”font-body-sm text-body-sm text-on-surface leading-relaxed italic bg-surface-container-low p-space-sm rounded-lg” data-tp=”bio”>
+        “Educar con ternura y firmeza es encender una antorcha que nunca dejará de alumbrar el porvenir de nuestra patria.”
+      </p>
+<div class="flex justify-end pt-1">
+<a class="inline-flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md py-2 px-3.5 rounded-lg transition-colors" data-path="perfil-docente" href="panel.html">
+<span>Ver biografía y metodología</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Bloque Pedagógico & Pensamiento del Mes -->
+<section class="px-gutter-mobile py-space-sm">
+<div class="bg-surface-container-high p-space-md rounded-xl flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px] shrink-0 mt-0.5">format_quote</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Pensamiento Pedagógico</span>
+<blockquote class="font-headline-sm-mobile text-body-md italic text-primary leading-snug">
+          “El aula no son cuatro paredes; es cualquier rincón donde florece la curiosidad guiada por el afecto.”
+        </blockquote>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-1">Eugenio María de Hostos • Ideario Educativo</span>
+</div>
+</div>
+</section>
+<!-- Pie de Página Institucional y Accesible -->
+<footer class="mt-space-md px-gutter-mobile pt-space-md pb-space-lg bg-surface-container-highest text-on-surface-variant flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">school</span>
+<span class="font-headline-sm text-title-md font-bold text-primary">Aula Abierta — Blog Docente</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Espacio curricular y pedagógico sin fines de lucro, elaborado como apoyo formativo para estudiantes, familias y maestros de nivel primario y secundario.
+      </p>
+</div>
+<!-- Metadatos de alineación curricular -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-sm shadow-xs">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">policy</span>
+<div class="min-w-0 text-on-surface">
+<span class="font-label-md text-label-md font-bold block text-primary">Alineación Curricular Sugerida</span>
+<span class="font-body-sm text-label-sm text-on-surface-variant block">Adecuación Curricular vigente del Ministerio de Educación (MINERD).</span>
+</div>
+</div>
+<!-- Enlaces institucionales accesibles -->
+<div class="flex flex-wrap gap-x-space-md gap-y-2 font-label-md text-label-md pt-space-xs">
+<a class="text-on-surface-variant hover:text-primary transition-colors underline" href="#">Planificaciones Abiertas</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors underline" href="#">Términos Pedagógicos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors underline" href="#">Accesibilidad Visual</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors underline" href="#" data-tp="titleName">Contacto • Lic. Ramona</a>
+</div>
+<div class="pt-space-xs text-on-surface-variant font-label-sm text-label-sm flex flex-col gap-1 text-center">
+<span>Santo Domingo, República Dominicana • 2024</span>
+<span>Compromiso con la excelencia, la equidad y el rigor en la enseñanza.</span>
+</div>
+</footer>
+</div>
+<script>
+  // Micro-interacción: Guardado temporal de artículos y retroalimentación táctil
+  document.querySelectorAll('button[aria-label^="Guardar"]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const icon = this.querySelector('.material-symbols-outlined');
+      if (icon) {
+        if (icon.innerText === 'bookmark_border' || icon.innerText === 'bookmark_add') {
+          icon.innerText = 'bookmark';
+          icon.classList.add('text-secondary');
+        } else {
+          icon.innerText = 'bookmark_border';
+          icon.classList.remove('text-secondary');
+        }
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,32,66,0.06)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary-container font-semibold" data-path="inicio" href="index.html"><span class="material-symbols-outlined text-[24px]">school</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="publicaciones" href="publicaciones.html"><span class="material-symbols-outlined text-[24px]">menu_book</span><span class="font-label-sm text-label-sm">Artículos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="recursos-didacticos" href="recursos.html"><span class="material-symbols-outlined text-[24px]">folder_open</span><span class="font-label-sm text-label-sm">Recursos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="actividades-pedagogicas" href="lectura.html"><span class="material-symbols-outlined text-[24px]">extension</span><span class="font-label-sm text-label-sm">Actividades</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="perfil-docente" href="panel.html"><span class="material-symbols-outlined text-[24px]">person_outline</span><span class="font-label-sm text-label-sm">Perfil</span></a></div></nav><script src="db.js"></script>
+<script src="profile-loader.js"></script>
+<script>
+// === WhatsApp share helper ===
+function shareWhatsAppCard(btn) {
+  var card = btn.closest('article') || btn.closest('a');
+  var titleEl = card.querySelector('h4, h2, a.font-title-md');
+  var title = titleEl ? titleEl.textContent.trim() : 'Articulo';
+  var link = card.querySelector('a[href*="lectura.html"]');
+  var url = link ? new URL(link.href, window.location.href).href : window.location.href;
+  var text = '\u{1F4DA} *' + title + '* - Aula Abierta Blog Docente\n' + url;
+  window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+}
+
+// === CRUD DINÁMICO: INDEX.HTML ===
+document.addEventListener('DOMContentLoaded', async () => {
+  await AulaAbiertaDB._initPromise;
+  const articles = await AulaAbiertaDB.getPublishedArticles();
+  const allArticles = await AulaAbiertaDB.getAll('articles');
+
+  // --- Helper: formatear fecha ---
+  function fmtDate(ts) {
+    return new Date(ts).toLocaleDateString('es-DO', { day: 'numeric', month: 'short' });
+  }
+
+  // --- 1. HERO CARD (primer artículo publicado) ---
+  const heroSection = document.querySelector('section.px-gutter-mobile.py-space-sm article.group');
+  if (heroSection && articles.length > 0) {
+    const hero = articles[0];
+    const img = heroSection.querySelector('img');
+    if (img && hero.coverImage) { img.src = hero.coverImage; img.setAttribute('data-alt', hero.coverAlt || ''); }
+    const subjectBadge = heroSection.querySelector('.bg-secondary-fixed');
+    if (subjectBadge) subjectBadge.textContent = hero.subject || '';
+    const timeBadge = heroSection.querySelector('.bg-primary\\/80');
+    if (timeBadge) timeBadge.innerHTML = '<span class="material-symbols-outlined text-[14px]">schedule</span> ' + (hero.readTime || 5) + ' min lectura';
+    const gradeSpan = heroSection.querySelector('.flex.items-center.gap-2.text-on-surface-variant span:first-child');
+    if (gradeSpan) gradeSpan.innerHTML = '<span class="material-symbols-outlined text-[15px]">school</span> ' + (hero.grade || '');
+    const title = heroSection.querySelector('h4');
+    if (title) title.textContent = hero.title;
+    const summary = heroSection.querySelector('p.line-clamp-2');
+    if (summary) summary.textContent = hero.summary || '';
+    const readLink = heroSection.querySelector('a[href]');
+    if (readLink) readLink.href = 'lectura.html?id=' + hero.id;
+  }
+
+  // --- 2. ÚLTIMAS PUBLICACIONES (artículos 2, 3, 4) ---
+  const latestSection = document.querySelector('section:has(h3:last-of-type)');
+  const latestContainer = document.querySelectorAll('section.px-gutter-mobile.py-space-sm');
+  let pubSection = null;
+  latestContainer.forEach(s => {
+    const h3 = s.querySelector('h3');
+    if (h3 && h3.textContent.includes('Últimas Publicaciones')) pubSection = s;
+  });
+  if (pubSection) {
+    const cardContainer = pubSection.querySelector('.flex.flex-col.gap-space-xs');
+    if (cardContainer && articles.length > 1) {
+      const remaining = articles.slice(1, 4);
+      const subjectStyles = {
+        'Ciencias Naturales': { bg: 'bg-tertiary-fixed', text: 'text-on-tertiary-fixed' },
+        'Matemáticas': { bg: 'bg-secondary-fixed', text: 'text-on-secondary-fixed-variant' },
+        'Lengua Española': { bg: 'bg-primary-fixed', text: 'text-on-primary-fixed' },
+        'Ciencias Sociales': { bg: 'bg-secondary-container', text: 'text-on-secondary-container' }
+      };
+      cardContainer.innerHTML = remaining.map(art => {
+        const style = subjectStyles[art.subject] || subjectStyles['Ciencias Naturales'];
+        return `
+        <article class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex gap-space-sm items-start">
+          <div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+            <img class="w-full h-full object-cover" src="${escapeHTML(art.coverImage || '')}" alt="${escapeHTML(art.coverAlt || art.title)}"/>
+          </div>
+          <div class="flex flex-col justify-between flex-1 min-w-0">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="${style.bg} ${style.text} font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">${escapeHTML(art.grade || '')}</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">${fmtDate(art.createdAt)}</span>
+            </div>
+            <a class="font-title-md text-body-md font-bold text-primary hover:text-secondary transition-colors line-clamp-2 mt-0.5" href="lectura.html?id=${encodeURIComponent(art.id)}">
+              ${escapeHTML(art.title)}
+            </a>
+            <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ${art.readTime || 5} min lectura</span>
+              <div class="flex items-center gap-1">
+                <button aria-label="Compartir en WhatsApp" class="w-8 h-8 flex items-center justify-center rounded-lg hover:opacity-80 transition-opacity" style="color:#25D366;" type="button" onclick="shareWhatsAppCard(this)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </button>
+                <button aria-label="Guardar artículo" class="text-on-surface-variant hover:text-primary" type="button">
+                  <span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>`;
+      }).join('');
+
+      // Re-bind bookmark buttons
+      cardContainer.querySelectorAll('button[aria-label^="Guardar"]').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const icon = this.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.innerText = icon.innerText === 'bookmark_border' ? 'bookmark' : 'bookmark_border';
+            icon.classList.toggle('text-secondary');
+          }
+        });
+      });
+    }
+
+    // Update "Ver repositorio" link
+    const repoLink = pubSection.querySelector('a[href="#"]');
+    if (repoLink && repoLink.textContent.includes('Ver repositorio')) {
+      repoLink.href = 'publicaciones.html';
+    }
+  }
+
+  // --- 3. ÁREAS CURRICULARES (conteos dinámicos) ---
+  const subjects = ['Ciencias Naturales', 'Matemáticas', 'Lengua Española', 'Ciencias Sociales'];
+  const subjectLabels = { 'Ciencias Naturales': 'publicaciones', 'Matemáticas': 'secuencias', 'Lengua Española': 'lecturas', 'Ciencias Sociales': 'investigaciones' };
+  const areasSection = document.getElementById('areas-curriculares');
+  if (areasSection) {
+    const areaCards = areasSection.querySelectorAll('.grid a');
+    areaCards.forEach((card, i) => {
+      if (i < subjects.length) {
+        const subj = subjects[i];
+        const count = allArticles.filter(a => a.subject === subj).length;
+        const countSpan = card.querySelector('.font-label-sm.text-label-sm.text-on-surface-variant');
+        if (countSpan) countSpan.textContent = count + ' ' + subjectLabels[subj];
+        card.href = 'publicaciones.html?subject=' + encodeURIComponent(subj);
+      }
+    });
+    // "Ver todas" link
+    const verTodasLink = areasSection.querySelector('a[href="#"]');
+    if (verTodasLink) verTodasLink.href = 'publicaciones.html';
+  }
+});
+</script>
+<script>
+// Profile auto-loads via data-auto-profile attribute on body
+</script>
+</body></html>

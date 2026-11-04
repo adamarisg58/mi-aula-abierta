@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Aula Abierta</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&amp;family=Source+Sans+3:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error": "#ba1a1a", "primary": "#000922", "inverse-primary": "#b6c6f1", "on-secondary-container": "#00476e", "on-error": "#ffffff", "primary-fixed-dim": "#b6c6f1", "error-container": "#ffdad6", "outline": "#75777f", "surface-bright": "#f7f9fb", "on-surface": "#191c1e", "on-primary-container": "#7988b0", "primary-fixed": "#d9e2ff", "on-tertiary-fixed": "#002113", "on-surface-variant": "#45464e", "on-primary-fixed-variant": "#37466a", "surface-container": "#eceef0", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "secondary-container": "#5bb8fe", "inverse-surface": "#2d3133", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#009c6b", "surface-variant": "#e0e3e5", "surface-dim": "#d8dadc", "background": "#f7f9fb", "primary-container": "#0f2042", "tertiary": "#000d06", "on-primary-fixed": "#081a3c", "on-secondary-fixed": "#001d31", "on-primary": "#ffffff", "on-background": "#191c1e", "tertiary-fixed-dim": "#4edea3", "surface-container-highest": "#e0e3e5", "secondary-fixed-dim": "#93ccff", "inverse-on-surface": "#eff1f3", "tertiary-fixed": "#6ffbbe", "on-secondary-fixed-variant": "#004b73", "on-tertiary-fixed-variant": "#005236", "outline-variant": "#c5c6cf", "tertiary-container": "#002718", "surface": "#f7f9fb", "surface-tint": "#4f5e83", "secondary": "#006398", "on-error-container": "#93000a", "secondary-fixed": "#cce5ff", "surface-container-high": "#e6e8ea", "surface-container-low": "#f2f4f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin": "2rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-mobile": "1rem" }, fontFamily: { "body-lg": ["\"Source Sans 3\""], "headline-md": ["Literata"], "headline-sm": ["Literata"], "label-lg": ["\"Source Sans 3\""], "display": ["Literata"], "title-md": ["\"Source Sans 3\""], "headline-md-mobile": ["Literata"], "headline-lg-mobile": ["Literata"], "label-sm": ["\"Source Sans 3\""], "display-mobile": ["Literata"], "body-sm": ["\"Source Sans 3\""], "title-lg": ["\"Source Sans 3\""], "headline-lg": ["Literata"], "label-md": ["\"Source Sans 3\""], "body-md": ["\"Source Sans 3\""] }, fontSize: { "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-md-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "display-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,32,66,0.05)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Logo Aula Abierta" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc5inx07kdMNiPilOQ2dgiYy0fxqiFi1z1VBbAE2kswSZLikWihwSGN9sSRJjYkQR-mXq3G9NkUxJuNRZR0rTUdjDP8O98CLkZJNqNyrOGWAei46h6drUzCQbHs7JlswwIwnct6VynZzaHVHa22OmbTrWUYYob-1xTJklooTZ2w7DXmXtHgOAtLvQR8VZ5B_256iIbTck9dkeheUO8i1SBk8nxh8KBBV_utg_o2VHm1Z_Oa3L-JFs"/><div class="flex flex-col truncate leading-tight"><div class="flex items-baseline gap-space-xs"><span class="font-headline-sm text-title-md text-primary truncate font-bold">Aula Abierta</span></div><span class="font-label-sm text-label-sm text-secondary truncate tracking-normal font-semibold">Mi Blog Docente • Publicaciones</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Buscar publicaciones o recursos" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Guardados y marcadores" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">bookmark</span></button><a aria-label="Perfil del docente" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" data-path="perfil-docente" href="panel.html"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%236750A4' rx='60'/%3E%3Ctext x='60' y='76' text-anchor='middle' font-size='48' font-family='sans-serif' fill='white'%3E%F0%9F%91%A9%E2%80%8D%F0%9F%8F%AB%3C/text%3E%3C/svg%3E"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Cabecera de la sección -->
+<section class="px-gutter-mobile pt-space-md pb-space-sm">
+<div class="flex items-center gap-space-xs mb-1.5">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Repositorio Abierto</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold tracking-tight">Biblioteca de Publicaciones</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+      Artículos pedagógicos, reflexiones docentes y secuencias de aprendizaje para estudiantes y familias.
+    </p>
+</section>
+<!-- Barra de búsqueda avanzada y gatillo de filtros -->
+<section class="px-gutter-mobile py-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="relative flex-1">
+<label class="sr-only" for="buscar-publicacion">Buscar artículos, temas o grados</label>
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm shadow-[0_2px_8px_-2px_rgba(15,32,66,0.06)] focus:outline-none focus:ring-2 focus:ring-secondary/40 transition-shadow" id="buscar-publicacion" placeholder="Buscar por tema, grado o competencia..." type="search"/>
+</div>
+<button aria-label="Abrir panel de filtros avanzados" class="h-[42px] px-3.5 flex items-center gap-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-[0_2px_8px_-2px_rgba(15,32,66,0.06)] hover:bg-surface-container transition-colors shrink-0" id="btn-toggle-filtros" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+<span>Filtros</span>
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+</button>
+</div>
+<!-- Panel expandible de filtros avanzados / activos -->
+<div class="hidden mt-space-sm p-space-md rounded-xl bg-surface-container-low text-on-surface shadow-sm" id="panel-filtros">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<span class="font-label-md text-label-md text-primary font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">filter_alt</span>
+          Filtros seleccionados
+        </span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline" id="btn-limpiar-filtros" type="button">
+          Restablecer
+        </button>
+</div>
+<div class="flex flex-wrap gap-1.5" id="chips-activos">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-xs">
+          Nivel: Primaria (4to-6to)
+          <button aria-label="Quitar filtro" class="text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-xs">
+          Recurso: Con actividades
+          <button aria-label="Quitar filtro" class="text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+</div>
+</div>
+</section>
+<!-- Filtros rápidos tipo carrusel horizontal -->
+<section class="py-space-sm">
+<div aria-label="Áreas de conocimiento" class="flex gap-2 overflow-x-auto px-gutter-mobile scrollbar-none py-1" role="tablist">
+<button aria-selected="true" class="filtro-chip active whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md font-semibold bg-primary-container text-on-primary shadow-xs transition-transform active:scale-95" role="tab">
+        Todas las áreas
+      </button>
+<button aria-selected="false" class="filtro-chip whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-xs hover:bg-surface-container transition-colors" role="tab">
+        Ciencias Naturales
+      </button>
+<button aria-selected="false" class="filtro-chip whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-xs hover:bg-surface-container transition-colors" role="tab">
+        Matemáticas
+      </button>
+<button aria-selected="false" class="filtro-chip whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-xs hover:bg-surface-container transition-colors" role="tab">
+        Lengua Española
+      </button>
+<button aria-selected="false" class="filtro-chip whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-xs hover:bg-surface-container transition-colors" role="tab">
+        Ciencias Sociales
+      </button>
+<button aria-selected="false" class="filtro-chip whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-xs hover:bg-surface-container transition-colors" role="tab">
+        Primaria (4to-6to)
+      </button>
+<button aria-selected="false" class="filtro-chip whitespace-nowrap px-3.5 py-1.5 rounded-full font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-xs hover:bg-surface-container transition-colors" role="tab">
+        Secundaria
+      </button>
+</div>
+</section>
+<!-- Barra de ordenamiento y contador de resultados -->
+<section class="px-gutter-mobile py-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">18 lecturas activas</span>
+</div>
+<div class="flex items-center gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="selector-orden">Ordenar:</label>
+<div class="relative inline-flex items-center">
+<select class="appearance-none bg-surface-container-low pl-2 pr-6 py-1 rounded-lg font-label-md text-label-md text-primary font-semibold focus:outline-none cursor-pointer" id="selector-orden">
+<option selected="" value="recientes">Más recientes</option>
+<option value="leidos">Más leídos</option>
+<option value="destacados">Destacados</option>
+</select>
+<span class="material-symbols-outlined absolute right-1 pointer-events-none text-[16px] text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Lista de Tarjetas de Publicaciones -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-space-lg">
+<!-- Tarjeta 1: Ciencias Naturales -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_2px_12px_-2px_rgba(15,32,66,0.06)] flex flex-col transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of lush green Caribbean tropical raindrops falling gently over river rocks and tropical foliage, soft natural daylight, academic nature documentary photography with crisp clarity and fresh turquoise reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWJ5Q_O1RX8b6HRl_fZKtOuIiXdKu-XGwzJUn2RqS1V57cxOyYkm4nj8viMEEL9Ez9shA4z243h1GSoBym23IpjUwUybaqYNHwcMw1qVbqe4hyUwb_DJs4Jsht_VB3maRhjkXks5ruV3YffmnhB9c-EPRzpwQJJ1Bd_obQ8XjP29C15YPvWkDuErcugQ80bVIk0tHxYirfVnWiKos2JoYMpDdwD9FS6c3oETgrf18hWNCOH2EmHv0"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary/95 text-on-secondary font-label-sm text-label-sm font-semibold backdrop-blur-xs">
+<span class="material-symbols-outlined text-[13px]">water_drop</span>
+            Ciencias Naturales
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-on-surface font-label-sm text-label-sm backdrop-blur-xs">
+            5to Grado
+          </span>
+</div>
+<button aria-label="Guardar en favoritos" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary flex items-center justify-center backdrop-blur-xs shadow-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-sm">
+<!-- Metadatos de lectura -->
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+            5 min de lectura
+          </span>
+<span>•</span>
+<span>14 Marzo 2025</span>
+</div>
+<!-- Título -->
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold leading-snug">
+          El ciclo del agua y su importancia para la vida
+        </h2>
+<!-- Extracto -->
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 leading-relaxed">
+          Secuencia didáctica activa para comprender evaporación, condensación y precipitación a través de experimentos caseros y observación climática insular.
+        </p>
+<!-- Insignias pedagógicas específicas -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed/40 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+            Lectura con actividades
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">file_download</span>
+            Recursos descargables
+          </span>
+</div>
+<!-- Barra inferior de acciones -->
+<div class="pt-space-sm flex items-center justify-between mt-1">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover shadow-xs" data-alt="Warm portrait of a Dominican elementary school science teacher wearing spectacles and a smart indigo linen shirt, smiling warmly inside a brightly lit classroom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRcaU1a9SehToqHzZoKH7ouhrBm9X7Bqa5fM3mNtthWps-8lRnLR8JET4zDNHgro63e8ockVSyPOjclV1gwgs8ZNZFuZTtqSVISBGzbyrL3RxPEgs5p7LkV6DmYTbITOt6gyZhuZCmPOQuywp52_rqPWWyI7kisA3ca_pC5GOMy178ylUpVsZGUCsEzJAYZ33KPsApqu5dnkysijaXqSg4tmIOBM-QsALU_ZcG1haJBew1TuoPW7U"/>
+<span class="font-label-md text-label-md text-on-surface font-medium">Prof. Carmen Reyes</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Compartir este artículo" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-xs hover:opacity-95 transition-opacity" href="#">
+<span>Leer artículo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Tarjeta 2: Matemáticas -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_2px_12px_-2px_rgba(15,32,66,0.06)] flex flex-col transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Overhead aesthetic educational photograph of colorful tactile geometric fraction blocks and wooden math manipulatives arranged on a warm clean birch table with clean study notes, crisp natural school lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYIhsgSBJ8LnjxXSp1RhoyAlO025qjUPeiqGNKsOSsOdMrLUgj27tuM4ccvFE4SA4V19QP7whbfFzwvNOyo6CVVuX5sFByAqnaDzGeIoXBldPtI-14Kb8K7NjFj7MPtiEfmJaH6uAsATdYCIvR9GmOQkCDONKao7HzU3cTKPkTR5lfuF8OXX7Fs9oSooOpXADDHZveLDaoi_bp3JEUAcRDZT3-tpFMt0WMWccytZFq3Rz5zbH-0Kg"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold backdrop-blur-xs">
+<span class="material-symbols-outlined text-[13px]">calculate</span>
+            Matemáticas
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-on-surface font-label-sm text-label-sm backdrop-blur-xs">
+            6to Grado
+          </span>
+</div>
+<button aria-label="Guardar en favoritos" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary flex items-center justify-center backdrop-blur-xs shadow-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+            7 min de lectura
+          </span>
+<span>•</span>
+<span>11 Marzo 2025</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold leading-snug">
+          Comprendiendo las fracciones equivalentes: método visual para el aula y el hogar
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 leading-relaxed">
+          Estrategias gráficas paso a paso para desmitificar las fracciones y construir intuición matemática auténtica antes de pasar a los algoritmos abstractos.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">sports_esports</span>
+            Incluye reto interactivo
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+            Metodología CPA
+          </span>
+</div>
+<div class="pt-space-sm flex items-center justify-between mt-1">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover shadow-xs" data-alt="Professional portrait of a male Dominican mathematics educator smiling in front of a clean chalkboard filled with colorful pedagogical diagrams, soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfmeAlS2aR6IzVXbTfac1rob4KXjtkhI2Qq5LcFfjPFJb2idRUWqH9zfaif4bQyH6Sqn94iz-c9AW8suzhSt7bSTfHlMfJjh-BCJF7c8DqfWj46sIBAcZQj-rKuq_-mHLzWcpoES9vnjWojs8OgI-Yg93whHeKko1WOU6CvrnaA7lqt81Z5M21OtEFZDtF0IBu6DoUNis0bTxnjAa1eR7Og1mmrMLxRVcbO7ZwLvi5XsNC_7VKfDI"/>
+<span class="font-label-md text-label-md text-on-surface font-medium">Lic. Marcos Peña</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Compartir este artículo" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-xs hover:opacity-95 transition-opacity" href="#">
+<span>Leer artículo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Tarjeta 3: Lengua Española -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_2px_12px_-2px_rgba(15,32,66,0.06)] flex flex-col transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Macro photography of an open student writing notebook with neat handwritten Spanish sentences, a classic fountain pen resting gracefully on the margins, warm soft golden ambient library lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlECXlTecRSiXJ1GgFghC3is9A0RsZSFoNUpg6HJvjCvBZ6rMMh-pSv6DOdwF7J6Xuhg3JHiHmaPRnrAK08FT8pqUu2fSQ5KF0Zf4bS4Q1RXMH-LQ3sWMVuZ_R-UnfW-8_i9RkIu0LBbwxf2gwa5iFp3tMxxO-_5X5MVTGbbQkHPVluB63gu1X0GBOlm1l7C-YL7gsGUJ2uizMO4N6ABKtNVws1oEEZeW9it5a43iV2VOpF5CZ0hM"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold backdrop-blur-xs">
+<span class="material-symbols-outlined text-[13px]">spellcheck</span>
+            Lengua Española
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-on-surface font-label-sm text-label-sm backdrop-blur-xs">
+            4to Grado
+          </span>
+</div>
+<button aria-label="Guardar en favoritos" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary flex items-center justify-center backdrop-blur-xs shadow-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+            4 min de lectura
+          </span>
+<span>•</span>
+<span>08 Marzo 2025</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold leading-snug">
+          Cómo construir oraciones claras y coherentes
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 leading-relaxed">
+          Guía de sintaxis lúdica para niños: identificación del sujeto y predicado mediante fórmulas narrativas y conectores lógicos cotidianos.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed/40 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">print</span>
+            Incluye ficha imprimible
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+            Redacción inicial
+          </span>
+</div>
+<div class="pt-space-sm flex items-center justify-between mt-1">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover shadow-xs" data-alt="Editorial headshot of an experienced Latina female literature teacher with curly dark hair and joyful expression, in front of a wooden bookshelf filled with classic poetry and pedagogy books." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIHFPMFmW9kBBO8EL_nVT_vtADjQyMleySyvLscGFDC6aRMJAkfSmc4KPjkVHsD-_PXKMjJa_Hy1dj2hiTbkSupgT2M4dKP3UAz4Koh-DBqf9xOzmqYUREw2tJoPKBwU586qR4wvK-HJuj7Ae-UlJclApS9bZhQfTam1zXzmkpmRIamv516-g3GMvm25CICKtJFmpV6Rf9krKaRTkalN3Es6qJyNhp39hz8oS-iJdJq8MqYccTN60"/>
+<span class="font-label-md text-label-md text-on-surface font-medium">Mtra. Altagracia Díaz</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Compartir este artículo" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-xs hover:opacity-95 transition-opacity" href="#">
+<span>Leer artículo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Tarjeta 4: Ciencias Sociales -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_2px_12px_-2px_rgba(15,32,66,0.06)] flex flex-col transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Artistic respectful depiction of historical Dominican patriotic heritage, architectural colonial facade bathed in early Caribbean morning sun with national flag colors subtly harmonized in a vintage academic textbook illustration style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXJp_0VqUQgNOnlXlqb3X4ukXlJBd4EO1bgbvYhUKuNdPghshpdbMQTtUQ3j1rwZsRFz4Gueha8wTWICkffQXpCL39oPE7aaI2sGtEQd3YcXx8wRLkt-m_IAcP98Ai_zgNBMCpsx9-I9ixRkoIoFQIXdpYXHgIgsI8xGK7CzYyaqZ7quVNDABqY_VqkyAXf42PoxCNe_7cEuwNT2IargsPFuK26WSYq_CE7Nc0LjGQrCEgQv411qI"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold backdrop-blur-xs">
+<span class="material-symbols-outlined text-[13px]">history_edu</span>
+            Ciencias Sociales
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-on-surface font-label-sm text-label-sm backdrop-blur-xs">
+            5to Grado
+          </span>
+</div>
+<button aria-label="Guardar en favoritos" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary flex items-center justify-center backdrop-blur-xs shadow-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+            8 min de lectura
+          </span>
+<span>•</span>
+<span>03 Marzo 2025</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold leading-snug">
+          Explorando la historia dominicana: símbolos y gestas patrias explicadas paso a paso
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 leading-relaxed">
+          Un recorrido reflexivo por el proceso independentista de 1844, diseñado para generar pensamiento crítico e identidad ciudadana en el segundo ciclo de básica.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">map</span>
+            Línea de tiempo
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed/40 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">quiz</span>
+            Preguntas generadoras
+          </span>
+</div>
+<div class="pt-space-sm flex items-center justify-between mt-1">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover shadow-xs" data-alt="Distinguished Dominican historian and pedagogy researcher with grey temples and warm engaging smile, wearing a traditional white linen chacabana shirt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU21dufi1j7fa-K5QF4yZQvKcKOWkW_bxUtmDTENC7R3G9SHtujE1clyUgyDqFqBoYrhTH10WkzSEOjfp3Bh6N2P2-HyZiUQ2qFB7mF3EprH25YHFgFsVuUoYQu03KkjOUQKT1Rv-JbZzkki7D6ZL-L5aTyK8ZEokWyvWCQqkKY5HjSP__cnm9TZ3fji2S9ur04XPCW-8SzirtalZKz92ASNF1PZJmjIdywZGPFRfHoBpCIuSpXLw"/>
+<span class="font-label-md text-label-md text-on-surface font-medium">Dr. Rafael M. Sánchez</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Compartir este artículo" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-xs hover:opacity-95 transition-opacity" href="#">
+<span>Leer artículo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Paginación y Cargar Más -->
+<section class="px-gutter-mobile py-space-md flex flex-col items-center gap-space-sm">
+<button class="w-full py-3 px-4 rounded-xl bg-surface-container text-primary font-title-md text-title-md font-bold flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors shadow-xs" id="btn-cargar-mas" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">autorenew</span>
+<span>Cargar más publicaciones</span>
+</button>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+      Mostrando 4 de 18 publicaciones didácticas
+    </p>
+</section>
+<!-- Componente de Aviso Pedagógico / Guía de Búsqueda -->
+<section class="px-gutter-mobile pb-space-lg pt-space-xs">
+<aside class="p-space-md rounded-2xl bg-secondary-fixed/30 text-on-secondary-fixed-variant flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-primary font-bold">Consejo de exploración docente</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          ¿Buscas una competencia curricular específica del MINERD? Escribe códigos o descriptores como <em class="font-medium text-primary">"comprensión oral"</em> o <em class="font-medium text-primary">"fracciones impropias"</em> en el buscador para obtener planificaciones asociadas.
+        </p>
+<div class="pt-1 flex flex-wrap gap-2">
+<button class="sugerencia-tag font-label-sm text-label-sm px-2.5 py-1 rounded-lg bg-surface-container-lowest text-secondary font-semibold hover:bg-surface-container transition-colors" type="button">
+            #GeometríaLúdica
+          </button>
+<button class="sugerencia-tag font-label-sm text-label-sm px-2.5 py-1 rounded-lg bg-surface-container-lowest text-secondary font-semibold hover:bg-surface-container transition-colors" type="button">
+            #LecturaCrítica
+          </button>
+<button class="sugerencia-tag font-label-sm text-label-sm px-2.5 py-1 rounded-lg bg-surface-container-lowest text-secondary font-semibold hover:bg-surface-container transition-colors" type="button">
+            #EfeméridesPatrias
+          </button>
+</div>
+</div>
+</aside>
+</section>
+</div>
+<script>
+  (function() {
+    // Interacción simple de desplegable de filtros
+    const btnToggleFiltros = document.getElementById('btn-toggle-filtros');
+    const panelFiltros = document.getElementById('panel-filtros');
+    if (btnToggleFiltros && panelFiltros) {
+      btnToggleFiltros.addEventListener('click', function() {
+        const isHidden = panelFiltros.classList.contains('hidden');
+        if (isHidden) {
+          panelFiltros.classList.remove('hidden');
+          btnToggleFiltros.classList.add('bg-surface-container-high');
+        } else {
+          panelFiltros.classList.add('hidden');
+          btnToggleFiltros.classList.remove('bg-surface-container-high');
+        }
+      });
+    }
+
+    // Comportamiento visual de pestañas / chips de filtro
+    const chips = document.querySelectorAll('.filtro-chip');
+    chips.forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        chips.forEach(function(c) {
+          c.classList.remove('bg-primary-container', 'text-on-primary');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface');
+          c.setAttribute('aria-selected', 'false');
+        });
+        chip.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        chip.classList.add('bg-primary-container', 'text-on-primary');
+        chip.setAttribute('aria-selected', 'true');
+      });
+    });
+
+    // Guardar en favoritos micro-interacción
+    const botonesGuardar = document.querySelectorAll('button[aria-label="Guardar en favoritos"]');
+    botonesGuardar.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const icono = btn.querySelector('.material-symbols-outlined');
+        if (icono) {
+          const isFilled = icono.textContent.trim() === 'bookmark';
+          icono.textContent = isFilled ? 'bookmark_border' : 'bookmark';
+          if (!isFilled) {
+            btn.classList.add('text-secondary');
+          } else {
+            btn.classList.remove('text-secondary');
+          }
+        }
+      });
+    });
+
+    // Click en etiquetas sugeridas
+    const sugerencias = document.querySelectorAll('.sugerencia-tag');
+    const inputBuscar = document.getElementById('buscar-publicacion');
+    sugerencias.forEach(function(sug) {
+      sug.addEventListener('click', function() {
+        if (inputBuscar) {
+          inputBuscar.value = sug.textContent.replace('#', '').trim();
+          inputBuscar.focus();
+        }
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,32,66,0.06)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="inicio" href="index.html"><span class="material-symbols-outlined text-[24px]">school</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary-container font-semibold" data-path="publicaciones" href="publicaciones.html"><span class="material-symbols-outlined text-[24px]">menu_book</span><span class="font-label-sm text-label-sm">Artículos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="recursos-didacticos" href="recursos.html"><span class="material-symbols-outlined text-[24px]">folder_open</span><span class="font-label-sm text-label-sm">Recursos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="actividades-pedagogicas" href="lectura.html"><span class="material-symbols-outlined text-[24px]">extension</span><span class="font-label-sm text-label-sm">Actividades</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="perfil-docente" href="panel.html"><span class="material-symbols-outlined text-[24px]">person_outline</span><span class="font-label-sm text-label-sm">Perfil</span></a></div></nav><script src="db.js"></script>
+<script>
+// === WhatsApp share helper ===
+function shareWhatsAppCard(btn) {
+  var card = btn.closest('article');
+  var titleEl = card ? card.querySelector('h2') : null;
+  var title = titleEl ? titleEl.textContent.trim() : 'Articulo';
+  var link = card ? card.querySelector('a[href*="lectura.html"]') : null;
+  var url = link ? new URL(link.href, window.location.href).href : window.location.href;
+  var text = '\u{1F4DA} *' + title + '* - Aula Abierta Blog Docente\n' + url;
+  window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+}
+
+(function(){
+  const SUBJECT_ICONS = {
+    'Ciencias Naturales': 'water_drop',
+    'Matemáticas': 'calculate',
+    'Lengua Española': 'spellcheck',
+    'Ciencias Sociales': 'history_edu'
+  };
+  const DEFAULT_AVATARS = [
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuBRcaU1a9SehToqHzZoKH7ouhrBm9X7Bqa5fM3mNtthWps-8lRnLR8JET4zDNHgro63e8ockVSyPOjclV1gwgs8ZNZFuZTtqSVISBGzbyrL3RxPEgs5p7LkV6DmYTbITOt6gyZhuZCmPOQuywp52_rqPWWyI7kisA3ca_pC5GOMy178ylUpVsZGUCsEzJAYZ33KPsApqu5dnkysijaXqSg4tmIOBM-QsALU_ZcG1haJBew1TuoPW7U',
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuBfmeAlS2aR6IzVXbTfac1rob4KXjtkhI2Qq5LcFfjPFJb2idRUWqH9zfaif4bQyH6Sqn94iz-c9AW8suzhSt7bSTfHlMfJjh-BCJF7c8DqfWj46sIBAcZQj-rKuq_-mHLzWcpoES9vnjWojs8OgI-Yg93whHeKko1WOU6CvrnaA7lqt81Z5M21OtEFZDtF0IBu6DoUNis0bTxnjAa1eR7Og1mmrMLxRVcbO7ZwLvi5XsNC_7VKfDI',
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuBIHFPMFmW9kBBO8EL_nVT_vtADjQyMleySyvLscGFDC6aRMJAkfSmc4KPjkVHsD-_PXKMjJa_Hy1dj2hiTbkSupgT2M4dKP3UAz4Koh-DBqf9xOzmqYUREw2tJoPKBwU586qR4wvK-HJuj7Ae-UlJclApS9bZhQfTam1zXzmkpmRIamv516-g3GMvm25CICKtJFmpV6Rf9krKaRTkalN3Es6qJyNhp39hz8oS-iJdJq8MqYccTN60'
+  ];
+
+  let allArticles = [];
+  let currentFilter = 'Todas las áreas';
+  let currentSort = 'recientes';
+  let currentSearch = '';
+
+  const cardContainer = document.querySelector('section.px-gutter-mobile.py-space-sm.flex.flex-col.gap-space-lg');
+  const counterEl = document.querySelector('.font-label-sm.text-label-sm.text-on-surface-variant.font-medium');
+  const paginationInfo = document.querySelector('section.px-gutter-mobile.py-space-md p.font-label-sm');
+  const searchInput = document.getElementById('buscar-publicacion');
+  const sortSelect = document.getElementById('selector-orden');
+  const filterChips = document.querySelectorAll('.filtro-chip');
+  const loadMoreBtn = document.getElementById('btn-cargar-mas');
+
+  function formatDate(ts) {
+    return new Date(ts).toLocaleDateString('es-DO', { day: '2-digit', month: 'long', year: 'numeric' });
+  }
+
+  function renderCard(art, idx) {
+    const icon = SUBJECT_ICONS[art.subject] || 'article';
+    const avatar = DEFAULT_AVATARS[idx % DEFAULT_AVATARS.length];
+    const coverImg = art.coverImage || 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80';
+    const gradeShort = art.grade || '';
+    return `
+    <article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_2px_12px_-2px_rgba(15,32,66,0.06)] flex flex-col transition-all duration-200">
+      <div class="relative w-full h-44 bg-surface-container overflow-hidden">
+        <img class="w-full h-full object-cover" src="${escapeHTML(coverImg)}" alt="${escapeHTML(art.coverAlt || art.title)}"/>
+        <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary/95 text-on-secondary font-label-sm text-label-sm font-semibold backdrop-blur-xs">
+            <span class="material-symbols-outlined text-[13px]">${icon}</span>
+            ${escapeHTML(art.subject)}
+          </span>
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-on-surface font-label-sm text-label-sm backdrop-blur-xs">
+            ${escapeHTML(gradeShort)}
+          </span>
+        </div>
+        <button aria-label="Guardar en favoritos" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 text-on-surface-variant hover:text-primary flex items-center justify-center backdrop-blur-xs shadow-xs transition-colors" type="button">
+          <span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+        </button>
+      </div>
+      <div class="p-space-lg flex flex-col gap-space-sm">
+        <div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+          <span class="inline-flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">schedule</span>
+            ${art.readTime || 5} min de lectura
+          </span>
+          <span>•</span>
+          <span>${formatDate(art.createdAt)}</span>
+        </div>
+        <h2 class="font-headline-sm text-headline-sm text-primary font-bold leading-snug">${escapeHTML(art.title)}</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 leading-relaxed">${escapeHTML(art.summary || '')}</p>
+        ${art.tags && art.tags.length ? `
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          ${art.tags.slice(0,2).map(t => `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed/40 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">${escapeHTML(t)}</span>`).join('')}
+        </div>` : ''}
+        <div class="pt-space-sm flex items-center justify-between mt-1">
+          <div class="flex items-center gap-2">
+            <img class="w-7 h-7 rounded-full object-cover shadow-xs" src="${escapeHTML(avatar)}" alt="${escapeHTML(art.author)}"/>
+            <span class="font-label-md text-label-md text-on-surface font-medium">${escapeHTML(art.author || 'Docente')}</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button aria-label="Compartir en WhatsApp" class="w-9 h-9 rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity" style="color:#25D366;" type="button" onclick="shareWhatsAppCard(this)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </button>
+            <a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-xs hover:opacity-95 transition-opacity" href="lectura.html?id=${art.id}">
+              <span>Leer artículo</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>`;
+  }
+
+  function getFilteredArticles() {
+    let list = allArticles.slice();
+    // Filter by subject
+    if (currentFilter !== 'Todas las áreas') {
+      if (currentFilter === 'Primaria (4to-6to)') {
+        list = list.filter(a => a.grade && a.grade.toLowerCase().includes('primaria'));
+      } else if (currentFilter === 'Secundaria') {
+        list = list.filter(a => a.grade && a.grade.toLowerCase().includes('secundaria'));
+      } else {
+        list = list.filter(a => a.subject === currentFilter);
+      }
+    }
+    // Filter by search
+    if (currentSearch) {
+      const q = currentSearch.toLowerCase();
+      list = list.filter(a =>
+        (a.title && a.title.toLowerCase().includes(q)) ||
+        (a.summary && a.summary.toLowerCase().includes(q)) ||
+        (a.tags && a.tags.some(t => t.toLowerCase().includes(q))) ||
+        (a.subject && a.subject.toLowerCase().includes(q))
+      );
+    }
+    // Sort
+    if (currentSort === 'recientes') {
+      list.sort((a, b) => b.createdAt - a.createdAt);
+    } else if (currentSort === 'leidos') {
+      list.sort((a, b) => (b.views || 0) - (a.views || 0));
+    }
+    return list;
+  }
+
+  function renderArticles() {
+    const filtered = getFilteredArticles();
+    if (!cardContainer) return;
+    if (filtered.length === 0) {
+      cardContainer.innerHTML = `
+        <div class="flex flex-col items-center justify-center py-12 gap-3 text-center">
+          <span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+          <p class="font-title-md text-title-md text-on-surface-variant">No se encontraron publicaciones</p>
+          <p class="font-body-sm text-body-sm text-outline">Intenta con otros filtros o términos de búsqueda.</p>
+        </div>`;
+    } else {
+      cardContainer.innerHTML = filtered.map((a, i) => renderCard(a, i)).join('');
+    }
+    // Update counter
+    if (counterEl) counterEl.textContent = filtered.length + ' lectura' + (filtered.length !== 1 ? 's' : '') + ' activa' + (filtered.length !== 1 ? 's' : '');
+    if (paginationInfo) paginationInfo.textContent = 'Mostrando ' + filtered.length + ' de ' + allArticles.length + ' publicaciones didácticas';
+    // Re-bind bookmark buttons
+    cardContainer.querySelectorAll('button[aria-label="Guardar en favoritos"]').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var icono = btn.querySelector('.material-symbols-outlined');
+        if (icono) {
+          var isFilled = icono.textContent.trim() === 'bookmark';
+          icono.textContent = isFilled ? 'bookmark_border' : 'bookmark';
+          btn.classList.toggle('text-secondary', !isFilled);
+        }
+      });
+    });
+  }
+
+  // Wire filter chips
+  filterChips.forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      currentFilter = chip.textContent.trim();
+      renderArticles();
+    });
+  });
+
+  // Wire search
+  if (searchInput) {
+    let debounce;
+    searchInput.addEventListener('input', function() {
+      clearTimeout(debounce);
+      debounce = setTimeout(function() {
+        currentSearch = searchInput.value.trim();
+        renderArticles();
+      }, 250);
+    });
+  }
+
+  // Wire sort
+  if (sortSelect) {
+    sortSelect.addEventListener('change', function() {
+      currentSort = sortSelect.value;
+      renderArticles();
+    });
+  }
+
+  // Hide load more (we show all at once from IndexedDB)
+  if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+
+  // Init
+  document.addEventListener('DOMContentLoaded', async function() {
+    try {
+      await window.AulaAbiertaDB._initPromise;
+      allArticles = await window.AulaAbiertaDB.getPublishedArticles();
+      renderArticles();
+    } catch(e) {
+      console.error('Error cargando artículos:', e);
+    }
+  });
+})();
+</script>
+</body></html>

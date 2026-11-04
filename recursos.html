@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Aula Abierta</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&amp;family=Source+Sans+3:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error": "#ba1a1a", "primary": "#000922", "inverse-primary": "#b6c6f1", "on-secondary-container": "#00476e", "on-error": "#ffffff", "primary-fixed-dim": "#b6c6f1", "error-container": "#ffdad6", "outline": "#75777f", "surface-bright": "#f7f9fb", "on-surface": "#191c1e", "on-primary-container": "#7988b0", "primary-fixed": "#d9e2ff", "on-tertiary-fixed": "#002113", "on-surface-variant": "#45464e", "on-primary-fixed-variant": "#37466a", "surface-container": "#eceef0", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "secondary-container": "#5bb8fe", "inverse-surface": "#2d3133", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#009c6b", "surface-variant": "#e0e3e5", "surface-dim": "#d8dadc", "background": "#f7f9fb", "primary-container": "#0f2042", "tertiary": "#000d06", "on-primary-fixed": "#081a3c", "on-secondary-fixed": "#001d31", "on-primary": "#ffffff", "on-background": "#191c1e", "tertiary-fixed-dim": "#4edea3", "surface-container-highest": "#e0e3e5", "secondary-fixed-dim": "#93ccff", "inverse-on-surface": "#eff1f3", "tertiary-fixed": "#6ffbbe", "on-secondary-fixed-variant": "#004b73", "on-tertiary-fixed-variant": "#005236", "outline-variant": "#c5c6cf", "tertiary-container": "#002718", "surface": "#f7f9fb", "surface-tint": "#4f5e83", "secondary": "#006398", "on-error-container": "#93000a", "secondary-fixed": "#cce5ff", "surface-container-high": "#e6e8ea", "surface-container-low": "#f2f4f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin": "2rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-mobile": "1rem" }, fontFamily: { "body-lg": ["\"Source Sans 3\""], "headline-md": ["Literata"], "headline-sm": ["Literata"], "label-lg": ["\"Source Sans 3\""], "display": ["Literata"], "title-md": ["\"Source Sans 3\""], "headline-md-mobile": ["Literata"], "headline-lg-mobile": ["Literata"], "label-sm": ["\"Source Sans 3\""], "display-mobile": ["Literata"], "body-sm": ["\"Source Sans 3\""], "title-lg": ["\"Source Sans 3\""], "headline-lg": ["Literata"], "label-md": ["\"Source Sans 3\""], "body-md": ["\"Source Sans 3\""] }, fontSize: { "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-md-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "display-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body data-auto-profile class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,32,66,0.05)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Logo Aula Abierta" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc5inx07kdMNiPilOQ2dgiYy0fxqiFi1z1VBbAE2kswSZLikWihwSGN9sSRJjYkQR-mXq3G9NkUxJuNRZR0rTUdjDP8O98CLkZJNqNyrOGWAei46h6drUzCQbHs7JlswwIwnct6VynZzaHVHa22OmbTrWUYYob-1xTJklooTZ2w7DXmXtHgOAtLvQR8VZ5B_256iIbTck9dkeheUO8i1SBk8nxh8KBBV_utg_o2VHm1Z_Oa3L-JFs"/><div class="flex flex-col truncate leading-tight"><div class="flex items-baseline gap-space-xs"><span class="font-headline-sm text-title-md text-primary truncate font-bold">Aula Abierta</span></div><span class="font-label-sm text-label-sm text-secondary truncate tracking-normal font-semibold">Mi Blog Docente • Recursos Didacticos</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Buscar publicaciones o recursos" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Guardados y marcadores" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">bookmark</span></button><a aria-label="Perfil del docente" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" data-path="perfil-docente" href="panel.html"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%236750A4' rx='60'/%3E%3Ctext x='60' y='76' text-anchor='middle' font-size='48' font-family='sans-serif' fill='white'%3E%F0%9F%91%A9%E2%80%8D%F0%9F%8F%AB%3C/text%3E%3C/svg%3E"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Intro Header Section -->
+<section class="px-gutter-mobile pt-space-md pb-space-sm">
+<div class="flex items-center gap-space-xs mb-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wide">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+        Repositorio Curricular
+      </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 45 Documentos</span>
+</div>
+<h1 class="font-headline-md-mobile text-headline-md-mobile text-primary tracking-tight font-bold mb-1">
+      Biblioteca de Recursos Didácticos
+    </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      Fichas de trabajo, guías docentes, presentaciones, rúbricas y materiales imprimibles listos para el aula dominicana e iberoamericana.
+    </p>
+</section>
+<!-- Interactive Search & Filter Bar -->
+<section class="px-gutter-mobile py-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm">
+<!-- Search Input Container -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-10 py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="resource-search" placeholder="Buscar por tema, estándar o palabra clave..." type="text"/>
+<button class="hidden absolute right-2.5 p-1 rounded-full text-on-surface-variant hover:text-primary" id="clear-search-btn">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Quick Selector Pill Filters -->
+<div class="flex flex-col gap-2 pt-1">
+<!-- Asignatura Selector -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0 font-bold uppercase tracking-wider pl-0.5">Área:</span>
+<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-primary-container text-on-primary transition-all active:scale-95" data-filter="all">Todas</button>
+<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="ciencias">Ciencias</button>
+<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="matematicas">Matemáticas</button>
+<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="lengua">Lengua</button>
+<button class="filter-subject-btn shrink-0 px-3 py-1 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-filter="sociales">Sociales</button>
+</div>
+<!-- Grado & Tipo Selector Row -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md py-2 pl-3 pr-8 rounded-lg focus:outline-none" id="grade-filter">
+<option value="all">Todos los grados</option>
+<option value="4to">4to Primaria</option>
+<option value="5to">5to Primaria</option>
+<option value="6to">6to Primaria</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md py-2 pl-3 pr-8 rounded-lg focus:outline-none" id="type-filter">
+<option value="all">Tipo de recurso</option>
+<option value="guia">Guía didáctica</option>
+<option value="ficha">Ficha imprimible</option>
+<option value="rubrica">Rúbrica de evaluación</option>
+<option value="infografia">Infografía / Póster</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Nav Tabs with Counter Badges -->
+<section class="px-gutter-mobile py-2 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 min-w-max pb-1">
+<button class="category-tab active-tab flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" data-cat="all">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+<span>Todos los Archivos</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary-fixed-dim/30 text-on-primary font-label-sm text-label-sm">45</span>
+</button>
+<button class="category-tab flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all hover:bg-surface-container" data-cat="fichas">
+<span class="material-symbols-outlined text-[16px] text-secondary">assignment</span>
+<span>Fichas de Trabajo</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">18</span>
+</button>
+<button class="category-tab flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all hover:bg-surface-container" data-cat="guias">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">fact_check</span>
+<span>Guías y Rúbricas</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">12</span>
+</button>
+<button class="category-tab flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all hover:bg-surface-container" data-cat="imprimibles">
+<span class="material-symbols-outlined text-[16px] text-on-secondary-container">print</span>
+<span>Imprimibles B/N</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">9</span>
+</button>
+<button class="category-tab flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all hover:bg-surface-container" data-cat="interactivas">
+<span class="material-symbols-outlined text-[16px] text-error">touch_app</span>
+<span>Interactivas</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">6</span>
+</button>
+</div>
+</section>
+<!-- Resource Cards List Container -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-space-md" id="resource-list">
+<!-- CARD 1: El Ciclo Hidrológico -->
+<article class="resource-card bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col transition-all hover:shadow-md" data-cat="guias" data-grade="5to" data-subject="ciencias" data-type="guia">
+<!-- Media Preview Header -->
+<div class="relative w-full h-44 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Educational visual diagram showing the hydrological water cycle with precipitation, condensation, and evaporation, painted in soft botanical watercolor textures of azure blues and earthy slate tones suited for elementary school science class." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuym35r9jnVPQ-cB6sKmBuIGwhhYDYBRebw0xrfD9WyI79uIxcpphfp0gPP1SGirVUlZok3O2SF3FOB4TsYsmYj2zmkQRqH9wF7gdqiL3KmH-4KCzaMvr0oCmhfa7O1D-lgEWwQmmLcM3_Rx6FH32xQeW1fRLQeBit7rHxfCw3XfmHETt00FHWKm--xq-MhW3q4xsP5knfxwPTzb8d_CdbJMmu5YvJlKyPKLj3F0_DfQ3JtWqiQQE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent"></div>
+<!-- Top Tags Overlay -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">science</span>
+            Ciencias Naturales
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-primary-container/90 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-semibold">
+            5to Primaria
+          </span>
+</div>
+<!-- Quick Spec Badge Overlay -->
+<div class="absolute bottom-2.5 left-3 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="material-symbols-outlined text-[16px]">description</span>
+            3 páginas • Experimento de laboratorio
+          </span>
+</div>
+</div>
+<!-- Content Details -->
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h2 class="font-headline-sm text-title-lg text-primary leading-snug font-bold">
+            Guía Didáctica y Ficha de Experimento: El Ciclo Hidrológico
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Secuencia completa para armar un terrario condensador en botella plástica reutilizable. Fomenta el método científico con registro de hipótesis y conclusiones guiadas.
+          </p>
+</div>
+<!-- Technical Metadata Grid -->
+<div class="bg-surface-container-low rounded-xl p-3 grid grid-cols-2 gap-2 text-on-surface">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Formato</span>
+<span class="font-label-md text-label-md font-bold truncate">PDF • 2.4 MB</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Autoría</span>
+<span data-tp="titleName" class="font-label-md text-label-md font-semibold truncate">Lic. Ramona Almonte</span>
+</div>
+</div>
+</div>
+<!-- Licensing note -->
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container shrink-0">verified_user</span>
+<span class="font-label-sm text-label-sm">Uso educativo libre y no comercial bajo atribución institucional.</span>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<button class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-all active:scale-[0.98]" onclick="triggerPreview('Guía: El Ciclo Hidrológico', 'PDF • 3 Páginas • Laboratorio de Ciencias', 'ciencias')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+            Vista Previa
+          </button>
+<button class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 transition-all active:scale-[0.98]" onclick="triggerDownload('Ciclo_Hidrologico_Ficha5to.pdf')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            Descargar
+          </button>
+</div>
+</div>
+</article>
+<!-- CARD 2: Fracciones Equivalentes -->
+<article class="resource-card bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col transition-all hover:shadow-md" data-cat="guias" data-grade="4to" data-subject="matematicas" data-type="rubrica">
+<div class="relative w-full h-44 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Classroom assessment worksheet flatlay featuring colorful fraction bars, geometric strips, mathematical evaluation matrices, and tidy handwritten teacher annotations on warm beige linen desk background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAuEwuv2lRmFAXUUvUq7SPGEqNaWFpYOeOskwbVUr9e5AdjxldD28rO6nufnjwsPuTo4TaDoTMOeeRMadPkPu_BlCy1EL0bO7LFDGTX2jVV7f_Md6oKv37yUmilNoK1yL6nOpZqP7UjL7wHy1kQvLcHkt8nPap-9qkQ8OuYFums8b4Bglpi0MZ1F9VqKJYwq07YpUzzosG7ZeeR76MDvXYxGjgu0b7YcoZhVQiAHM3LHjQThYDWEc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">calculate</span>
+            Matemáticas
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-primary-container/90 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-semibold">
+            4to &amp; 5to Primaria
+          </span>
+</div>
+<div class="absolute bottom-2.5 left-3 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="material-symbols-outlined text-[16px]">rubric</span>
+            Rúbrica Formativa • 4 Niveles de Dominio
+          </span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h2 class="font-headline-sm text-title-lg text-primary leading-snug font-bold">
+            Rúbrica de Evaluación Formativa: Comprensión de Fracciones Equivalentes
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Matriz de desempeño analítica alineada al currículo por competencias. Evalúa representación gráfica, amplificación, simplificación y resolución de situaciones cotidianas.
+          </p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3 grid grid-cols-2 gap-2 text-on-surface">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">edit_document</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Formato</span>
+<span class="font-label-md text-label-md font-bold truncate">PDF + DOCX • 1.1 MB</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Autoría</span>
+<span data-tp="titleName" class="font-label-md text-label-md font-semibold truncate">Lic. Ramona Almonte</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container shrink-0">verified_user</span>
+<span class="font-label-sm text-label-sm">Uso educativo libre y no comercial bajo atribución institucional.</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<button class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-all active:scale-[0.98]" onclick="triggerPreview('Rúbrica: Fracciones Equivalentes', 'Formato Editable DOCX + PDF de Impresión', 'matematicas')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+            Vista Previa
+          </button>
+<button class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 transition-all active:scale-[0.98]" onclick="triggerDownload('Rubrica_Fracciones_Equivalentes.zip')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            Descargar
+          </button>
+</div>
+</div>
+</article>
+<!-- CARD 3: Coherencia y Conectores -->
+<article class="resource-card bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col transition-all hover:shadow-md" data-cat="imprimibles" data-grade="6to" data-subject="lengua" data-type="ficha">
+<div class="relative w-full h-44 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="High contrast clean monochrome graphic printout worksheet for school children with punctuation marks, quotation bubbles, sentence diagram trees, minimal black and white aesthetic on high brightness paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJV3bcst4Ylw7lc18uJji7L6axdjcM0lQiYKmyjOua4lBaxYHDlcjufT5brk41h0OPs8aL4N_Pjx1ypOKkBr1a7GVxNzx1Dcte9mWIY4KutCdbdKKeJ4wMtlCjcXyZYOlxPgKYQ5UlSjDa35tj7cZwsuniHZr054JZmdhwT3kqGMrwnr9WISwtRruiC2ikb6J9R0OpBK5r8b4bCww63F3HI_-VBwozu3LvXHyI74jEqETQHdKahRM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/85 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+            Lengua Española
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+            Eco-Tinta B/N
+          </span>
+</div>
+<div class="absolute bottom-2.5 left-3 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="material-symbols-outlined text-[16px]">print</span>
+            6to Primaria • Ficha Imprimible sin escala de grises
+          </span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h2 class="font-headline-sm text-title-lg text-primary leading-snug font-bold">
+            Ficha de Ejercicios Prácticos: Coherencia y Conectores en la Oración
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Diseñada especialmente en monocromo limpio para fotocopiado económico escolar. Ejercicios de conectores causales, temporales y adversativos en párrafos expositivos.
+          </p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3 grid grid-cols-2 gap-2 text-on-surface">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Formato</span>
+<span class="font-label-md text-label-md font-bold truncate">PDF Listo • 680 KB</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Autoría</span>
+<span data-tp="titleName" class="font-label-md text-label-md font-semibold truncate">Lic. Ramona Almonte</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container shrink-0">verified_user</span>
+<span class="font-label-sm text-label-sm">Uso educativo libre y no comercial bajo atribución institucional.</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<button class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-all active:scale-[0.98]" onclick="triggerPreview('Ficha: Coherencia y Conectores', 'Ficha Optimizada para Fotocopia B/N', 'lengua')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+            Vista Previa
+          </button>
+<button class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 transition-all active:scale-[0.98]" onclick="triggerDownload('Conectores_Gramatica_6to_BN.pdf')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            Descargar
+          </button>
+</div>
+</div>
+</article>
+<!-- CARD 4: Línea de Tiempo Dominicanas -->
+<article class="resource-card bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col transition-all hover:shadow-md" data-cat="fichas" data-grade="5to" data-subject="sociales" data-type="infografia">
+<div class="relative w-full h-44 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High resolution educational infographic wall chart depicting historical timeline of Dominican Republic independence, portraits of founding fathers Juan Pablo Duarte, Francisco del Rosario Sanchez and Matias Ramon Mella with clean modern pedagogical typography and historic emblems." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh6GRNs9sGauxH-dOrE7qqVUv9l7mhLlXC9baBtJWIT6eCjabRNWJevNkGNDek4hFjCMtqzaw1tMJw_6fHRNqYws4vMDYBpIXUFmrSFPfJOzS93selR_cvwQ1qyiHWg_O32TFN4dcW0zlg8zVai-tkl9ITcvkp9Jq6lve-U46bCF_dgFVQSXnKQikSB9CzVhlfx8JtRvi1fLEeMJpbCF1LnBu5kNNEPb3CZ0EAJjwgageSv5zivn8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">public</span>
+            Ciencias Sociales
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+            Infografía Mural
+          </span>
+</div>
+<div class="absolute bottom-2.5 left-3 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="material-symbols-outlined text-[16px]">view_timeline</span>
+            A3 / Tabloide • Efemérides Patrias Dominicanas
+          </span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h2 class="font-headline-sm text-title-lg text-primary leading-snug font-bold">
+            Línea de Tiempo Ilustrada: Efemérides Dominicanas y Padres de la Patria
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Póster de aula en alta resolución vectorial. Presenta los hitos de 1844, la gesta de La Trinitaria y el ideario duartiano con infografías explicativas para el salón de clases.
+          </p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3 grid grid-cols-2 gap-2 text-on-surface">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">photo_size_select_actual</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Formato</span>
+<span class="font-label-md text-label-md font-bold truncate">PDF Poster 300DPI • 5.8 MB</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Autoría</span>
+<span data-tp="titleName" class="font-label-md text-label-md font-semibold truncate">Lic. Ramona Almonte</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container shrink-0">verified_user</span>
+<span class="font-label-sm text-label-sm">Uso educativo libre y no comercial bajo atribución institucional.</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<button class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-all active:scale-[0.98]" onclick="triggerPreview('Póster: Efemérides Dominicanas', 'PDF Vectorial en Gran Formato (A3/Poster)', 'sociales')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+            Vista Previa
+          </button>
+<button class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 transition-all active:scale-[0.98]" onclick="triggerDownload('Linea_Tiempo_Dominicana_Poster.pdf')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            Descargar
+          </button>
+</div>
+</div>
+</article>
+</section>
+<!-- Empty Search Results State (Hidden by default) -->
+<div class="hidden px-gutter-mobile py-8 flex-col items-center text-center" id="no-results-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-3">
+<span class="material-symbols-outlined text-[32px]">manage_search</span>
+</div>
+<h3 class="font-headline-sm text-title-md text-primary font-bold">No se encontraron recursos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1 mb-4">
+      Prueba ajustando los filtros de materia, grado o borrando el término de búsqueda actual.
+    </p>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high" id="reset-filters-btn">
+      Restablecer todos los filtros
+    </button>
+</div>
+<!-- Institutional Suggestion & Request Card -->
+<section class="px-gutter-mobile pt-space-sm pb-space-lg">
+<div class="bg-primary-container text-on-primary rounded-2xl p-5 shadow-sm relative overflow-hidden">
+<!-- Decorative background accent pattern -->
+<div class="absolute -right-8 -bottom-8 w-36 h-36 rounded-full bg-secondary/20 pointer-events-none"></div>
+<div class="flex items-start gap-3.5 relative z-10">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest/15 backdrop-blur-md flex items-center justify-center text-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[24px]">contact_support</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-title-md text-on-primary font-bold">
+              ¿Necesitas un material específico?
+            </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary/80 leading-relaxed">
+            Como docentes colaboradores, construimos este repositorio juntos. Puedes solicitar adaptaciones para necesidades específicas de apoyo educativo (NEAE), nuevos temas curriculares del MINERD o proponer tus propias guías de aula.
+          </p>
+<div class="pt-2 flex flex-wrap gap-2">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold shadow-sm hover:opacity-90 active:scale-95 transition-all" onclick="showToast('Formulario de sugerencia docente abierto')">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+              Sugerir o Solicitar Recurso
+            </button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-lowest/10 text-on-primary font-label-md text-label-md hover:bg-surface-container-lowest/20 transition-all" onclick="showToast('Guía para autores docentes abierta')">
+<span class="material-symbols-outlined text-[16px]">help_outline</span>
+              Pautas de Publicación
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Quick Preview Modal Sheet (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-end justify-center p-0 transition-opacity duration-300" id="preview-modal">
+<div class="bg-surface-container-lowest text-on-surface w-full max-w-lg rounded-t-2xl max-h-[751px] overflow-y-auto p-5 shadow-2xl flex flex-col gap-4 transform transition-transform duration-300">
+<!-- Modal Handle Bar -->
+<div class="w-12 h-1.5 rounded-full bg-surface-container-highest mx-auto"></div>
+<!-- Modal Header -->
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center shrink-0" id="modal-icon-badge">
+<span class="material-symbols-outlined text-[22px]">visibility</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wide">Vista Previa Rápida</span>
+<h3 class="font-headline-sm text-title-md text-primary font-bold" id="modal-title">Título de Material</h3>
+</div>
+</div>
+<button class="p-1.5 rounded-full text-on-surface-variant hover:bg-surface-container" onclick="closePreview()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Preview Inspection Box -->
+<div class="rounded-xl bg-surface-container-low p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between text-on-surface font-label-md text-label-md">
+<span class="font-semibold text-on-surface-variant" id="modal-meta">Detalles de archivo</span>
+<span class="inline-flex items-center gap-1 text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+            Revisado por pares
+          </span>
+</div>
+<div class="h-48 rounded-lg bg-surface-container-highest/60 flex flex-col items-center justify-center text-center p-4 relative overflow-hidden">
+<span class="material-symbols-outlined text-[44px] text-secondary mb-2">article</span>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Documento Pedagógico Digitalizado</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-0.5">
+            Incluye portada institucional, matriz curricular dominicana, actividades paso a paso y hoja de respuestas.
+          </p>
+<div class="mt-3 flex gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm">Alineado a Competencias</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm">Listo para Impresión</span>
+</div>
+</div>
+</div>
+<!-- Licensing & Citation inside Modal -->
+<div class="rounded-lg bg-surface-container p-3 flex items-start gap-2.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">copyright</span>
+<div class="flex flex-col text-on-surface-variant font-label-sm text-label-sm leading-relaxed">
+<span><strong>Citación recomendada:</strong> <span data-tp="titleName">Almonte, R.</span> (2024). <em>Materiales de Aula Abierta</em>. Santo Domingo, R.D. Licencia Creative Commons Atribución 4.0 Internacional.</span>
+</div>
+</div>
+<!-- Modal Bottom Actions -->
+<div class="grid grid-cols-2 gap-3 pt-1">
+<button class="py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all" onclick="closePreview()">
+          Cerrar
+        </button>
+<button class="py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm hover:bg-primary-container transition-all" id="modal-download-btn" onclick="triggerDownloadFromModal()">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Descargar Ahora
+        </button>
+</div>
+</div>
+</div>
+<!-- Micro-interaction Notification Toast -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-xl shadow-lg flex items-center gap-2.5 opacity-0 pointer-events-none transition-opacity duration-300 font-label-md text-label-md" id="toast-notification">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]" id="toast-icon">check_circle</span>
+<span id="toast-message">Descarga iniciada exitosamente</span>
+</div>
+<!-- Client-side Interactive Script -->
+<script>
+    (function initResourceLibrary() {
+      const searchInput = document.getElementById('resource-search');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+      const gradeFilter = document.getElementById('grade-filter');
+      const typeFilter = document.getElementById('type-filter');
+      const subjectButtons = document.querySelectorAll('.filter-subject-btn');
+      const categoryTabs = document.querySelectorAll('.category-tab');
+      const resourceCards = document.querySelectorAll('.resource-card');
+      const noResultsState = document.getElementById('no-results-state');
+      const resetBtn = document.getElementById('reset-filters-btn');
+
+      let currentSubject = 'all';
+      let currentGrade = 'all';
+      let currentType = 'all';
+      let currentCategory = 'all';
+      let currentSearchTerm = '';
+
+      function filterResources() {
+        let visibleCount = 0;
+
+        resourceCards.forEach(card => {
+          const cardSubject = card.getAttribute('data-subject') || '';
+          const cardGrade = card.getAttribute('data-grade') || '';
+          const cardType = card.getAttribute('data-type') || '';
+          const cardCat = card.getAttribute('data-cat') || '';
+          const cardText = card.textContent.toLowerCase();
+
+          const matchesSubject = (currentSubject === 'all') || (cardSubject === currentSubject);
+          const matchesGrade = (currentGrade === 'all') || (cardGrade === currentGrade);
+          const matchesType = (currentType === 'all') || (cardType === currentType);
+          const matchesCategory = (currentCategory === 'all') || (cardCat === currentCategory);
+          const matchesSearch = (!currentSearchTerm) || cardText.includes(currentSearchTerm.toLowerCase());
+
+          if (matchesSubject && matchesGrade && matchesType && matchesCategory && matchesSearch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (visibleCount === 0) {
+          noResultsState.classList.remove('hidden');
+          noResultsState.classList.add('flex');
+        } else {
+          noResultsState.classList.add('hidden');
+          noResultsState.classList.remove('flex');
+        }
+      }
+
+      // Subject Filter Buttons
+      subjectButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          subjectButtons.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary');
+            b.classList.add('bg-surface-container', 'text-on-surface');
+          });
+          btn.classList.remove('bg-surface-container', 'text-on-surface');
+          btn.classList.add('bg-primary-container', 'text-on-primary');
+          currentSubject = btn.getAttribute('data-filter');
+          filterResources();
+        });
+      });
+
+      // Grade Dropdown
+      gradeFilter.addEventListener('change', (e) => {
+        currentGrade = e.target.value;
+        filterResources();
+      });
+
+      // Type Dropdown
+      typeFilter.addEventListener('change', (e) => {
+        currentType = e.target.value;
+        filterResources();
+      });
+
+      // Category Tabs
+      categoryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          categoryTabs.forEach(t => {
+            t.classList.remove('bg-primary', 'text-on-primary');
+            t.classList.add('bg-surface-container-lowest', 'text-on-surface');
+          });
+          tab.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+          tab.classList.add('bg-primary', 'text-on-primary');
+          currentCategory = tab.getAttribute('data-cat');
+          filterResources();
+        });
+      });
+
+      // Search field
+      searchInput.addEventListener('input', (e) => {
+        currentSearchTerm = e.target.value.trim();
+        if (currentSearchTerm.length > 0) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+        filterResources();
+      });
+
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearchTerm = '';
+        clearSearchBtn.classList.add('hidden');
+        filterResources();
+      });
+
+      // Reset Button on Empty State
+      resetBtn.addEventListener('click', () => {
+        currentSubject = 'all';
+        currentGrade = 'all';
+        currentType = 'all';
+        currentCategory = 'all';
+        currentSearchTerm = '';
+        searchInput.value = '';
+        clearSearchBtn.classList.add('hidden');
+        gradeFilter.value = 'all';
+        typeFilter.value = 'all';
+
+        subjectButtons.forEach((b, idx) => {
+          if (idx === 0) {
+            b.classList.add('bg-primary-container', 'text-on-primary');
+            b.classList.remove('bg-surface-container', 'text-on-surface');
+          } else {
+            b.classList.remove('bg-primary-container', 'text-on-primary');
+            b.classList.add('bg-surface-container', 'text-on-surface');
+          }
+        });
+
+        categoryTabs.forEach((t, idx) => {
+          if (idx === 0) {
+            t.classList.add('bg-primary', 'text-on-primary');
+            t.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+          } else {
+            t.classList.remove('bg-primary', 'text-on-primary');
+            t.classList.add('bg-surface-container-lowest', 'text-on-surface');
+          }
+        });
+
+        filterResources();
+      });
+    })();
+
+    // Preview Modal Logic
+    let activeDownloadName = '';
+
+    window.triggerPreview = function(title, meta, subject) {
+      const modal = document.getElementById('preview-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalMeta = document.getElementById('modal-meta');
+      
+      modalTitle.textContent = title;
+      modalMeta.textContent = meta;
+      activeDownloadName = title.replace(/\s+/g, '_') + '.pdf';
+      
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    };
+
+    window.closePreview = function() {
+      const modal = document.getElementById('preview-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    };
+
+    window.triggerDownloadFromModal = function() {
+      closePreview();
+      triggerDownload(activeDownloadName || 'Recurso_Didactico_Aula_Abierta.pdf');
+    };
+
+    window.triggerDownload = function(filename) {
+      showToast('Descargando: ' + filename);
+    };
+
+    window.showToast = function(msg) {
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = msg;
+      
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 3000);
+    };
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,32,66,0.06)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="inicio" href="index.html"><span class="material-symbols-outlined text-[24px]">school</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="publicaciones" href="publicaciones.html"><span class="material-symbols-outlined text-[24px]">menu_book</span><span class="font-label-sm text-label-sm">Artículos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary-container font-semibold" data-path="recursos-didacticos" href="recursos.html"><span class="material-symbols-outlined text-[24px]">folder_open</span><span class="font-label-sm text-label-sm">Recursos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="actividades-pedagogicas" href="lectura.html"><span class="material-symbols-outlined text-[24px]">extension</span><span class="font-label-sm text-label-sm">Actividades</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="perfil-docente" href="panel.html"><span class="material-symbols-outlined text-[24px]">person_outline</span><span class="font-label-sm text-label-sm">Perfil</span></a></div></nav><script src="db.js"></script>
+<script src="profile-loader.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => window.applyTeacherProfile());</script>
+</body></html>
