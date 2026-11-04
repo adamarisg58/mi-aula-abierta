@@ -1,26 +1,22 @@
-# El Redes — Mi Blog Docente
+# El Redes — Blog docente
 
-Blog educativo para docentes de nivel primario y secundario en República Dominicana.
+Blog educativo de Redes (6to de Secundaria). Servidor Node.js + Express con base de datos PostgreSQL, desplegado en Render.
 
-## Pantallas
+## Estructura
+- `server.js` — servidor y API REST (`/api`)
+- `seed.json` — datos de ejemplo que se cargan solo la primera vez, cuando la base está vacía
+- `public/` — páginas HTML, `db.js` (capa de datos del navegador) y `profile-loader.js`
 
-- **Inicio** — Página principal con artículos destacados y áreas curriculares
-- **Publicaciones** — Listado de publicaciones educativas
-- **Lectura** — Vista de lectura de artículos
-- **Recursos** — Recursos didácticos descargables
-- **Panel** — Panel de control docente (admin)
-- **Gestión** — Gestión de artículos
-- **Editor** — Editor de artículos
-- **Biblioteca** — Biblioteca multimedia
-- **Moderación** — Moderación de comentarios
+## Variables de entorno (Render)
+| Variable | Para qué sirve |
+|---|---|
+| `DATABASE_URL` | Internal Database URL de la base Postgres de Render |
+| `ADMIN_PASSWORD` | Contraseña del docente para entrar a `admin-login.html` |
+| `SESSION_SECRET` | Texto largo y aleatorio para firmar las sesiones |
 
-## Tecnologías
+## Permisos
+- Público: lee artículos publicados, comentarios aprobados y el perfil docente; envía comentarios (quedan pendientes) y suma vistas.
+- Docente (con contraseña): crea, edita y borra artículos, modera comentarios, administra la biblioteca y el perfil.
 
-- HTML5 + Tailwind CSS (CDN)
-- IndexedDB para persistencia local (db.js)
-- Google Material Symbols
-- Tipografías: Literata + Source Sans 3
-
-## Despliegue
-
-Sitio estático desplegado en Render (Free Tier).
+## Render
+- Build: `npm install` — Start: `npm start`

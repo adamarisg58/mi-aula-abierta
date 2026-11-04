@@ -1,6 +1,10 @@
 {
   "name": "el-redes-blog-docente",
-  "version": "1.0.0",
-  "description": "Blog educativo docente - El Redes. Prototipo creado con Stitch y desplegado en Render.",
-  "private": true
+  "version": "2.0.0",
+  "description": "Blog educativo docente - El Redes. Servidor Node + PostgreSQL en Render.",
+  "private": true,
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.21.2", "pg": "^8.13.1" }
 }

@@ -735,9 +735,7 @@
       }
 
       // Increment view count
-      if (typeof window.AulaAbiertaDB.updateArticle === 'function') {
-        window.AulaAbiertaDB.updateArticle(articleId, { views: (art.views || 0) + 1 }).catch(() => {});
-      }
+      window.AulaAbiertaDB.registerView(articleId);
 
     } catch(e) {
       console.error('Error cargando artículo:', e);

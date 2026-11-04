@@ -1,0 +1,179 @@
+{
+ "articles": [
+  {
+   "id": "art-modelo-osi",
+   "title": "El modelo OSI: las 7 capas que explican cómo viaja la información",
+   "summary": "Una guía para entender qué ocurre desde que das clic en \"enviar\" hasta que el mensaje llega al otro lado de la red.",
+   "subject": "Fundamentos de Redes",
+   "grade": "6to Secundaria",
+   "readTime": 8,
+   "status": "published",
+   "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+   "coverAlt": "Red global de conexiones luminosas sobre el planeta",
+   "author": "Lic. Adamaris Gratero",
+   "role": "Docente de Redes",
+   "views": 1250,
+   "createdAt": 1792485000000,
+   "content": "\n            <div style=\"background:linear-gradient(135deg,#dbeafe,#f1f5f9);padding:20px 24px;border-radius:12px;margin-bottom:24px;border-left:4px solid #2563eb;\">\n              <p style=\"margin:0 0 8px;font-weight:700;color:#1d4ed8;\">📋 Ficha de la clase</p>\n              <p style=\"margin:4px 0;\"><strong>Módulo:</strong> Redes de computadoras</p>\n              <p style=\"margin:4px 0;\"><strong>Objetivo:</strong> Identificar las 7 capas del modelo OSI y explicar la función de cada una.</p>\n              <p style=\"margin:4px 0;\"><strong>Grado:</strong> 6to Secundaria &nbsp;|&nbsp; <strong>Duración:</strong> 2 sesiones de 45 min</p>\n            </div>\n\n            <h2>1. ¿Por qué necesitamos un modelo de capas?</h2>\n            <p>Cuando envías un mensaje por WhatsApp intervienen la aplicación, el sistema operativo, tu tarjeta de red, el cable o la señal Wi-Fi, el router de tu casa y decenas de equipos de tu proveedor de internet. Si todo eso fuera un solo bloque, nadie podría arreglarlo ni mejorarlo. El <strong>modelo OSI</strong> (Interconexión de Sistemas Abiertos), publicado por la ISO, divide el problema en <strong>7 capas</strong>: cada una hace un trabajo concreto y solo habla con la capa de arriba y la de abajo.</p>\n\n            <blockquote style=\"border-left:4px solid #2563eb;padding:16px 20px;background:#eff6ff;border-radius:0 8px 8px 0;margin:24px 0;\">\n              <p style=\"font-style:italic;margin:0 0 8px;\">«Dividir un problema grande en capas pequeñas es la mejor forma de entenderlo y de repararlo.»</p>\n              <cite style=\"color:#64748b;\">— Idea central del diseño de redes por capas</cite>\n            </blockquote>\n\n            <h2>2. Las 7 capas, de arriba hacia abajo</h2>\n            <ol>\n              <li><strong>Capa 7 — Aplicación:</strong> donde están los servicios que usa la persona: navegador web (HTTP/HTTPS), correo (SMTP), nombres de dominio (DNS).</li>\n              <li><strong>Capa 6 — Presentación:</strong> traduce, comprime y cifra los datos para que ambos extremos los entiendan (por ejemplo, TLS, JPEG, UTF-8).</li>\n              <li><strong>Capa 5 — Sesión:</strong> abre, mantiene y cierra el diálogo entre dos equipos.</li>\n              <li><strong>Capa 4 — Transporte:</strong> divide los datos en <em>segmentos</em> y controla su entrega. TCP es confiable; UDP es más rápido pero sin garantías.</li>\n              <li><strong>Capa 3 — Red:</strong> maneja las direcciones IP y decide la ruta. Aquí trabaja el <em>router</em> y la unidad de datos es el <em>paquete</em>.</li>\n              <li><strong>Capa 2 — Enlace de datos:</strong> entrega <em>tramas</em> dentro de una misma red usando direcciones MAC. Aquí trabaja el <em>switch</em>.</li>\n              <li><strong>Capa 1 — Física:</strong> cables, fibra, ondas de radio y señales eléctricas; transporta <em>bits</em>. Aquí trabajan los cables y los hubs.</li>\n            </ol>\n\n            <div style=\"background:#f3e8ff;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #d8b4fe;\">\n              <h4 style=\"margin:0 0 8px;color:#6b21a8;\">💡 Truco para memorizarlas</h4>\n              <p style=\"margin:0;\">De la capa 7 a la 1: <strong>A</strong>plicación, <strong>P</strong>resentación, <strong>S</strong>esión, <strong>T</strong>ransporte, <strong>R</strong>ed, <strong>E</strong>nlace, <strong>F</strong>ísica. Una frase: <em>«A Papá Siempre Te Ríe En Familia»</em>.</p>\n            </div>\n\n            <h2>3. Encapsulamiento: el viaje de un mensaje</h2>\n            <p>Al enviar datos, cada capa le agrega su propia información de control (una <em>cabecera</em>) a lo que recibe de la capa superior. A este proceso se le llama <strong>encapsulamiento</strong>: datos → segmento → paquete → trama → bits. En el equipo receptor ocurre lo contrario (<em>desencapsulamiento</em>) hasta que la aplicación recibe el mensaje original.</p>\n\n            <h2>4. Actividad práctica</h2>\n            <ul>\n              <li>Abre el símbolo del sistema y ejecuta <code>ping 8.8.8.8</code>: ¿en qué capa trabaja este comando? (Pista: usa direcciones IP).</li>\n              <li>Ejecuta <code>ipconfig /all</code> (Windows) o <code>ip a</code> (Linux) y localiza tu dirección MAC y tu dirección IP: ¿qué capa usa cada una?</li>\n              <li>Con un cable desconectado, comprueba qué capa falla primero y cuál es el síntoma.</li>\n            </ul>\n\n            <h2>Para pensar</h2>\n            <p>Si una página web no carga pero <code>ping</code> a una IP sí responde, ¿en qué capas es más probable que esté el problema? Justifica tu respuesta.</p>\n          ",
+   "tags": [
+    "ModeloOSI",
+    "Redes",
+    "Fundamentos",
+    "Encapsulamiento"
+   ]
+  },
+  {
+   "id": "art-direccionamiento-ip",
+   "title": "Direccionamiento IPv4 y subredes: aprende a dividir una red paso a paso",
+   "summary": "Qué es una dirección IP, cómo se lee una máscara y cómo se divide una red /24 en cuatro subredes.",
+   "subject": "Direccionamiento IP",
+   "grade": "6to Secundaria",
+   "readTime": 9,
+   "status": "published",
+   "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+   "coverAlt": "Servidores y cables de red en un centro de datos",
+   "author": "Lic. Adamaris Gratero",
+   "role": "Docente de Redes",
+   "views": 980,
+   "createdAt": 1793096100000,
+   "content": "\n            <h2>1. ¿Qué es una dirección IPv4?</h2>\n            <p>Una dirección IPv4 es un número de <strong>32 bits</strong> escrito en cuatro grupos de 8 bits (octetos) separados por puntos, por ejemplo <code>192.168.10.25</code>. Cada octeto va de 0 a 255. La dirección tiene dos partes: la <strong>parte de red</strong> (a qué red pertenece) y la <strong>parte de host</strong> (qué equipo es dentro de esa red). La <strong>máscara de subred</strong> indica dónde termina una y empieza la otra.</p>\n\n            <h2>2. Máscara y notación CIDR</h2>\n            <p>La máscara <code>255.255.255.0</code> tiene 24 bits en 1, por eso se escribe <code>/24</code>. Con 8 bits para hosts hay 2<sup>8</sup> = 256 direcciones, pero se restan 2: la <em>dirección de red</em> (primera) y la de <em>broadcast</em> (última). Quedan <strong>254 hosts utilizables</strong>.</p>\n            <blockquote style=\"border-left:4px solid #2563eb;padding:16px 20px;background:#eff6ff;border-radius:0 8px 8px 0;margin:24px 0;\">\n              <p style=\"margin:0;\">Fórmula: hosts utilizables = 2<sup>h</sup> − 2, donde <strong>h</strong> es la cantidad de bits de host.</p>\n            </blockquote>\n\n            <h2>3. Direcciones privadas</h2>\n            <ul>\n              <li><code>10.0.0.0/8</code> (10.0.0.0 – 10.255.255.255)</li>\n              <li><code>172.16.0.0/12</code> (172.16.0.0 – 172.31.255.255)</li>\n              <li><code>192.168.0.0/16</code> (192.168.0.0 – 192.168.255.255)</li>\n            </ul>\n            <p>Son las que usan las redes de casas, escuelas y oficinas; el router las traduce a una dirección pública mediante NAT.</p>\n\n            <h2>4. Ejemplo resuelto: dividir 192.168.10.0/24 en 4 subredes</h2>\n            <p>Necesitamos 4 subredes, así que \"prestamos\" 2 bits de host (2<sup>2</sup> = 4). La nueva máscara es <code>/26</code> = <code>255.255.255.192</code>. Quedan 6 bits de host: 2<sup>6</sup> − 2 = <strong>62 hosts por subred</strong>.</p>\n            <table style=\"width:100%;border-collapse:collapse;margin:16px 0;\">\n              <thead><tr style=\"background:#e2e8f0;text-align:left;\"><th style=\"padding:8px;\">Subred</th><th style=\"padding:8px;\">Dirección de red</th><th style=\"padding:8px;\">Rango utilizable</th><th style=\"padding:8px;\">Broadcast</th></tr></thead>\n              <tbody>\n                <tr><td style=\"padding:8px;\">1</td><td style=\"padding:8px;\">192.168.10.0/26</td><td style=\"padding:8px;\">.1 – .62</td><td style=\"padding:8px;\">192.168.10.63</td></tr>\n                <tr><td style=\"padding:8px;\">2</td><td style=\"padding:8px;\">192.168.10.64/26</td><td style=\"padding:8px;\">.65 – .126</td><td style=\"padding:8px;\">192.168.10.127</td></tr>\n                <tr><td style=\"padding:8px;\">3</td><td style=\"padding:8px;\">192.168.10.128/26</td><td style=\"padding:8px;\">.129 – .190</td><td style=\"padding:8px;\">192.168.10.191</td></tr>\n                <tr><td style=\"padding:8px;\">4</td><td style=\"padding:8px;\">192.168.10.192/26</td><td style=\"padding:8px;\">.193 – .254</td><td style=\"padding:8px;\">192.168.10.255</td></tr>\n              </tbody>\n            </table>\n            <p>El \"salto\" entre subredes es 256 − 192 = <strong>64</strong>, por eso las redes comienzan en 0, 64, 128 y 192.</p>\n\n            <div style=\"background:#f3e8ff;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #d8b4fe;\">\n              <h4 style=\"margin:0 0 8px;color:#6b21a8;\">🧪 Practica</h4>\n              <p style=\"margin:0;\">Divide <code>192.168.20.0/24</code> en 8 subredes. ¿Cuál es la nueva máscara, cuántos hosts tiene cada una y cuál es el rango de la tercera subred?</p>\n            </div>\n\n            <h2>5. Errores comunes</h2>\n            <ul>\n              <li>Asignar la dirección de red o la de broadcast a un equipo.</li>\n              <li>Poner dos equipos con la misma IP (conflicto de direcciones).</li>\n              <li>Configurar una puerta de enlace que no pertenece a la misma subred del equipo.</li>\n            </ul>\n          ",
+   "tags": [
+    "IPv4",
+    "Subredes",
+    "CIDR",
+    "Direccionamiento"
+   ]
+  },
+  {
+   "id": "art-cableado-estructurado",
+   "title": "Cableado estructurado: cómo se organiza la red física de un edificio",
+   "summary": "Subsistemas, categorías de cable UTP y el orden de colores T568B para armar un cable de red correctamente.",
+   "subject": "Cableado Estructurado",
+   "grade": "6to Secundaria",
+   "readTime": 7,
+   "status": "published",
+   "coverImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+   "coverAlt": "Rack de comunicaciones con cables de red ordenados",
+   "author": "Lic. Adamaris Gratero",
+   "role": "Docente de Redes",
+   "views": 760,
+   "createdAt": 1793361600000,
+   "content": "\n            <h2>1. ¿Qué es el cableado estructurado?</h2>\n            <p>Es un sistema organizado y normalizado de cables, conectores y paneles que lleva voz, datos y video por todo un edificio. Se rige por normas como <strong>TIA/EIA-568</strong>, lo que permite que equipos de distintos fabricantes funcionen juntos y que la red sea fácil de ampliar y reparar.</p>\n\n            <h2>2. Los subsistemas</h2>\n            <ol>\n              <li><strong>Área de trabajo:</strong> donde están las computadoras y los tomas de pared.</li>\n              <li><strong>Cableado horizontal:</strong> une cada toma con el cuarto de telecomunicaciones del mismo piso. Longitud máxima del enlace permanente: <strong>90 m</strong>.</li>\n              <li><strong>Cableado vertical (backbone):</strong> conecta pisos y edificios entre sí, normalmente con fibra óptica.</li>\n              <li><strong>Cuarto de telecomunicaciones:</strong> alberga rack, patch panel y switches.</li>\n              <li><strong>Cuarto de equipos y acometida:</strong> servidores y entrada de los servicios del proveedor.</li>\n            </ol>\n            <p>Sumando los cables de parcheo (hasta 10 m en total), el canal completo no debe pasar de <strong>100 m</strong>.</p>\n\n            <h2>3. Categorías de cable UTP</h2>\n            <table style=\"width:100%;border-collapse:collapse;margin:16px 0;\">\n              <thead><tr style=\"background:#e2e8f0;text-align:left;\"><th style=\"padding:8px;\">Categoría</th><th style=\"padding:8px;\">Velocidad típica</th><th style=\"padding:8px;\">Uso común</th></tr></thead>\n              <tbody>\n                <tr><td style=\"padding:8px;\">Cat5e</td><td style=\"padding:8px;\">1 Gbps (100 m)</td><td style=\"padding:8px;\">Redes de oficina y escuela</td></tr>\n                <tr><td style=\"padding:8px;\">Cat6</td><td style=\"padding:8px;\">1 Gbps (100 m) / 10 Gbps (hasta 55 m)</td><td style=\"padding:8px;\">Redes actuales</td></tr>\n                <tr><td style=\"padding:8px;\">Cat6a</td><td style=\"padding:8px;\">10 Gbps (100 m)</td><td style=\"padding:8px;\">Centros de datos y backbone corto</td></tr>\n              </tbody>\n            </table>\n\n            <h2>4. Orden de colores T568B</h2>\n            <p>Mirando el conector RJ-45 con la lengüeta hacia abajo y los contactos hacia ti, de izquierda a derecha:</p>\n            <ol>\n              <li>Blanco/naranja</li><li>Naranja</li><li>Blanco/verde</li><li>Azul</li><li>Blanco/azul</li><li>Verde</li><li>Blanco/marrón</li><li>Marrón</li>\n            </ol>\n            <div style=\"background:#f3e8ff;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #d8b4fe;\">\n              <h4 style=\"margin:0 0 8px;color:#6b21a8;\">🛠️ Práctica de taller</h4>\n              <p style=\"margin:0;\">Arma un cable <strong>directo</strong> (T568B en ambos extremos) y pruébalo con el probador de cables. Luego arma uno <strong>cruzado</strong> (T568B en un extremo y T568A en el otro) y explica en qué casos se usaba.</p>\n            </div>\n\n            <h2>5. Buenas prácticas</h2>\n            <ul>\n              <li>No doblar el cable con curvas muy cerradas ni jalarlo con fuerza.</li>\n              <li>Separar los cables de datos de los cables de energía.</li>\n              <li>Etiquetar ambos extremos de cada cable y cada puerto del patch panel.</li>\n              <li>Probar y documentar cada enlace al terminar.</li>\n            </ul>\n          ",
+   "tags": [
+    "Cableado",
+    "UTP",
+    "T568B",
+    "Taller"
+   ]
+  },
+  {
+   "id": "art-seguridad-wifi-borrador",
+   "title": "Seguridad en redes Wi-Fi: cómo proteger la red de la escuela y de tu casa",
+   "summary": "Cifrado WPA2/WPA3, contraseñas robustas y buenas prácticas para evitar accesos no autorizados.",
+   "subject": "Seguridad en Redes",
+   "grade": "6to Secundaria",
+   "readTime": 6,
+   "status": "draft",
+   "coverImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+   "coverAlt": "Candado digital sobre un circuito electrónico",
+   "author": "Lic. Adamaris Gratero",
+   "role": "Docente de Redes",
+   "views": 0,
+   "createdAt": 1793610000000,
+   "content": "\n            <h2>Protegiendo nuestras redes inalámbricas</h2>\n            <p>Borrador en construcción. Pendiente de agregar la práctica de laboratorio y la lista de verificación de seguridad.</p>\n          ",
+   "tags": [
+    "Seguridad",
+    "WiFi",
+    "WPA3"
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "id": "comm-1",
+   "articleId": "art-modelo-osi",
+   "authorName": "Prof. Manuel Grullón",
+   "authorType": "teacher",
+   "authorBadge": "Docente Verificado",
+   "schoolInfo": "Docente de Informática • Santo Domingo",
+   "content": "Excelente explicación del encapsulamiento. Usé la frase para memorizar las capas con mis estudiantes de 6to y les encantó. ¿Tiene alguna práctica con Wireshark para ver las cabeceras?",
+   "status": "pending",
+   "createdAt": 1793750671481,
+   "teacherReply": null
+  },
+  {
+   "id": "comm-2",
+   "articleId": "art-direccionamiento-ip",
+   "authorName": "Estefanía Peña",
+   "authorType": "family",
+   "authorBadge": "Familia Comunidad",
+   "schoolInfo": "Madre de estudiante de 6to",
+   "content": "Mi hijo practicó las subredes con la tabla del artículo y por fin entendió por qué el salto es de 64. ¡Muchas gracias por explicarlo tan claro!",
+   "status": "approved",
+   "createdAt": 1793666971481,
+   "teacherReply": "¡Qué alegría, Estefanía! Dígale que practique con la subred 192.168.20.0/24 del reto final. ¡Saludos a su familia!"
+  },
+  {
+   "id": "comm-3",
+   "articleId": "art-cableado-estructurado",
+   "authorName": "Visitante_982",
+   "authorType": "guest",
+   "authorBadge": "Anónimo",
+   "schoolInfo": "IP: 179.53.*.* • Sin credenciales",
+   "content": "Para resolver rápido sus tareas miren este link gratis en hxxp://descarga-examenes-rd.cc y ganen puntos sin estudiar.",
+   "status": "pending",
+   "isSpamAlert": true,
+   "createdAt": 1793746171481,
+   "teacherReply": null
+  }
+ ],
+ "media": [
+  {
+   "id": "media-modelo-osi",
+   "title": "Esquema modelo OSI",
+   "category": "infografias",
+   "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+   "sizeKB": 420,
+   "dimensions": "1200x800",
+   "altText": "Red global de conexiones que representa el viaje de los datos entre capas",
+   "associatedArticle": "El modelo OSI: las 7 capas que explican cómo viaja la información",
+   "createdAt": 1792281600000
+  },
+  {
+   "id": "media-subredes",
+   "title": "Tabla de subredes /26",
+   "category": "fichas",
+   "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+   "sizeKB": 310,
+   "dimensions": "1200x800",
+   "altText": "Servidores y cables en un centro de datos",
+   "associatedArticle": "Direccionamiento IPv4 y subredes: aprende a dividir una red paso a paso",
+   "createdAt": 1792886400000
+  },
+  {
+   "id": "media-cableado",
+   "title": "Rack y patch panel",
+   "category": "portadas",
+   "url": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+   "sizeKB": 280,
+   "dimensions": "1080x720",
+   "altText": "Rack de comunicaciones con cables de red ordenados",
+   "associatedArticle": "Cableado estructurado: cómo se organiza la red física de un edificio",
+   "createdAt": 1793232000000
+  }
+ ],
+ "settings": [
+  {
+   "key": "teacherProfile",
+   "name": "Adamaris Gratero",
+   "title": "Lic.",
+   "role": "Docente de Redes",
+   "specialty": "Informática • Redes • 6to de Secundaria",
+   "school": "Politécnico José Núñez de Cáceres",
+   "yearsExperience": 0,
+   "bio": "Enseñar redes es enseñar a conectar: cada estudiante que entiende cómo viaja un paquete aprende también a construir puentes.",
+   "photoUrl": "",
+   "updatedAt": 1793753371481
+  }
+ ]
+}

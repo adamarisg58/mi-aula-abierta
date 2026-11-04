@@ -35,18 +35,18 @@
 <h3 class="font-title-lg text-title-lg text-primary">Acceso Docente y Gestión Escolar</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ingreso restringido a la administración de contenidos curriculares.</p>
 </div>
-<form class="flex flex-col gap-space-md" id="loginForm" onsubmit="event.preventDefault(); handleAuthFeedback();">
+<form class="flex flex-col gap-space-md" id="loginForm" onsubmit="event.preventDefault(); doLogin();">
 <div class="flex flex-col gap-1.5">
-<label class="font-label-md text-label-md text-on-surface" for="emailInput">Correo Electrónico Institucional</label>
+<label class="font-label-md text-label-md text-on-surface" for="emailInput">Correo (opcional)</label>
 <div class="relative flex items-center">
 <span class="material-symbols-outlined absolute left-3 text-outline text-[20px] pointer-events-none">account_circle</span>
-<input class="w-full pl-10 pr-3 py-2.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="emailInput" placeholder="docente@correo.com" required="" type="email"/>
+<input class="w-full pl-10 pr-3 py-2.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="emailInput" placeholder="docente@correo.com" type="email"/>
 </div>
 </div>
 <div class="flex flex-col gap-1.5">
 <div class="flex items-center justify-between">
 <label class="font-label-md text-label-md text-on-surface" for="passwordInput">Contraseña</label>
-<a class="font-label-md text-label-md text-secondary hover:underline" href="#">¿Olvidaste tu contraseña de docente?</a>
+
 </div>
 <div class="relative flex items-center">
 <span class="material-symbols-outlined absolute left-3 text-outline text-[20px] pointer-events-none">lock</span>
@@ -59,7 +59,7 @@
 <div class="flex items-center gap-space-sm pt-0.5">
 <input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" id="rememberDevice" type="checkbox"/>
 <label class="font-body-sm text-body-sm text-on-surface select-none cursor-pointer" for="rememberDevice">
-            Mantener sesión iniciada en este dispositivo de trabajo
+            Mantener sesión iniciada en este dispositivo de trabajo (12 horas)
           </label>
 </div>
 <button class="w-full mt-space-xs py-3 px-space-md rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-sm shadow-md active:scale-[0.99] transition-all" id="submitBtn" type="submit">
@@ -83,21 +83,8 @@
         </p>
 </div>
 </div>
-<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-secondary text-[20px]">school</span>
-<span class="font-label-md text-label-md text-primary font-semibold">Acceso Rápido de Demostración</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-        Modo demostración guiado: <strong data-tp="titleName">Lic. Adamaris Gratero</strong> (<span data-tp="school">Nivel Secundario - Distrito 10-01</span>).
-      </p>
-<button class="w-full py-2.5 px-space-md rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-sm hover:bg-surface-bright active:scale-[0.99] transition-all" onclick="fillDemoData()" type="button">
-<span class="material-symbols-outlined text-[18px]">play_circle</span>
-<span>Cargar Credenciales de Prueba</span>
-</button>
-</div>
 <div class="flex justify-center pt-space-xs pb-space-md">
-<a class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors" href="#">
+<a class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors" href="index.html">
 <span class="material-symbols-outlined text-[18px]">home</span>
 <span class="font-label-md text-label-md">Volver al Inicio del Blog Público</span>
 </a>
@@ -119,45 +106,26 @@
     }
   }
 
-  function fillDemoData() {
-    const emailInput = document.getElementById('emailInput');
-    const passwordInput = document.getElementById('passwordInput');
-    if (emailInput && passwordInput) {
-      emailInput.value = 'docente@mi-escuela.edu.do';
-      passwordInput.value = 'MiClave2025*';
-      
-      const rememberCheckbox = document.getElementById('rememberDevice');
-      if (rememberCheckbox) rememberCheckbox.checked = true;
-
-      const submitBtn = document.getElementById('submitBtn');
-      if (submitBtn) {
-        submitBtn.classList.add('scale-[1.02]');
-        setTimeout(() => submitBtn.classList.remove('scale-[1.02]'), 200);
-      }
-    }
-  }
-
-  function handleAuthFeedback() {
+  async function doLogin() {
     const notice = document.getElementById('authNotice');
-    if (notice) {
+    const pass = document.getElementById('passwordInput').value;
+    const label = notice && notice.querySelector('span:last-child');
+    const icon = notice && notice.querySelector('.material-symbols-outlined');
+    const show = (msg, ok) => {
+      if (!notice) return;
+      label.textContent = msg;
+      icon.textContent = ok ? 'verified' : 'error';
       notice.classList.remove('hidden');
-      notice.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+    try {
+      await window.AulaAbiertaDB.login(pass);
+      show('Acceso verificado. Redirigiendo al panel...', true);
+      setTimeout(() => { location.href = 'panel.html'; }, 600);
+    } catch (e) {
+      show(e.message || 'No se pudo iniciar sesión', false);
     }
   }
 </script></main>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.querySelector('form') || document.querySelector('[onclick]');
-  document.querySelectorAll('button[type="button"]').forEach(btn => {
-    if (btn.textContent.includes('Acceder') || btn.textContent.includes('Ingresar') || btn.textContent.includes('Iniciar')) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.location.href = 'panel.html';
-      });
-    }
-  });
-});
-</script>
 <script src="db.js"></script>
 <script src="profile-loader.js"></script>
 <script>document.addEventListener('DOMContentLoaded', () => window.applyTeacherProfile());</script>
