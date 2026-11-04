@@ -1,5 +1,5 @@
 /**
- * AULA ABIERTA — Mi Blog Docente
+ * EL REDES — Mi Blog Docente
  * db.js — Módulo desacoplado de abstracción y persistencia (IndexedDB)
  * 
  * Diseñado con interfaz agnóstica para permitir sustituir fácilmente 
@@ -101,13 +101,13 @@ class StorageService {
           status: 'published', // 'published', 'draft', 'scheduled'
           coverImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
           coverAlt: 'Esquema y paisaje del ciclo hidrológico en la naturaleza',
-          author: 'Lic. Ramona Almonte',
-          role: 'Especialista en Didáctica',
+          author: 'Lic. Adamaris Gratero',
+          role: 'Docente de Redes',
           views: 2450,
           createdAt: new Date('2025-03-14T08:30:00Z').getTime(),
           content: `
-            <div style="background:linear-gradient(135deg,#e0f2fe,#f0fdf4);padding:20px 24px;border-radius:12px;margin-bottom:24px;border-left:4px solid #0284c7;">
-              <p style="margin:0 0 8px;font-weight:700;color:#0369a1;">📋 Ficha Curricular — Alineada al Currículo MINERD</p>
+            <div style="background:linear-gradient(135deg,#dbeafe,#f0fdf4);padding:20px 24px;border-radius:12px;margin-bottom:24px;border-left:4px solid #2563eb;">
+              <p style="margin:0 0 8px;font-weight:700;color:#1d4ed8;">📋 Ficha Curricular — Alineada al Currículo MINERD</p>
               <p style="margin:4px 0;"><strong>Competencia fundamental:</strong> Científica y Tecnológica</p>
               <p style="margin:4px 0;"><strong>Eje temático:</strong> La Tierra y el Universo — Ciclos naturales</p>
               <p style="margin:4px 0;"><strong>Indicador de logro:</strong> Describe las fases del ciclo del agua y explica su importancia para los ecosistemas locales.</p>
@@ -118,7 +118,7 @@ class StorageService {
             <p>Cada vez que observamos un aguacero vespertino sobre Santo Domingo, el verde valle del Cibao o las aguas cristalinas del río Yaque del Norte, estamos presenciando una obra maestra de la naturaleza que lleva miles de millones de años en marcha: <strong>el ciclo del agua</strong>.</p>
             <p>Para los estudiantes de primaria en nuestra región insular, comprender este ciclo no es solo una lección de ciencias; es entender la columna vertebral de nuestra agricultura, nuestro clima templado por los alisios y el agua potable que llega a nuestros hogares y aulas escolares.</p>
 
-            <blockquote style="border-left:4px solid #0284c7;padding:16px 20px;background:#f0f9ff;border-radius:0 8px 8px 0;margin:24px 0;">
+            <blockquote style="border-left:4px solid #2563eb;padding:16px 20px;background:#eff6ff;border-radius:0 8px 8px 0;margin:24px 0;">
               <p style="font-style:italic;margin:0 0 8px;">«El agua que bebió un dinosaurio hace millones de años es exactamente la misma molécula que hoy acaricia las hojas de nuestros manglares dominicanos.»</p>
               <cite style="color:#64748b;">— Principio de Conservación Hidrológica</cite>
             </blockquote>
@@ -182,7 +182,7 @@ class StorageService {
             <h2>5. Síntesis y Compromiso Ciudadano</h2>
             <p>El ciclo hidrológico no es estático; se ve directamente impactado por la deforestación de nuestras lomas, la contaminación por plásticos en cañadas y ríos, y el calentamiento global. Cada árbol que sembramos en nuestras escuelas es un regulador del ciclo; cada botella plástica que recogemos de un arroyo es una barrera menos para el flujo natural del agua.</p>
 
-            <div style="background:linear-gradient(135deg,#ede9fe,#e0f2fe);padding:20px;border-radius:10px;margin:24px 0;">
+            <div style="background:linear-gradient(135deg,#ede9fe,#dbeafe);padding:20px;border-radius:10px;margin:24px 0;">
               <h4 style="margin:0 0 12px;color:#5b21b6;">📊 Rúbrica de Evaluación Formativa</h4>
               <table style="width:100%;border-collapse:collapse;font-size:14px;">
                 <thead>
@@ -216,8 +216,8 @@ class StorageService {
               </table>
             </div>
 
-            <div style="background:#f0f9ff;padding:16px 20px;border-radius:10px;margin:16px 0;border:1px solid #bae6fd;">
-              <p style="margin:0;font-weight:600;color:#0369a1;">📖 Referencias Curriculares</p>
+            <div style="background:#eff6ff;padding:16px 20px;border-radius:10px;margin:16px 0;border:1px solid #bae6fd;">
+              <p style="margin:0;font-weight:600;color:#1d4ed8;">📖 Referencias Curriculares</p>
               <ul style="margin:8px 0 0;color:#334155;">
                 <li>Diseño Curricular Nivel Primario, MINERD (2014), Área Ciencias de la Naturaleza.</li>
                 <li>Ordenanza 02-2015, sobre el currículo revisado del Nivel Primario.</li>
@@ -278,8 +278,8 @@ class StorageService {
           status: 'draft',
           coverImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
           coverAlt: 'Paisaje de manglar rojo costero',
-          author: 'Lic. Ramona Almonte',
-          role: 'Especialista en Didáctica',
+          author: 'Lic. Adamaris Gratero',
+          role: 'Docente de Redes',
           views: 0,
           createdAt: new Date('2025-03-15T09:00:00Z').getTime(),
           content: `
@@ -385,13 +385,13 @@ class StorageService {
       if (settingsCount === 0) {
         await this._putRaw('settings', {
           key: 'teacherProfile',
-          name: 'Lic. Ramona Almonte',
+          name: 'Adamaris Gratero',
           title: 'Lic.',
-          role: 'Especialista en Didáctica',
-          specialty: 'Educación Primaria • Mención Ciencias',
-          school: 'Distrito Educativo 10-01',
-          yearsExperience: 14,
-          bio: 'Educar con ternura y firmeza es encender una antorcha que nunca dejará de alumbrar el porvenir de nuestra patria.',
+          role: 'Docente de Redes',
+          specialty: 'Informática • Redes',
+          school: 'Politécnico José Núñez de Cáceres',
+          yearsExperience: 0,
+          bio: 'Enseñar redes es enseñar a conectar: cada estudiante que entiende cómo viaja un paquete aprende también a construir puentes.',
           photoUrl: '',
           updatedAt: Date.now()
         });
