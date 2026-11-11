@@ -54,6 +54,10 @@ async function initDb() {
     }
     console.log('Datos de ejemplo cargados.');
   }
+  // Foto de perfil: si el perfil aún no tiene foto, usar la de la docente
+  await pool.query(
+    `UPDATE docs SET data = jsonb_set(data, '{photoUrl}', '"/img/adamaris-gratero.jpg"')
+     WHERE store = 'settings' AND key = 'teacherProfile' AND COALESCE(data->>'photoUrl', '') = ''`);
 }
 
 const keyOf = (store, item) => String(store === 'settings' ? item.key : item.id);
